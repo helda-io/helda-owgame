@@ -5,9 +5,7 @@
   )
 
 (defn seed-models []
-  (save-model {
-    :package "owgame"
-    :name "GeoObject"
+  (save-model :owgame :GeoObject {
     :description "Base class for geo objects"
     :attrs {
       :name "String"
@@ -15,7 +13,5 @@
       :y "Int"
       :d "Int"
       }
-    :extends []
-    :actions {}
     })
   )
