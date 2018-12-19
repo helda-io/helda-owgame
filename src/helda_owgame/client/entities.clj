@@ -1,6 +1,6 @@
 (ns helda-owgame.client.entities
   (:require
-    [clj-http.client :as http-client]
+    [clj-http.client :as client]
     )
   )
 
@@ -16,7 +16,7 @@
   (client/post
     "http://localhost:3000/entities/save-entity"
     {
-      :form-params (prepare-entity package name model)
+      :form-params (prepare-entity world model entity)
       :content-type :json
       }
     )
