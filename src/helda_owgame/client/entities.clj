@@ -3,3 +3,21 @@
     [clj-http.client :as http-client]
     )
   )
+
+(defn prepare-entity [world model entity]
+  (cond-> model
+    true (assoc :world (name world))
+    true (assoc :model (name model))
+    (-> model :tags nil?) (assoc :tags [])
+    )
+  )
+
+(defn save-entity [world model entity]
+  (client/post
+    "http://localhost:3000/entities/save-entity"
+    {
+      :form-params (prepare-entity package name model)
+      :content-type :json
+      }
+    )
+  )
