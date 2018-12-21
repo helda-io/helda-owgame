@@ -5,7 +5,7 @@
   )
 
 (defn prepare-entity [world model entity]
-  (cond-> model
+  (cond-> entity
     true (assoc :world (name world))
     true (assoc :model (name model))
     (-> model :tags nil?) (assoc :tags [])
