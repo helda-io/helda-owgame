@@ -5,13 +5,27 @@
   )
 
 (defn seed-models []
-  (save-model :owgame :GeoObject {
-    :description "Base class for geo objects"
+
+  (save-model :owgame :NpcTemplate {
+    :description "Template to generate NPC"
     :attrs {
       :name "String"
-      :x "Int"
-      :y "Int"
-      :d "Int"
+      :xp "Integer"
+      :hp-dices "String"
+    })
+
+  (save-model :owgame :Npc {
+    :description "NPC entity"
+    :attrs {
+      :name "String"
+      :xp "Integer"
+      :initiative "Integer"
+      :ac "Integer"
+      :hp "Integer"
+      :speed "Integer"
+      :reach-distance "Integer"
+      :attack-chk "Integer"
+      :attack-dmg "String"
       }
     })
   )
