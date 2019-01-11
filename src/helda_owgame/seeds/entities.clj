@@ -5,12 +5,17 @@
   )
 
 (defn seed-entities [world]
-    (save-entity world :owgame.GeoObject {
-      :description "Obstacle 1"
+    (save-entity world :owgame.Npc {
+      :description "NPC enemy sample instance"
       :attrs {
-        :x 100
-        :y 200
-        :d 3
-      }
+        :name "Dark Stalker"
+        :xp 1200
+        :initiative 4
+        :ac 18
+        :hp 39
+        :speed 30
+        :attack-chk "12"
+        :attack-dmg "1d6+2"
+        }
       })
   )
