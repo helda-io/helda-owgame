@@ -20,5 +20,13 @@
       :ranged-attack-chk "Integer"
       :ranged-attack-dmg "String"
       }
+    :actions {
+      :fight {
+        :source-model "owgame.BattleUnit"
+        }
+      }
     })
+
+  ;todo Provide listeners for model
+
   )
