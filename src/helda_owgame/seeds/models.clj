@@ -1,6 +1,6 @@
 (ns helda-owgame.seeds.models
   (:require
-    [helda-owgame.client.models :refer [save-model]]
+    [helda-owgame.client.models :refer [save-model save-model-listener]]
     )
   )
 
@@ -28,5 +28,5 @@
     })
 
   ;todo Provide listeners for model
-
+  (save-model-listener :world1 "owgame.BattleUnit" :fight "http://localhost:3100/fight")
   )

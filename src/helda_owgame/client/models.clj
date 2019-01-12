@@ -23,3 +23,20 @@
       }
     )
   )
+
+(defn prepare-model-listener [world model action url] {
+    :world world
+    :model model
+    :action action
+    :action-url url
+  })
+
+(defn save-model-listener [world model action url]
+  (client/post
+    "http://localhost:3000/models/add-model-listener"
+    {
+      :form-params (prepare-model-listener world model action url)
+      :content-type :json
+      }
+    )
+  )
