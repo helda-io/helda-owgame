@@ -6,7 +6,7 @@
 
 (defn seed-models []
 
-  (save-model :owgame :Npc {
+  (save-model :owgame :BattleUnit {
     :description "NPC entity"
     :fields {
       :name "String"
@@ -17,6 +17,8 @@
       :speed "Integer"
       :attack-chk "Integer"
       :attack-dmg "String"
+      :ranged-attack-chk "Integer"
+      :ranged-attack-dmg "String"
       }
     })
   )
