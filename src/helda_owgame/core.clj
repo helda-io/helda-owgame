@@ -1,7 +1,15 @@
 (ns helda-owgame.core
-  (:gen-class))
+  (:require [com.stuartsierra.component :as component]
+            [reloaded.repl :refer [set-init! go]])
+  (:gen-class)
+  )
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(defn -main [& [port]]
+  (let [port (or port 3000)]
+    (require 'helda-owgame.handlers.system)
+    (set-init! #((resolve 'helda-owgame.handlers.system/new-system)
+      {:http {:port port}})
+      )
+    (go)
+    )
+  )

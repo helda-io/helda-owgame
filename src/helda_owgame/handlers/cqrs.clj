@@ -1,6 +1,7 @@
-(ns helda-owgame.handlers.core
+(ns helda-owgame.handlers.cqrs
   (:require
     [kekkonen.cqrs :refer :all]
+    [plumbing.core :refer [defnk]]
     [helda-owgame.handlers.schema :as s]
     )
   )
@@ -14,7 +15,7 @@
     ]
   ;todo add-entity
   (success
-    (storage/save-entity entities-storage data)
+    {:action-ctx {}}
     )
   )
 
