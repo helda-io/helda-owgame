@@ -5,4 +5,4 @@
     )
   )
 
-(reloaded.repl/set-init! #(new-system {:http {:port 3000}, :dev-mode? true}))
+(reloaded.repl/set-init! #(new-system {:http {:port 3001}, :dev-mode? true}))
