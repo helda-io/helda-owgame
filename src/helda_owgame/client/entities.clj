@@ -18,6 +18,7 @@
     {
       :form-params (prepare-entity world model entity)
       :content-type :json
+      :as :json-strict
       }
     )
   )
@@ -35,6 +36,7 @@
     {
       :form-params (prepare-entity-listener world entity-id action url)
       :content-type :json
+      :as :json-strict
       }
     )
   )

@@ -5,8 +5,8 @@
   )
 
 (defn seed-entities [world]
-    (println
-      (save-entity world :owgame.BattleUnit {
+    (->
+      (save-entity "owgame1" :owgame.BattleUnit {
         :description "NPC enemy sample instance"
         :attrs {
           :name "Orc Warrior"
@@ -21,9 +21,12 @@
           :ranged-attack-dmg "1d6+3"
           }
         })
+      :body :id
+      #(save-entity-listener world % :fight "http://localhost:3100/hooks/fight")
+      println
       )
 
-    (println
+    (->
       (save-entity world :owgame.BattleUnit {
         :description "Hero instance"
         :attrs {
@@ -39,6 +42,8 @@
           :ranged-attack-dmg "1d6"
           }
         })
+      :body :id
+      println
       )
 
   )
