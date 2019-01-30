@@ -32,7 +32,7 @@
 
 (defn save-entity-listener [world entity-id action url]
   (client/post
-    "http://localhost:3000/models/add-entity-listener"
+    "http://localhost:3000/entities/add-entity-listener"
     {
       :form-params (prepare-entity-listener world entity-id action url)
       :content-type :json
