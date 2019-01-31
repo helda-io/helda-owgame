@@ -5,7 +5,7 @@
   )
 
 (defn -main [& [port]]
-  (let [port (or port 3001)]
+  (let [port (or port 3100)]
     (require 'helda-owgame.handlers.system)
     (set-init! #((resolve 'helda-owgame.handlers.system/new-system)
       {:http {:port port}})

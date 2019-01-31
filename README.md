@@ -1,36 +1,6 @@
-# helda-owgame
-
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
-
-## Usage
-
-FIXME: explanation
-
-    $ java -jar helda-owgame-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2018 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'kekkonen.mode: invoke' -d '{
+  "action": "fight",
+  "source-entity-id": "5c51ec5f4d22df75677eff07",
+  "target-entity-id": "5c51ec5f4d22df75677eff05",
+  "action-ctx": {}
+}' 'http://localhost:3000/entities/perform-action'

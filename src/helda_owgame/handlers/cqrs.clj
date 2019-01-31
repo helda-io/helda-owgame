@@ -15,7 +15,7 @@
     ]
   ;todo add-entity
   (success
-    {:action-ctx {}}
+    {:action-ctx {:hello :world}}
     )
   )
 
@@ -28,7 +28,7 @@
 
      :core {
        :handlers {
-        :actions [#'fight]
+        :hooks [#'fight]
        }
        :context system
       }
