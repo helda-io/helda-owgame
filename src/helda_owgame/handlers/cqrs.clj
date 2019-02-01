@@ -15,7 +15,7 @@
     ]
   ;todo add-entity
   (success
-    {:action-ctx {:hello :world}}
+    {:action-ctx {}}
     )
   )
 
