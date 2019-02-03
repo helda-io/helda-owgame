@@ -13,9 +13,16 @@
     [:clients models worlds entities]
     data :- s/ActionEvent
     ]
-  ;todo add-entity
-  (success
-    {:action-ctx {}}
+  (let [
+    source (:source-entity data)
+    target (:target-entity data)
+    action-ctx (:action-ctx data)
+    ]
+    (println "source " source)
+    (println "target " target)
+    (println "action-ctx " action-ctx)
+
+    (success {:action-ctx {}})
     )
   )
 
