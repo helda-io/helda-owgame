@@ -8,7 +8,7 @@
   (cond-> entity
     true (assoc :world (name world))
     true (assoc :model (name model))
-    (-> model :tags nil?) (assoc :tags [])
+    (-> entity :tags nil?) (assoc :tags [])
     )
   )
 

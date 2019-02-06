@@ -7,7 +7,7 @@
 (defn seed-models []
 
   (save-model :owgame :BattleUnit {
-    :description "NPC entity"
+    :description "BattleUnit entity"
     :fields {
       :name "String"
       :xp "Integer"

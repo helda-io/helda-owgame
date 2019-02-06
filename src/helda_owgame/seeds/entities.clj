@@ -9,7 +9,7 @@
     (save-entity-listener
       world
       (->
-        (save-entity "owgame1" :owgame.BattleUnit {
+        (save-entity world :owgame.BattleUnit {
           :description "NPC enemy sample instance"
           :attrs {
             :name "Orc Warrior"
@@ -23,6 +23,7 @@
             :ranged-attack-chk "1"
             :ranged-attack-dmg "1d6+3"
             }
+          :tags [:npc]
           })
         :body :id
         )
@@ -46,6 +47,7 @@
           :ranged-attack-chk "3"
           :ranged-attack-dmg "1d6"
           }
+        :tags [:hero]
         })
       :body :id
       println
