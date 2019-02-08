@@ -34,9 +34,12 @@
     (println "target " target)
     (println "action-ctx " action-ctx)
 
-    (success {:action-ctx {
-      :target (calculate-dmg source target)
-      }})
+    (success {
+      :action-ctx {
+        :target (calculate-dmg source target)
+        }
+      :reasoning-msg "Monster wounded!"
+      })
     )
   )
 
