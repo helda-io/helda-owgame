@@ -22,21 +22,3 @@
       }
     )
   )
-
-(defn prepare-entity-listener [world entity-id action url] {
-    :world world
-    :entity-id entity-id
-    :action action
-    :action-url url
-  })
-
-(defn save-entity-listener [world entity-id action url]
-  (client/post
-    "http://localhost:3000/entities/add-entity-listener"
-    {
-      :form-params (prepare-entity-listener world entity-id action url)
-      :content-type :json
-      :as :json-strict
-      }
-    )
-  )
