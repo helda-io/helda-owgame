@@ -23,10 +23,8 @@
     :actions {
       :fight {
         :source-model "owgame.BattleUnit"
+        :module-id "battle"
         }
       }
     })
-
-  ;todo Provide listeners for model
-  (save-model-listener :world1 "owgame.BattleUnit" :fight "http://localhost:3100/hooks/fight")
   )
