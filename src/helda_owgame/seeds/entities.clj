@@ -1,6 +1,6 @@
 (ns helda-owgame.seeds.entities
   (:require
-    [helda-owgame.client.entities :refer [save-entity save-entity-listener]]
+    [helda-owgame.client.entities :refer [save-entity]]
     )
   )
 
