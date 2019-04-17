@@ -101,7 +101,7 @@
         "SI" :sign-inn
         "SE" :sign-east
         "SX" :sign-on-crossroad
-      }
+        }
       :geo-objects [
         {
           :map-tag :castle1
@@ -124,8 +124,8 @@
           :x 0 :y 15
           :w 2 :h 2
           }
+        ]
       }
-    }
     :tags [:room1]
     :actions {}
     })
