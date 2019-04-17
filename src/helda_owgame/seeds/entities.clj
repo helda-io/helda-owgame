@@ -58,9 +58,9 @@
         ["TT TT ^^ C1 C1 C1 .. H3 ~~ ~~ ~~ HV V1 V1 V1 ^^ SE"]
         ["TT TT ^^ SX || .. .. .. .. .. rr == == == == == =="]
         ["== == == == XX == == == == == ET __ __ __ ^^ ^^ ^^"]
-        ["HW HW HW ^^ || ^^ ^^ ~~ ~~ ~~ || __ __ __ ^^ ^^ ^^"]
-        ["HW HW HW ^^ || H4 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"]
-        ["HW HW HW ^^ || H5 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"]
+        ["V3 V3 V3 ^^ || ^^ ^^ ~~ ~~ ~~ || __ __ __ ^^ ^^ ^^"]
+        ["V3 V3 V3 ^^ || H4 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"]
+        ["V3 V3 V3 ^^ || H5 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"]
         ["^^ ^^ ^^ ^^ || H6 __ ~~ ~~ ~~ || oo oo oo OO OO OO"]
         ["^^ ^^ ^^ ^^ || ^^ __ __ __ __ || oo oo oo OO OO OO"]
         ["== == \\ ^^ || __ __ __ __ __ || oo oo oo rr == =="]
@@ -71,10 +71,35 @@
         ["oo oo __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."]
         ]
       :room-legend {
-        :e :empty
-        :r :road
-        :c :castle1
-        :v :village1
+        ".." :green
+        "__" :desert
+        "^^" :forest
+        "~~" :water
+        "OO" :hill
+        "oo" :cave
+        "C1" :castle1
+        "V1" :village1
+        "V2" :village2
+        "V3" :village3
+        "HI" :house-inn
+        "H1" :house1
+        "H2" :house2
+        "H3" :house3
+        "H4" :house4
+        "H5" :house5
+        "H6" :house6
+        "==" :h-road
+        "||" :v-road
+        "XX" :x-crossroad
+        "ST" :south-t-crossroad
+        "ET" :east-t-crossroad
+        "//" :west-north-turn
+        "rr" :south-east-turn
+        "\\" :west-sourth-turn
+        "LL" :north-east-turn
+        "SI" :sign-inn
+        "SE" :sign-east
+        "SX" :sign-on-crossroad
       }
       :rooms-dict {:room1 {:sound :wroom-wroom :hero-kind "Cool"}}
     }
