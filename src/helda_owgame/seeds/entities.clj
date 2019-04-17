@@ -105,22 +105,22 @@
       :geo-objects [
         {
           :map-tag :castle1
-          :tile :castle1
-          :entity-tag castle1
+          :tile-id :castle1
+          :entity-tag :castle1
           :x 3 :y 1
           :w 3 :h 3
           }
         {
           :map-tag :village1
-          :tile :village1
-          :entity-tag village1
+          :tile-id :village1
+          :entity-tag :village1
           :x 12 :y 1
           :w 3 :h 3
           }
         {
           :map-tag :cave
-          :tile :small-cave
-          :entity-tag cave1
+          :tile-id :small-cave
+          :entity-tag :cave1
           :x 0 :y 15
           :w 2 :h 2
           }
