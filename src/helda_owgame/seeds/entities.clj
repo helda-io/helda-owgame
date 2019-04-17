@@ -51,26 +51,27 @@
   (save-entity world :helda.RoomMap {
     :description "RoomMap"
     :attrs {
-      :room-tiles [
-        ["^^ ^^ .. .. .. .. .. ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"]
-        ["^^ ^^ .. C1 C1 C1 .. H1 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"]
-        ["^^ ^^ .. C1 C1 C1 .. H2 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"]
-        ["TT TT ^^ C1 C1 C1 .. H3 ~~ ~~ ~~ HV V1 V1 V1 ^^ SE"]
-        ["TT TT ^^ SX || .. .. .. .. .. rr == == == == == =="]
-        ["== == == == XX == == == == == ET __ __ __ ^^ ^^ ^^"]
-        ["V3 V3 V3 ^^ || ^^ ^^ ~~ ~~ ~~ || __ __ __ ^^ ^^ ^^"]
-        ["V3 V3 V3 ^^ || H4 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"]
-        ["V3 V3 V3 ^^ || H5 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"]
-        ["^^ ^^ ^^ ^^ || H6 __ ~~ ~~ ~~ || oo oo oo OO OO OO"]
-        ["^^ ^^ ^^ ^^ || ^^ __ __ __ __ || oo oo oo OO OO OO"]
-        ["== == \\ ^^ || __ __ __ __ __ || oo oo oo rr == =="]
-        ["__ __ LL == ST == == == == == ST == == == // .. .."]
-        ["__ __ __ SI HI __ ^^ V2 V2 V2 .. .. .. .. .. .. .."]
-        ["__ __ __ __ __ __ ^^ V2 V2 V2 .. .. .. .. .. .. .."]
-        ["oo oo __ __ __ __ ^^ V2 V2 V2 .. .. .. OO OO .. .."]
-        ["oo oo __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."]
+      :name :room1
+      :tiles [
+        "^^ ^^ .. .. .. .. .. ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
+        "^^ ^^ .. C1 C1 C1 .. H1 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
+        "^^ ^^ .. C1 C1 C1 .. H2 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
+        "TT TT ^^ C1 C1 C1 .. H3 ~~ ~~ ~~ HV V1 V1 V1 ^^ SE"
+        "TT TT ^^ SX || .. .. .. .. .. rr == == == == == =="
+        "== == == == XX == == == == == ET __ __ __ ^^ ^^ ^^"
+        "V3 V3 V3 ^^ || ^^ ^^ ~~ ~~ ~~ || __ __ __ ^^ ^^ ^^"
+        "V3 V3 V3 ^^ || H4 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"
+        "V3 V3 V3 ^^ || H5 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"
+        "^^ ^^ ^^ ^^ || H6 __ ~~ ~~ ~~ || oo oo oo OO OO OO"
+        "^^ ^^ ^^ ^^ || ^^ __ __ __ __ || oo oo oo OO OO OO"
+        "== == \\ ^^ || __ __ __ __ __ || oo oo oo rr == =="
+        "__ __ LL == ST == == == == == ST == == == // .. .."
+        "__ __ __ SI HI __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
+        "__ __ __ __ __ __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
+        "oo oo __ __ __ __ ^^ V2 V2 V2 .. .. .. OO OO .. .."
+        "oo oo __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
         ]
-      :room-legend {
+      :legend {
         ".." :green
         "__" :desert
         "^^" :forest
@@ -101,7 +102,29 @@
         "SE" :sign-east
         "SX" :sign-on-crossroad
       }
-      :rooms-dict {:room1 {:sound :wroom-wroom :hero-kind "Cool"}}
+      :geo-objects [
+        {
+          :map-tag :castle1
+          :tile :castle1
+          :entity-tag castle1
+          :x 3 :y 1
+          :w 3 :h 3
+          }
+        {
+          :map-tag :village1
+          :tile :village1
+          :entity-tag village1
+          :x 12 :y 1
+          :w 3 :h 3
+          }
+        {
+          :map-tag :cave
+          :tile :small-cave
+          :entity-tag cave1
+          :x 0 :y 15
+          :w 2 :h 2
+          }
+      }
     }
     :tags [:room1]
     :actions {}
