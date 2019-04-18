@@ -53,10 +53,10 @@
     :attrs {
       :name :room1
       :tiles [
-        "^^ ^^ .. .. .. .. .. ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
-        "^^ ^^ .. C1 C1 C1 .. H1 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
-        "^^ ^^ .. C1 C1 C1 .. H2 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
-        "TT TT ^^ C1 C1 C1 .. H3 ~~ ~~ ~~ HV V1 V1 V1 ^^ SE"
+        "^^ ^^ .. C1 C1 C1 C1 ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
+        "^^ ^^ .. C1 C1 C1 C1 H1 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
+        "^^ ^^ .. C1 C1 C1 C1 H2 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
+        "TT TT ^^ C1 00 C1 00 H3 ~~ ~~ ~~ HV V1 00 V1 ^^ SE"
         "TT TT ^^ SX || .. .. .. .. .. rr == == == == == =="
         "== == == == XX == == == == == ET __ __ __ ^^ ^^ ^^"
         "V3 V3 V3 ^^ || ^^ ^^ ~~ ~~ ~~ || __ __ __ ^^ ^^ ^^"
@@ -64,12 +64,12 @@
         "V3 V3 V3 ^^ || H5 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"
         "^^ ^^ ^^ ^^ || H6 __ ~~ ~~ ~~ || oo oo oo OO OO OO"
         "^^ ^^ ^^ ^^ || ^^ __ __ __ __ || oo oo oo OO OO OO"
-        "== == \\ ^^ || __ __ __ __ __ || oo oo oo rr == =="
+        "== == \\ ^^ || __ __ __ __ __ || oo 00 oo rr == =="
         "__ __ LL == ST == == == == == ST == == == // .. .."
         "__ __ __ SI HI __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
         "__ __ __ __ __ __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
         "oo oo __ __ __ __ ^^ V2 V2 V2 .. .. .. OO OO .. .."
-        "oo oo __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
+        "oo 00 __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
         ]
       :legend {
         ".." :green
@@ -101,6 +101,7 @@
         "SI" :sign-inn
         "SE" :sign-east
         "SX" :sign-on-crossroad
+        "00" :map-port
         }
       :geo-objects [
         {
@@ -109,6 +110,10 @@
           :entity-tag :castle1
           :x 3 :y 1
           :w 3 :h 3
+          :ports {
+            :main :castle1-yard
+            :tower :castle1-tower1
+            }
           }
         {
           :map-tag :village1
@@ -142,11 +147,10 @@
         [568 569 570 571]
         [607 608 609 610]
       ]
-      :ports [
-        {:x 1 :y 3 :direction :south}
-        {:x 3 :y 3 :direction :south}
-      ]
-
+      :ports {
+        :main {:x 1 :y 3 :direction :south}
+        :tower {:x 3 :y 3 :direction :south}
+      }
     }
     :tags [:castle1 :world]
     :actions {}
