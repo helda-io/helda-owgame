@@ -129,4 +129,23 @@
     :tags [:room1]
     :actions {}
     })
+  (save-entity world :helda.TileSet {
+    :description "Castle tileset"
+    :attrs {
+      :comp-id :castle1
+      :file-id :world
+      :width 4
+      :height 4
+      :tiles [
+        [490 491 492 493]
+        [529 530 531 532]
+        [568 569 570 571]
+        [607 608 609 610]
+      ]
+
+    }
+    :tags [:castle1 :world]
+    :actions {}
+    })
+  ;todo links
   )
