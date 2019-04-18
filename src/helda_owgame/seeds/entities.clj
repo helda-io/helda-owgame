@@ -159,4 +159,22 @@
     :tags [:castle1 :world]
     :actions {}
     })
+  (save-entity world :helda.ScalableTileSet {
+    :description "Lake tileset"
+    :attrs {
+      :comp-id :lake
+      :file-id :world
+      :nw-corner 669
+      :sw-corner 747
+      :ne-corner 671
+      :se-corner 749
+      :n-line 670
+      :s-line 748
+      :w-line 708
+      :e-line 710
+      :center 709
+    }
+    :tags [:lake :world]
+    :actions {}
+    })
   )
