@@ -130,6 +130,10 @@
           :w 2 :h 2
           }
         ]
+      :transitions {
+        :east :room0
+        :west :room2
+        }
       }
     :tags [:room1]
     :actions {}
@@ -155,5 +159,4 @@
     :tags [:castle1 :world]
     :actions {}
     })
-  ;todo links
   )
