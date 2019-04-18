@@ -142,6 +142,10 @@
         [568 569 570 571]
         [607 608 609 610]
       ]
+      :ports [
+        {:x 1 :y 3 :direction :south}
+        {:x 3 :y 3 :direction :south}
+      ]
 
     }
     :tags [:castle1 :world]
