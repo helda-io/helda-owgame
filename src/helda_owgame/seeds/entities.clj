@@ -138,6 +138,27 @@
     :tags [:room1]
     :actions {}
     })
+  (save-entity world :helda.SingleTile {
+    :description "Grass tile"
+    :attrs {
+      :comp-id :green
+      :file-id :world
+      :tile-code 43
+      }
+    :tags [:green :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "Road EW tile"
+    :attrs {
+      :comp-id :green
+      :file-id :world
+      :tile-code 80
+      }
+    :tags [:green :world]
+    :actions {}
+    })
+  ;todo define border  
   (save-entity world :helda.TileSet {
     :description "Castle tileset"
     :attrs {
