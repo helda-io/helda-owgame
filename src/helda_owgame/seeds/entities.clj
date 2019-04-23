@@ -72,36 +72,36 @@
         "oo 00 __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
         ]
       :legend {
-        ".." :green
-        "__" :desert
-        "^^" :forest
-        "~~" :water
-        "OO" :hill
-        "oo" :cave
-        "C1" :castle1
-        "V1" :village1
-        "V2" :village2
-        "V3" :village3
-        "HI" :house-inn
-        "H1" :house1
-        "H2" :house2
-        "H3" :house3
-        "H4" :house4
-        "H5" :house5
-        "H6" :house6
-        "==" :h-road
-        "||" :v-road
-        "XX" :x-crossroad
-        "ST" :south-t-crossroad
-        "ET" :east-t-crossroad
-        "//" :west-north-turn
-        "rr" :south-east-turn
-        "\\" :west-sourth-turn
-        "LL" :north-east-turn
-        "SI" :sign-inn
-        "SE" :sign-east
-        "SX" :sign-on-crossroad
-        "00" :map-port
+        :green ".."
+        :desert "__"
+        :forest "^^"
+        :water "~~"
+        :hill "OO"
+        :cave "oo"
+        :castle1 "C1"
+        :village1 "V1"
+        :village2 "V2"
+        :village3 "V3"
+        :house-inn "HI"
+        :house1 "H1"
+        :house2 "H2"
+        :house3 "H3"
+        :house4 "H4"
+        :house5 "H5"
+        :house6 "H6"
+        :h-road "=="
+        :v-road "||"
+        :x-crossroad "XX"
+        :south-t-crossroad "ST"
+        :east-t-crossroad "ET"
+        :west-north-turn "//"
+        :south-east-turn "rr"
+        :west-sourth-turn "\\"
+        :north-east-turn "LL"
+        :sign-inn "SI"
+        :sign-east "SE"
+        :sign-on-crossroad "SX"
+        :map-port "00"
         }
       :geo-objects [
         {
@@ -158,7 +158,7 @@
     :tags [:green :world]
     :actions {}
     })
-  ;todo define border  
+  ;todo define border
   (save-entity world :helda.TileSet {
     :description "Castle tileset"
     :attrs {
