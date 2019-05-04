@@ -108,8 +108,8 @@
           :map-tag :castle1
           :tile-id :castle1
           :entity-tag :castle1
-          :x 3 :y 1
-          :w 3 :h 3
+          :x 3 :y 0
+          :w 4 :h 4
           :ports {
             :main :castle1-yard
             :tower :castle1-tower1
@@ -141,9 +141,10 @@
   (save-entity world :helda.SingleTile {
     :description "Grass tile"
     :attrs {
-      :comp-id :green
-      :file-id :world
-      :tile-code 43
+      :compId :green
+      :fileId :world
+      :x 32
+      :y 32
       }
     :tags [:green :world]
     :actions {}
@@ -151,9 +152,10 @@
   (save-entity world :helda.SingleTile {
     :description "Road EW tile"
     :attrs {
-      :comp-id :green
-      :file-id :world
-      :tile-code 80
+      :compId :green
+      :fileId :world
+      :x 32
+      :y 64
       }
     :tags [:green :world]
     :actions {}
@@ -162,15 +164,15 @@
   (save-entity world :helda.TileSet {
     :description "Castle tileset"
     :attrs {
-      :comp-id :castle1
-      :file-id :world
+      :compId :castle1
+      :fileId :world
       :width 4
       :height 4
       :tiles [
-        [490 491 492 493]
-        [529 530 531 532]
-        [568 569 570 571]
-        [607 608 609 610]
+        [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
+        [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
+        [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
+        [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
       ]
       :ports {
         :main {:x 1 :y 3 :direction :south}
@@ -185,15 +187,15 @@
     :attrs {
       :comp-id :lake
       :file-id :world
-      :nw-corner 669
-      :sw-corner 747
-      :ne-corner 671
-      :se-corner 749
-      :n-line 670
-      :s-line 748
-      :w-line 708
-      :e-line 710
-      :center 709
+      :nw-corner {:x 32 :y 64}
+      :sw-corner {:x 32 :y 64}
+      :ne-corner {:x 32 :y 64}
+      :se-corner {:x 32 :y 64}
+      :n-line {:x 32 :y 64}
+      :s-line {:x 32 :y 64}
+      :w-line {:x 32 :y 64}
+      :e-line {:x 32 :y 64}
+      :center {:x 32 :y 64}
     }
     :tags [:lake :world]
     :actions {}
