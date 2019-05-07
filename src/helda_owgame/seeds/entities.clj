@@ -143,8 +143,8 @@
     :attrs {
       :compId :green
       :fileId :world
-      :x 32
-      :y 32
+      :x 2
+      :y 1
       }
     :tags [:green :world]
     :actions {}
@@ -152,12 +152,12 @@
   (save-entity world :helda.SingleTile {
     :description "Road EW tile"
     :attrs {
-      :compId :green
+      :compId :road-ew
       :fileId :world
       :x 32
       :y 64
       }
-    :tags [:green :world]
+    :tags [:road-ew :world]
     :actions {}
     })
   ;todo define border
@@ -169,7 +169,7 @@
       :width 4
       :height 4
       :tiles [
-        [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
+        [{:fileId :world :x 10 :y 10} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
         [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
         [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
         [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
