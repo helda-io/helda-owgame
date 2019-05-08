@@ -96,7 +96,7 @@
         :east-t-crossroad "ET"
         :west-north-turn "//"
         :south-east-turn "rr"
-        :west-sourth-turn "\\"
+        :west-south-turn "\\"
         :north-east-turn "LL"
         :sign-inn "SI"
         :sign-east "SE"
@@ -150,14 +150,102 @@
     :actions {}
     })
   (save-entity world :helda.SingleTile {
-    :description "Road EW tile"
+    :description "Horizontal Road tile"
     :attrs {
-      :compId :road-ew
+      :compId :h-road
       :fileId :world
-      :x 32
-      :y 64
+      :x 1
+      :y 2
       }
-    :tags [:road-ew :world]
+    :tags [:h-road :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "Horizontal Road tile"
+    :attrs {
+      :compId :v-road
+      :fileId :world
+      :x 1
+      :y 3
+      }
+    :tags [:v-road :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "X crossroad tile"
+    :attrs {
+      :compId :x-crossroad
+      :fileId :world
+      :x 8
+      :y 2
+      }
+    :tags [:x-crossroad :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "South-T crossroad tile"
+    :attrs {
+      :compId :south-t-crossroad
+      :fileId :world
+      :x 7
+      :y 2
+      }
+    :tags [:south-t-crossroad :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "East-T crossroad tile"
+    :attrs {
+      :compId :east-t-crossroad
+      :fileId :world
+      :x 7
+      :y 3
+      }
+    :tags [:east-t-crossroad :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "West-North turn tile"
+    :attrs {
+      :compId :west-north-turn
+      :fileId :world
+      :x 3
+      :y 3
+      }
+    :tags [:west-north-turn :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "South-East turn tile"
+    :attrs {
+      :compId :south-east-turn
+      :fileId :world
+      :x 2
+      :y 2
+      }
+    :tags [:south-east-turn :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "West-South turn tile"
+    :attrs {
+      :compId :west-south-turn
+      :fileId :world
+      :x 3
+      :y 2
+      }
+    :tags [:west-south-turn :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "North-East turn tile"
+    :attrs {
+      :compId :north-east-turn
+      :fileId :world
+      :x 2
+      :y 3
+      }
+    :tags [:north-east-turn :world]
     :actions {}
     })
   ;todo define border
