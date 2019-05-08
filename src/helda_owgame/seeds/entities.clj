@@ -253,14 +253,13 @@
     :description "Castle tileset"
     :attrs {
       :compId :castle1
-      :fileId :world
       :width 4
       :height 4
       :tiles [
-        [{:fileId :world :x 10 :y 10} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
-        [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
-        [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
-        [{:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64} {:fileId :world :x 32 :y 64}]
+        [{:fileId :world :x 20 :y 12} {:fileId :world :x 21 :y 12} {:fileId :world :x 22 :y 12} {:fileId :world :x 23 :y 12}]
+        [{:fileId :world :x 20 :y 13} {:fileId :world :x 21 :y 13} {:fileId :world :x 22 :y 13} {:fileId :world :x 23 :y 13}]
+        [{:fileId :world :x 20 :y 14} {:fileId :world :x 21 :y 14} {:fileId :world :x 22 :y 14} {:fileId :world :x 23 :y 14}]
+        [{:fileId :world :x 20 :y 15} {:fileId :world :x 21 :y 15} {:fileId :world :x 22 :y 15} {:fileId :world :x 23 :y 15}]
       ]
       :ports {
         :main {:x 1 :y 3 :direction :south}
