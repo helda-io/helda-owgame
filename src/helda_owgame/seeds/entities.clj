@@ -120,6 +120,20 @@
           :tile-id :village1
           :entity-tag :village1
           :x 12 :y 1
+          :w 2 :h 3
+          }
+        {
+          :map-tag :village2
+          :tile-id :village2
+          :entity-tag :village2
+          :x 8 :y 14
+          :w 3 :h 3
+          }
+        {
+          :map-tag :village3
+          :tile-id :village3
+          :entity-tag :village3
+          :x 1 :y 7
           :w 3 :h 3
           }
         {
@@ -139,7 +153,7 @@
     :actions {}
     })
   (save-entity world :helda.SingleTile {
-    :description "Grass tile"
+    :description "Grass basic tile"
     :attrs {
       :compId :green
       :fileId :world
@@ -147,6 +161,17 @@
       :y 1
       }
     :tags [:green :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "Forest basic tile"
+    :attrs {
+      :compId :forest
+      :fileId :worldB
+      :x 5
+      :y 12
+      }
+    :tags [:forest :world]
     :actions {}
     })
   (save-entity world :helda.SingleTile {
@@ -267,6 +292,54 @@
       }
     }
     :tags [:castle1 :world]
+    :actions {}
+    })
+  (save-entity world :helda.TileSet {
+    :description "Village1 tileset"
+    :attrs {
+      :compId :village1
+      :width 2
+      :height 3
+      :tiles [
+        [{:fileId :worldB :x 1 :y 3} {:fileId :worldB :x 2 :y 3}]
+        [{:fileId :worldB :x 1 :y 4} {:fileId :worldB :x 2 :y 4}]
+        [{:fileId :worldB :x 1 :y 5} {:fileId :worldB :x 2 :y 5}]
+      ]
+      :ports {}
+    }
+    :tags [:village1 :world]
+    :actions {}
+    })
+  (save-entity world :helda.TileSet {
+    :description "Village2 tileset"
+    :attrs {
+      :compId :village2
+      :width 2
+      :height 3
+      :tiles [
+        [{:fileId :worldB :x 3 :y 3} {:fileId :worldB :x 4 :y 3} {:fileId :worldB :x 5 :y 3}]
+        [{:fileId :worldB :x 3 :y 4} {:fileId :worldB :x 4 :y 4} {:fileId :worldB :x 5 :y 4}]
+        [{:fileId :worldB :x 3 :y 5} {:fileId :worldB :x 4 :y 5} {:fileId :worldB :x 5 :y 5}]
+      ]
+      :ports {}
+    }
+    :tags [:village2 :world]
+    :actions {}
+    })
+  (save-entity world :helda.TileSet {
+    :description "Village3 tileset"
+    :attrs {
+      :compId :village3
+      :width 2
+      :height 3
+      :tiles [
+        [{:fileId :worldB :x 1 :y 6} {:fileId :worldB :x 2 :y 6} {:fileId :worldB :x 3 :y 6}]
+        [{:fileId :worldB :x 1 :y 7} {:fileId :worldB :x 2 :y 7} {:fileId :worldB :x 3 :y 7}]
+        [{:fileId :worldB :x 1 :y 8} {:fileId :worldB :x 2 :y 8} {:fileId :worldB :x 3 :y 8}]
+      ]
+      :ports {}
+    }
+    :tags [:village3 :world]
     :actions {}
     })
   (save-entity world :helda.ScalableTileSet {
