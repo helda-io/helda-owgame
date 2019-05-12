@@ -103,6 +103,11 @@
         :sign-on-crossroad "SX"
         :map-port "00"
         }
+      ;todo implement support of backgrounds
+      :backgrounds {
+        :castle1 :green
+        :forest :green
+      }
       :geo-objects [
         {
           :map-tag :castle1
@@ -163,8 +168,9 @@
     :tags [:green :world]
     :actions {}
     })
-  (save-entity world :helda.SingleTile {
-    :description "Forest basic tile"
+  ;todo implement support of foreground tiles
+  (save-entity world :helda.ForegroundTile {
+    :description "Forest foreground tile"
     :attrs {
       :compId :forest
       :fileId :worldB
