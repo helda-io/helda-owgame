@@ -107,6 +107,8 @@
       :backgrounds {
         :castle1 :green
         :forest :green
+        :house-inn :desert
+        :sign-inn :desert
       }
       :geo-objects [
         {
@@ -166,6 +168,17 @@
       :y 1
       }
     :tags [:green :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "Desert basic tile"
+    :attrs {
+      :compId :desert
+      :fileId :world
+      :x 5
+      :y 5
+      }
+    :tags [:desert :world]
     :actions {}
     })
   ;todo implement support of foreground tiles
