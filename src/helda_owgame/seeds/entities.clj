@@ -105,6 +105,7 @@
         }
       ;todo implement support of backgrounds
       :backgrounds {
+        :green :green
         :castle1 :green
         :forest :green
         :house-inn :desert
