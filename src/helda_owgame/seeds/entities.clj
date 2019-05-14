@@ -113,7 +113,7 @@
           :map-tag :castle1
           :tile-id :castle1
           :entity-tag :castle1
-          :x 3 :y 0
+          :x 4 :y 1
           :w 4 :h 4
           :ports {
             :main :castle1-yard
@@ -124,28 +124,28 @@
           :map-tag :village1
           :tile-id :village1
           :entity-tag :village1
-          :x 12 :y 1
+          :x 13 :y 2
           :w 2 :h 3
           }
         {
           :map-tag :village2
           :tile-id :village2
           :entity-tag :village2
-          :x 7 :y 13
+          :x 8 :y 14
           :w 3 :h 3
           }
         {
           :map-tag :village3
           :tile-id :village3
           :entity-tag :village3
-          :x 0 :y 6
+          :x 1 :y 7
           :w 3 :h 3
           }
         {
           :map-tag :cave
           :tile-id :small-cave
           :entity-tag :cave1
-          :x 0 :y 15
+          :x 1 :y 16
           :w 2 :h 2
           }
         ]
