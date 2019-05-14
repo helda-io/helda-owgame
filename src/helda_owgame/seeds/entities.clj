@@ -62,7 +62,7 @@
         "V3 V3 V3 ^^ || ^^ ^^ ~~ ~~ ~~ || __ __ __ ^^ ^^ ^^"
         "V3 V3 V3 ^^ || H4 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"
         "V3 V3 V3 ^^ || H5 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"
-        "^^ ^^ ^^ ^^ || H6 __ ~~ ~~ ~~ || oo oo oo OO OO OO"
+        "^^ ^^ ^^ ^^ || H1 __ ~~ ~~ ~~ || oo oo oo OO OO OO"
         "^^ ^^ ^^ ^^ || ^^ __ __ __ __ || oo oo oo OO OO OO"
         "== == \\ ^^ || __ __ __ __ __ || oo 00 oo rr == =="
         "__ __ LL == ST == == == == == ST == == == // .. .."
@@ -88,7 +88,6 @@
         :house3 "H3"
         :house4 "H4"
         :house5 "H5"
-        :house6 "H6"
         :h-road "=="
         :v-road "||"
         :x-crossroad "XX"
@@ -103,7 +102,6 @@
         :sign-on-crossroad "SX"
         :map-port "00"
         }
-      ;todo implement support of backgrounds
       :backgrounds {
         :castle1 :green
         :forest :green
@@ -181,7 +179,6 @@
     :tags [:desert :world]
     :actions {}
     })
-  ;todo implement support of foreground tiles
   (save-entity world :helda.ForegroundTile {
     :description "Forest foreground tile"
     :attrs {
@@ -191,6 +188,72 @@
       :y 12
       }
     :tags [:forest :world]
+    :actions {}
+    })
+  (save-entity world :helda.ForegroundTile {
+    :description "Forest foreground tile"
+    :attrs {
+      :compId :house-inn
+      :fileId :worldB
+      :x 6
+      :y 2
+      }
+    :tags [:house-inn :world]
+    :actions {}
+    })
+  (save-entity world :helda.ForegroundTile {
+    :description "Forest foreground tile"
+    :attrs {
+      :compId :house1
+      :fileId :worldB
+      :x 6
+      :y 1
+      }
+    :tags [:house1 :world]
+    :actions {}
+    })
+  (save-entity world :helda.ForegroundTile {
+    :description "Forest foreground tile"
+    :attrs {
+      :compId :house2
+      :fileId :worldB
+      :x 7
+      :y 1
+      }
+    :tags [:house2 :world]
+    :actions {}
+    })
+  (save-entity world :helda.ForegroundTile {
+    :description "Forest foreground tile"
+    :attrs {
+      :compId :house3
+      :fileId :worldB
+      :x 8
+      :y 1
+      }
+    :tags [:house3 :world]
+    :actions {}
+    })
+  (save-entity world :helda.ForegroundTile {
+    :description "Forest foreground tile"
+    :attrs {
+      :compId :house4
+      :fileId :worldB
+      :x 6
+      :y 1
+      }
+    :tags [:house4 :world]
+    :actions {}
+    })
+  (save-entity world :helda.ForegroundTile {
+    :description "Forest foreground tile"
+    :attrs {
+      :compId :house5
+      :fileId :worldB
+      :x 7
+      :y 1
+      }
+    :tags [:house5 :world]
     :actions {}
     })
   (save-entity world :helda.SingleTile {
