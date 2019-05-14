@@ -105,7 +105,6 @@
         }
       ;todo implement support of backgrounds
       :backgrounds {
-        :green :green
         :castle1 :green
         :forest :green
         :house-inn :desert
@@ -134,14 +133,14 @@
           :map-tag :village2
           :tile-id :village2
           :entity-tag :village2
-          :x 8 :y 14
+          :x 7 :y 13
           :w 3 :h 3
           }
         {
           :map-tag :village3
           :tile-id :village3
           :entity-tag :village3
-          :x 1 :y 7
+          :x 0 :y 6
           :w 3 :h 3
           }
         {
