@@ -143,6 +143,17 @@
           :w 3 :h 3
           }
         {
+          :map-tag :lake
+          :tile-id :lake
+          :entity-tag :small-lake
+          :x 9 :y 2
+          :tiles [
+            [:nw :nl :ne]
+            [:wl :cl :el]
+            [:sw :sl :se]
+          ]
+          }
+        {
           :map-tag :cave
           :tile-id :small-cave
           :entity-tag :cave1
@@ -437,21 +448,21 @@
     :actions {}
     })
   (save-entity world :helda.ScalableTileSet {
-    :description "Lake tileset"
+    :description "Desert Lake Coast"
     :attrs {
-      :comp-id :lake
+      :comp-id :desert-lake
       :file-id :world
-      :nw-corner {:x 32 :y 64}
-      :sw-corner {:x 32 :y 64}
-      :ne-corner {:x 32 :y 64}
-      :se-corner {:x 32 :y 64}
-      :n-line {:x 32 :y 64}
-      :s-line {:x 32 :y 64}
-      :w-line {:x 32 :y 64}
-      :e-line {:x 32 :y 64}
-      :center {:x 32 :y 64}
+      :nw {:fileId :worldB :x 6 :y 6}
+      :sw {:fileId :worldB :x 6 :y 8}
+      :ne {:fileId :worldB :x 8 :y 6}
+      :se {:fileId :worldB :x 8 :y 8}
+      :nl {:fileId :worldB :x 7 :y 6}
+      :sl {:fileId :worldB :x 7 :y 8}
+      :wl {:fileId :worldB :x 6 :y 7}
+      :el {:fileId :worldB :x 8 :y 7}
+      :cr {:fileId :worldB :x 7 :y 7}
     }
-    :tags [:lake :world]
+    :tags [:desert-lake :world]
     :actions {}
     })
   )
