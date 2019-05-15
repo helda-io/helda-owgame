@@ -69,7 +69,7 @@
         "__ __ __ SI HI __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
         "__ __ __ __ __ __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
         "oo oo __ __ __ __ ^^ V2 V2 V2 .. .. .. OO OO .. .."
-        "oo 00 __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
+        "oo oo __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
         ]
       :legend {
         :green ".."
@@ -107,6 +107,7 @@
         :forest :green
         :house-inn :desert
         :sign-inn :desert
+        :cave :desert
       }
       :geo-objects [
         {
@@ -254,6 +255,17 @@
       :y 1
       }
     :tags [:house5 :world]
+    :actions {}
+    })
+  (save-entity world :helda.ForegroundTile {
+    :description "Forest foreground tile"
+    :attrs {
+      :compId :sign-inn
+      :fileId :worldB
+      :x 2
+      :y 1
+      }
+    :tags [:sign-inn :world]
     :actions {}
     })
   (save-entity world :helda.SingleTile {
