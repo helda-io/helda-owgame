@@ -147,6 +147,7 @@
           :tile-id :lake
           :entity-tag :small-lake
           :x 9 :y 2
+          :w 3 :h 3
           :tiles [
             [:nw :nl :ne]
             [:wl :cl :el]
