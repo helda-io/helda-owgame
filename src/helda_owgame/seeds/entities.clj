@@ -59,12 +59,12 @@
         "TT TT ^^ C1 00 C1 00 H3 ~~ ~~ ~~ HV V1 00 V1 ^^ SE"
         "TT TT ^^ SX || .. .. .. .. .. rr == == == == == =="
         "== == == == XX == == == == == ET __ __ __ ^^ ^^ ^^"
-        "V3 V3 V3 ^^ || ^^ ^^ ~~ ~~ ~~ || __ __ __ ^^ ^^ ^^"
+        "V3 V3 V3 ^^ || ^^ __ ~~ ~~ ~~ || __ __ __ ^^ ^^ ^^"
         "V3 V3 V3 ^^ || H4 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"
         "V3 V3 V3 ^^ || H5 __ ~~ ~~ ~~ || OO OO __ OO OO ^^"
         "^^ ^^ ^^ ^^ || H1 __ ~~ ~~ ~~ || oo oo oo OO OO OO"
         "^^ ^^ ^^ ^^ || ^^ __ __ __ __ || oo oo oo OO OO OO"
-        "== == \\ ^^ || __ __ __ __ __ || oo 00 oo rr == =="
+        "== == \\ ^^ || .. __ __ __ __ || oo 00 oo rr == =="
         "__ __ LL == ST == == == == == ST == == == // .. .."
         "__ __ __ SI HI __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
         "__ __ __ __ __ __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
@@ -144,7 +144,7 @@
           }
         {
           :map-tag :lake
-          :tile-id :desert-lake
+          :tile-id :green-lake
           :entity-tag :small-lake
           :x 9 :y 2
           :w 3 :h 3
@@ -152,7 +152,20 @@
             [:nw :nl :ne]
             [:wl :cr :el]
             [:sw :sl :se]
-          ]
+            ]
+          }
+        {
+          :map-tag :lake
+          :tile-id :desert-lake
+          :entity-tag :big-lake
+          :x 8 :y 7
+          :w 3 :h 4
+          :tiles [
+            [:nw :nl :ne]
+            [:wl :cr :el]
+            [:wl :cr :el]
+            [:sw :sl :se]
+            ]
           }
         {
           :map-tag :cave
@@ -475,6 +488,24 @@
       :cr {:fileId :world :x 7 :y 8}
     }
     :tags [:desert-lake :world]
+    :actions {}
+    })
+  (save-entity world :helda.ScalableTileSet {
+    :description "Green Lake Coast"
+    :attrs {
+      :comp-id :green-lake
+      :file-id :world
+      :nw {:fileId :world :x 1 :y 4}
+      :sw {:fileId :world :x 1 :y 6}
+      :ne {:fileId :world :x 3 :y 4}
+      :se {:fileId :world :x 3 :y 6}
+      :nl {:fileId :world :x 2 :y 4}
+      :sl {:fileId :world :x 2 :y 6}
+      :wl {:fileId :world :x 1 :y 5}
+      :el {:fileId :world :x 3 :y 5}
+      :cr {:fileId :world :x 2 :y 5}
+    }
+    :tags [:green-lake :world]
     :actions {}
     })
   )
