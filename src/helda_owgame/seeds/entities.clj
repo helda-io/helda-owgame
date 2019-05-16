@@ -103,7 +103,7 @@
         :map-port "00"
         }
       :backgrounds {
-        :castle1 :green
+        :castle1 :green ;todo support background for complex comps
         :forest :green
         :house-inn :desert
         :sign-inn :desert
@@ -144,13 +144,13 @@
           }
         {
           :map-tag :lake
-          :tile-id :lake
+          :tile-id :desert-lake
           :entity-tag :small-lake
           :x 9 :y 2
           :w 3 :h 3
           :tiles [
             [:nw :nl :ne]
-            [:wl :cl :el]
+            [:wl :cr :el]
             [:sw :sl :se]
           ]
           }
@@ -190,6 +190,17 @@
       :y 5
       }
     :tags [:desert :world]
+    :actions {}
+    })
+  (save-entity world :helda.SingleTile {
+    :description "Water basic tile"
+    :attrs {
+      :compId :water
+      :fileId :world
+      :x 1
+      :y 14
+      }
+    :tags [:water :world]
     :actions {}
     })
   (save-entity world :helda.ForegroundTile {
@@ -453,15 +464,15 @@
     :attrs {
       :comp-id :desert-lake
       :file-id :world
-      :nw {:fileId :worldB :x 6 :y 6}
-      :sw {:fileId :worldB :x 6 :y 8}
-      :ne {:fileId :worldB :x 8 :y 6}
-      :se {:fileId :worldB :x 8 :y 8}
-      :nl {:fileId :worldB :x 7 :y 6}
-      :sl {:fileId :worldB :x 7 :y 8}
-      :wl {:fileId :worldB :x 6 :y 7}
-      :el {:fileId :worldB :x 8 :y 7}
-      :cr {:fileId :worldB :x 7 :y 7}
+      :nw {:fileId :world :x 6 :y 7}
+      :sw {:fileId :world :x 6 :y 9}
+      :ne {:fileId :world :x 8 :y 7}
+      :se {:fileId :world :x 8 :y 9}
+      :nl {:fileId :world :x 7 :y 7}
+      :sl {:fileId :world :x 7 :y 9}
+      :wl {:fileId :world :x 6 :y 8}
+      :el {:fileId :world :x 8 :y 8}
+      :cr {:fileId :world :x 7 :y 8}
     }
     :tags [:desert-lake :world]
     :actions {}
