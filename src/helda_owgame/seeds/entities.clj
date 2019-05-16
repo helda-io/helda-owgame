@@ -76,7 +76,7 @@
         :desert "__"
         :forest "^^"
         :water "~~"
-        :hill "OO"
+        :mountain "OO"
         :cave "oo"
         :castle1 "C1"
         :village1 "V1"
@@ -168,9 +168,9 @@
             ]
           }
         {
-          :map-tag :cave
-          :tile-id :small-cave
-          :entity-tag :cave1
+          :map-tag :mountain
+          :tile-id :mountain
+          :entity-tag :mountain
           :x 1 :y 16
           :w 2 :h 2
           }
@@ -470,6 +470,21 @@
       :ports {}
     }
     :tags [:village3 :world]
+    :actions {}
+    })
+  (save-entity world :helda.TileSet {
+    :description "Mountain tileset"
+    :attrs {
+      :compId :mountain
+      :width 2
+      :height 2
+      :tiles [
+        [{:fileId :worldB :x 11 :y 5} {:fileId :worldB :x 12 :y 5}]
+        [{:fileId :worldB :x 11 :y 6} {:fileId :worldB :x 12 :y 6}]
+      ]
+      :ports {}
+    }
+    :tags [:mountain :world]
     :actions {}
     })
   (save-entity world :helda.ScalableTileSet {
