@@ -26,5 +26,5 @@
   )
 
 (defn foreground-tile [id descr file-id x y]
-  (foreground-tile :helda.SingleTile id descr file-id x y)
+  (foreground-tile :helda.ForegroundTile id descr file-id x y)
   )
