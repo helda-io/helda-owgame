@@ -1,6 +1,7 @@
 (ns helda-owgame.seeds.entities
   (:require
     [helda-owgame.client.entities :refer [save-entity]]
+    [helda-owgame.client.tiles :as tiles]
     )
   )
 
@@ -183,39 +184,10 @@
     :tags [:room1]
     :actions {}
     })
-  (save-entity world :helda.SingleTile {
-    :description "Grass basic tile"
-    :attrs {
-      :compId :green
-      :fileId :world
-      :x 2
-      :y 1
-      }
-    :tags [:green :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "Desert basic tile"
-    :attrs {
-      :compId :desert
-      :fileId :world
-      :x 5
-      :y 5
-      }
-    :tags [:desert :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "Water basic tile"
-    :attrs {
-      :compId :water
-      :fileId :world
-      :x 1
-      :y 14
-      }
-    :tags [:water :world]
-    :actions {}
-    })
+  (tiles/single-tile :green "Grass basic tile" :world 2 1)
+  (tiles/single-tile :desert "Desert basic tile" :world 5 5)
+  (tiles/single-tile :water "Water basic tile" :world 1 14)
+  
   (save-entity world :helda.ForegroundTile {
     :description "Forest foreground tile"
     :attrs {
