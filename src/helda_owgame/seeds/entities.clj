@@ -187,95 +187,16 @@
   (tiles/single-tile :green "Grass basic tile" :world 2 1)
   (tiles/single-tile :desert "Desert basic tile" :world 5 5)
   (tiles/single-tile :water "Water basic tile" :world 1 14)
-  
-  (save-entity world :helda.ForegroundTile {
-    :description "Forest foreground tile"
-    :attrs {
-      :compId :forest
-      :fileId :worldB
-      :x 5
-      :y 12
-      }
-    :tags [:forest :world]
-    :actions {}
-    })
-  (save-entity world :helda.ForegroundTile {
-    :description "Forest foreground tile"
-    :attrs {
-      :compId :house-inn
-      :fileId :worldB
-      :x 6
-      :y 2
-      }
-    :tags [:house-inn :world]
-    :actions {}
-    })
-  (save-entity world :helda.ForegroundTile {
-    :description "Forest foreground tile"
-    :attrs {
-      :compId :house1
-      :fileId :worldB
-      :x 6
-      :y 1
-      }
-    :tags [:house1 :world]
-    :actions {}
-    })
-  (save-entity world :helda.ForegroundTile {
-    :description "Forest foreground tile"
-    :attrs {
-      :compId :house2
-      :fileId :worldB
-      :x 7
-      :y 1
-      }
-    :tags [:house2 :world]
-    :actions {}
-    })
-  (save-entity world :helda.ForegroundTile {
-    :description "Forest foreground tile"
-    :attrs {
-      :compId :house3
-      :fileId :worldB
-      :x 8
-      :y 1
-      }
-    :tags [:house3 :world]
-    :actions {}
-    })
-  (save-entity world :helda.ForegroundTile {
-    :description "Forest foreground tile"
-    :attrs {
-      :compId :house4
-      :fileId :worldB
-      :x 6
-      :y 1
-      }
-    :tags [:house4 :world]
-    :actions {}
-    })
-  (save-entity world :helda.ForegroundTile {
-    :description "Forest foreground tile"
-    :attrs {
-      :compId :house5
-      :fileId :worldB
-      :x 7
-      :y 1
-      }
-    :tags [:house5 :world]
-    :actions {}
-    })
-  (save-entity world :helda.ForegroundTile {
-    :description "Forest foreground tile"
-    :attrs {
-      :compId :sign-inn
-      :fileId :worldB
-      :x 2
-      :y 1
-      }
-    :tags [:sign-inn :world]
-    :actions {}
-    })
+
+  (tiles/foreground-tile :forest "Forest foreground tile" :worldB 5 12)
+  (tiles/foreground-tile :house-inn "House Inn foreground tile" :worldB 6 2)
+  (tiles/foreground-tile :house1 "House I foreground tile" :worldB 6 1)
+  (tiles/foreground-tile :house2 "House II foreground tile" :worldB 7 1)
+  (tiles/foreground-tile :house3 "House III foreground tile" :worldB 8 1)
+  (tiles/foreground-tile :house4 "House IV foreground tile" :worldB 6 2)
+  (tiles/foreground-tile :house5 "House V foreground tile" :worldB 7 2)
+  (tiles/foreground-tile :sign-inn "INN sign foreground tile" :worldB 2 1)
+
   (save-entity world :helda.SingleTile {
     :description "Horizontal Road tile"
     :attrs {
@@ -375,7 +296,6 @@
     :tags [:north-east-turn :world]
     :actions {}
     })
-  ;todo define border
   (save-entity world :helda.TileSet {
     :description "Castle tileset"
     :attrs {
