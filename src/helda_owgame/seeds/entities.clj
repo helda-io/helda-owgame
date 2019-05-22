@@ -197,105 +197,16 @@
   (tiles/foreground-tile :house5 "House V foreground tile" :worldB 7 2)
   (tiles/foreground-tile :sign-inn "INN sign foreground tile" :worldB 2 1)
 
-  (save-entity world :helda.SingleTile {
-    :description "Horizontal Road tile"
-    :attrs {
-      :compId :h-road
-      :fileId :world
-      :x 1
-      :y 2
-      }
-    :tags [:h-road :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "Horizontal Road tile"
-    :attrs {
-      :compId :v-road
-      :fileId :world
-      :x 1
-      :y 3
-      }
-    :tags [:v-road :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "X crossroad tile"
-    :attrs {
-      :compId :x-crossroad
-      :fileId :world
-      :x 8
-      :y 2
-      }
-    :tags [:x-crossroad :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "South-T crossroad tile"
-    :attrs {
-      :compId :south-t-crossroad
-      :fileId :world
-      :x 7
-      :y 2
-      }
-    :tags [:south-t-crossroad :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "East-T crossroad tile"
-    :attrs {
-      :compId :east-t-crossroad
-      :fileId :world
-      :x 7
-      :y 3
-      }
-    :tags [:east-t-crossroad :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "West-North turn tile"
-    :attrs {
-      :compId :west-north-turn
-      :fileId :world
-      :x 3
-      :y 3
-      }
-    :tags [:west-north-turn :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "South-East turn tile"
-    :attrs {
-      :compId :south-east-turn
-      :fileId :world
-      :x 2
-      :y 2
-      }
-    :tags [:south-east-turn :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "West-South turn tile"
-    :attrs {
-      :compId :west-south-turn
-      :fileId :world
-      :x 3
-      :y 2
-      }
-    :tags [:west-south-turn :world]
-    :actions {}
-    })
-  (save-entity world :helda.SingleTile {
-    :description "North-East turn tile"
-    :attrs {
-      :compId :north-east-turn
-      :fileId :world
-      :x 2
-      :y 3
-      }
-    :tags [:north-east-turn :world]
-    :actions {}
-    })
+  (tiles/single-tile :h-road "Horizontal Road tile" :world 1 2)
+  (tiles/single-tile :v-road "Vertical Road tile" :world 1 3)
+  (tiles/single-tile :x-crossroad "X crossroad tile" :world 8 2)
+  (tiles/single-tile :south-t-crossroad "South-T crossroad tile" :world 7 2)
+  (tiles/single-tile :east-t-crossroad "East-T crossroad tile" :world 7 3)
+  (tiles/single-tile :west-north-turn "West-North turn tile" :world 3 3)
+  (tiles/single-tile :south-east-turn "South-East turn tile" :world 2 2)
+  (tiles/single-tile :west-south-turn "West-South turn tile" :world 3 2)
+  (tiles/single-tile :north-east-turn "North-East turn tile" :world 2 3)
+
   (save-entity world :helda.TileSet {
     :description "Castle tileset"
     :attrs {
