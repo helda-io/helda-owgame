@@ -5,6 +5,31 @@
     )
   )
 
+(defn seed-tiles []
+  (tiles/single-tile :green "Grass basic tile" :world 2 1)
+  (tiles/single-tile :desert "Desert basic tile" :world 5 5)
+  (tiles/single-tile :water "Water basic tile" :world 1 14)
+
+  (tiles/foreground-tile :forest "Forest foreground tile" :worldB 5 12)
+  (tiles/foreground-tile :house-inn "House Inn foreground tile" :worldB 6 2)
+  (tiles/foreground-tile :house1 "House I foreground tile" :worldB 6 1)
+  (tiles/foreground-tile :house2 "House II foreground tile" :worldB 7 1)
+  (tiles/foreground-tile :house3 "House III foreground tile" :worldB 8 1)
+  (tiles/foreground-tile :house4 "House IV foreground tile" :worldB 6 2)
+  (tiles/foreground-tile :house5 "House V foreground tile" :worldB 7 2)
+  (tiles/foreground-tile :sign-inn "INN sign foreground tile" :worldB 2 1)
+
+  (tiles/single-tile :h-road "Horizontal Road tile" :world 1 2)
+  (tiles/single-tile :v-road "Vertical Road tile" :world 1 3)
+  (tiles/single-tile :x-crossroad "X crossroad tile" :world 8 2)
+  (tiles/single-tile :south-t-crossroad "South-T crossroad tile" :world 7 2)
+  (tiles/single-tile :east-t-crossroad "East-T crossroad tile" :world 7 3)
+  (tiles/single-tile :west-north-turn "West-North turn tile" :world 3 3)
+  (tiles/single-tile :south-east-turn "South-East turn tile" :world 2 2)
+  (tiles/single-tile :west-south-turn "West-South turn tile" :world 3 2)
+  (tiles/single-tile :north-east-turn "North-East turn tile" :world 2 3)
+  )
+
 (defn seed-entities [world]
   (println
     (save-entity world :owgame.BattleUnit {
@@ -184,28 +209,6 @@
     :tags [:room1]
     :actions {}
     })
-  (tiles/single-tile :green "Grass basic tile" :world 2 1)
-  (tiles/single-tile :desert "Desert basic tile" :world 5 5)
-  (tiles/single-tile :water "Water basic tile" :world 1 14)
-
-  (tiles/foreground-tile :forest "Forest foreground tile" :worldB 5 12)
-  (tiles/foreground-tile :house-inn "House Inn foreground tile" :worldB 6 2)
-  (tiles/foreground-tile :house1 "House I foreground tile" :worldB 6 1)
-  (tiles/foreground-tile :house2 "House II foreground tile" :worldB 7 1)
-  (tiles/foreground-tile :house3 "House III foreground tile" :worldB 8 1)
-  (tiles/foreground-tile :house4 "House IV foreground tile" :worldB 6 2)
-  (tiles/foreground-tile :house5 "House V foreground tile" :worldB 7 2)
-  (tiles/foreground-tile :sign-inn "INN sign foreground tile" :worldB 2 1)
-
-  (tiles/single-tile :h-road "Horizontal Road tile" :world 1 2)
-  (tiles/single-tile :v-road "Vertical Road tile" :world 1 3)
-  (tiles/single-tile :x-crossroad "X crossroad tile" :world 8 2)
-  (tiles/single-tile :south-t-crossroad "South-T crossroad tile" :world 7 2)
-  (tiles/single-tile :east-t-crossroad "East-T crossroad tile" :world 7 3)
-  (tiles/single-tile :west-north-turn "West-North turn tile" :world 3 3)
-  (tiles/single-tile :south-east-turn "South-East turn tile" :world 2 2)
-  (tiles/single-tile :west-south-turn "West-South turn tile" :world 3 2)
-  (tiles/single-tile :north-east-turn "North-East turn tile" :world 2 3)
 
   (save-entity world :helda.TileSet {
     :description "Castle tileset"
