@@ -39,7 +39,11 @@
       :width (-> rows first count)
       :height (count rows)
       :tiles (map
-        #(map (fn [t] {:fileId file-id :x (first t) :y (second t)}) %)
+        #(map (fn [t] {
+          :x (first t)
+          :y (second t)
+          :fileId (or (get t 2) file-id)
+          }) %)
         rows
         )
       }

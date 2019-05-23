@@ -28,6 +28,38 @@
   (tiles/single-tile :south-east-turn "South-East turn tile" :world 2 2)
   (tiles/single-tile :west-south-turn "West-South turn tile" :world 3 2)
   (tiles/single-tile :north-east-turn "North-East turn tile" :world 2 3)
+
+  (tiles/tileset :castle1 "Castle tileset"
+    :worldB
+    [[14 3] [15 3] [16 3] [0 0 :empty]]
+    [[14 4] [15 4] [16 4] [8 11]]
+    [[14 5] [15 5] [16 5] [8 12]]
+    [[14 6] [15 6] [16 6] [8 13]]
+    )
+
+  (tiles/tileset :village1 "Village1 tileset"
+    :worldB
+    [[1 3] [2 3]]
+    [[1 4] [2 4]]
+    [[1 5] [2 5]]
+    )
+  (tiles/tileset :village2 "Village2 tileset"
+    :worldB
+    [[3 3] [4 3] [5 3]]
+    [[3 4] [4 4] [5 4]]
+    [[3 5] [4 5] [5 5]]
+    )
+  (tiles/tileset :village3 "Village3 tileset"
+    :worldB
+    [[1 6] [2 6] [3 6]]
+    [[1 7] [2 7] [3 7]]
+    [[1 8] [2 8] [3 8]]
+    )
+  (tiles/tileset :mountain "Mountain tileset"
+    :worldB
+    [[11 5] [12 5]]
+    [[11 6] [12 6]]
+    )
   )
 
 (defn seed-entities [world]
@@ -210,89 +242,6 @@
     :actions {}
     })
 
-  (save-entity world :helda.TileSet {
-    :description "Castle tileset"
-    :attrs {
-      :compId :castle1
-      :width 4
-      :height 4
-      :tiles [
-        [{:fileId :worldB :x 14 :y 3} {:fileId :worldB :x 15 :y 3} {:fileId :worldB :x 16 :y 3} {:fileId :empty}]
-        [{:fileId :worldB :x 14 :y 4} {:fileId :worldB :x 15 :y 4} {:fileId :worldB :x 16 :y 4} {:fileId :worldB :x 8 :y 11}]
-        [{:fileId :worldB :x 14 :y 5} {:fileId :worldB :x 15 :y 5} {:fileId :worldB :x 16 :y 5} {:fileId :worldB :x 8 :y 12}]
-        [{:fileId :worldB :x 14 :y 6} {:fileId :worldB :x 15 :y 6} {:fileId :worldB :x 16 :y 6} {:fileId :worldB :x 8 :y 13}]
-      ]
-      :ports {
-        :main {:x 1 :y 3 :direction :south}
-        :tower {:x 3 :y 3 :direction :south}
-      }
-    }
-    :tags [:castle1 :world]
-    :actions {}
-    })
-  (save-entity world :helda.TileSet {
-    :description "Village1 tileset"
-    :attrs {
-      :compId :village1
-      :width 2
-      :height 3
-      :tiles [
-        [{:fileId :worldB :x 1 :y 3} {:fileId :worldB :x 2 :y 3}]
-        [{:fileId :worldB :x 1 :y 4} {:fileId :worldB :x 2 :y 4}]
-        [{:fileId :worldB :x 1 :y 5} {:fileId :worldB :x 2 :y 5}]
-      ]
-      :ports {}
-    }
-    :tags [:village1 :world]
-    :actions {}
-    })
-  (save-entity world :helda.TileSet {
-    :description "Village2 tileset"
-    :attrs {
-      :compId :village2
-      :width 2
-      :height 3
-      :tiles [
-        [{:fileId :worldB :x 3 :y 3} {:fileId :worldB :x 4 :y 3} {:fileId :worldB :x 5 :y 3}]
-        [{:fileId :worldB :x 3 :y 4} {:fileId :worldB :x 4 :y 4} {:fileId :worldB :x 5 :y 4}]
-        [{:fileId :worldB :x 3 :y 5} {:fileId :worldB :x 4 :y 5} {:fileId :worldB :x 5 :y 5}]
-      ]
-      :ports {}
-    }
-    :tags [:village2 :world]
-    :actions {}
-    })
-  (save-entity world :helda.TileSet {
-    :description "Village3 tileset"
-    :attrs {
-      :compId :village3
-      :width 2
-      :height 3
-      :tiles [
-        [{:fileId :worldB :x 1 :y 6} {:fileId :worldB :x 2 :y 6} {:fileId :worldB :x 3 :y 6}]
-        [{:fileId :worldB :x 1 :y 7} {:fileId :worldB :x 2 :y 7} {:fileId :worldB :x 3 :y 7}]
-        [{:fileId :worldB :x 1 :y 8} {:fileId :worldB :x 2 :y 8} {:fileId :worldB :x 3 :y 8}]
-      ]
-      :ports {}
-    }
-    :tags [:village3 :world]
-    :actions {}
-    })
-  (save-entity world :helda.TileSet {
-    :description "Mountain tileset"
-    :attrs {
-      :compId :mountain
-      :width 2
-      :height 2
-      :tiles [
-        [{:fileId :worldB :x 11 :y 5} {:fileId :worldB :x 12 :y 5}]
-        [{:fileId :worldB :x 11 :y 6} {:fileId :worldB :x 12 :y 6}]
-      ]
-      :ports {}
-    }
-    :tags [:mountain :world]
-    :actions {}
-    })
   (save-entity world :helda.ScalableTileSet {
     :description "Desert Lake Coast"
     :attrs {
