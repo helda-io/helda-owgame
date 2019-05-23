@@ -9,8 +9,8 @@
 ;todo implement update for SingleTile
 
 (defn single-tile
-  ([type id descr file-id x y]
-    (save-entity tiles-world type {
+  ([model id descr file-id x y]
+    (save-entity tiles-world model {
       :description descr
       :attrs {
         :compId id
@@ -53,7 +53,7 @@
   )
 
 (defn scalable-tileset [id descr attrs]
-  (save-entity tiles-world type {
+  (save-entity tiles-world :helda.ScalableTileSet {
     :description descr
     :attrs (assoc attrs :comp-id id)
     :tags [id]
