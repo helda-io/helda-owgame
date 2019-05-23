@@ -51,3 +51,12 @@
     :actions {}
     })
   )
+
+(defn scalable-tileset [id descr attrs]
+  (save-entity tiles-world type {
+    :description descr
+    :attrs (assoc attrs :comp-id id)
+    :tags [id]
+    :actions {}
+    })
+  )

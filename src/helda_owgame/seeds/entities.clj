@@ -60,6 +60,32 @@
     [[11 5] [12 5]]
     [[11 6] [12 6]]
     )
+
+  (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
+    {
+      :nw {:fileId :world :x 6 :y 7}
+      :sw {:fileId :world :x 6 :y 9}
+      :ne {:fileId :world :x 8 :y 7}
+      :se {:fileId :world :x 8 :y 9}
+      :nl {:fileId :world :x 7 :y 7}
+      :sl {:fileId :world :x 7 :y 9}
+      :wl {:fileId :world :x 6 :y 8}
+      :el {:fileId :world :x 8 :y 8}
+      :cr {:fileId :world :x 7 :y 8}
+    })
+
+  (tiles/scalable-tileset :green-lake "Green Lake Coast"
+    {
+      :nw {:fileId :world :x 1 :y 4}
+      :sw {:fileId :world :x 1 :y 6}
+      :ne {:fileId :world :x 3 :y 4}
+      :se {:fileId :world :x 3 :y 6}
+      :nl {:fileId :world :x 2 :y 4}
+      :sl {:fileId :world :x 2 :y 6}
+      :wl {:fileId :world :x 1 :y 5}
+      :el {:fileId :world :x 3 :y 5}
+      :cr {:fileId :world :x 2 :y 5}
+    })
   )
 
 (defn seed-entities [world]
@@ -239,43 +265,6 @@
         }
       }
     :tags [:room1]
-    :actions {}
-    })
-
-  (save-entity world :helda.ScalableTileSet {
-    :description "Desert Lake Coast"
-    :attrs {
-      :comp-id :desert-lake
-      :file-id :world
-      :nw {:fileId :world :x 6 :y 7}
-      :sw {:fileId :world :x 6 :y 9}
-      :ne {:fileId :world :x 8 :y 7}
-      :se {:fileId :world :x 8 :y 9}
-      :nl {:fileId :world :x 7 :y 7}
-      :sl {:fileId :world :x 7 :y 9}
-      :wl {:fileId :world :x 6 :y 8}
-      :el {:fileId :world :x 8 :y 8}
-      :cr {:fileId :world :x 7 :y 8}
-    }
-    :tags [:desert-lake :world]
-    :actions {}
-    })
-  (save-entity world :helda.ScalableTileSet {
-    :description "Green Lake Coast"
-    :attrs {
-      :comp-id :green-lake
-      :file-id :world
-      :nw {:fileId :world :x 1 :y 4}
-      :sw {:fileId :world :x 1 :y 6}
-      :ne {:fileId :world :x 3 :y 4}
-      :se {:fileId :world :x 3 :y 6}
-      :nl {:fileId :world :x 2 :y 4}
-      :sl {:fileId :world :x 2 :y 6}
-      :wl {:fileId :world :x 1 :y 5}
-      :el {:fileId :world :x 3 :y 5}
-      :cr {:fileId :world :x 2 :y 5}
-    }
-    :tags [:green-lake :world]
     :actions {}
     })
   )
