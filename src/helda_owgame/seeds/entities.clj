@@ -2,6 +2,7 @@
   (:require
     [helda-owgame.client.entities :refer [save-entity]]
     [helda-owgame.client.tiles :as tiles]
+    [helda-owgame.client.maps :as maps]
     )
   )
 
@@ -132,30 +133,9 @@
   )
 
 (defn seed-world [world]
-  (save-entity world :helda.RoomMap {
-    :description "RoomMap"
-    :attrs {
-      :name :room1
-      :tiles [
-        "^^ ^^ .. C1 C1 C1 C1 ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
-        "^^ ^^ .. C1 C1 C1 C1 H1 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
-        "^^ ^^ .. C1 C1 C1 C1 H2 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
-        "TT TT ^^ C1 00 C1 00 H3 ~~ ~~ ~~ HV V1 00 V1 ^^ SE"
-        "TT TT ^^ SX || .. .. .. .. .. rr == == == == == =="
-        "== == == == XX == == == == == ET __ __ __ ^^ ^^ ^^"
-        "V3 V3 V3 ^^ || ^^ __ __ __ __ || __ __ __ ^^ ^^ ^^"
-        "V3 V3 V3 ^^ || H4 ~~ ~~ ~~ __ || OO OO __ OO OO ^^"
-        "V3 V3 V3 ^^ || H5 ~~ ~~ ~~ __ || OO OO __ OO OO ^^"
-        "^^ ^^ ^^ ^^ || H1 ~~ ~~ ~~ __ || oo oo oo OO OO OO"
-        "^^ ^^ ^^ ^^ || ^^ ~~ ~~ ~~ __ || oo oo oo OO OO OO"
-        "== == \\ ^^ || .. __ __ __ __ || oo 00 oo rr == =="
-        "__ __ LL == ST == == == == == ST == == == // .. .."
-        "__ __ __ SI HI __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
-        "__ __ __ __ __ __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
-        "oo oo __ __ __ __ ^^ V2 V2 V2 .. .. .. OO OO .. .."
-        "oo oo __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
-        ]
-      :legend {
+  (->
+    (maps/init-room-map :room1 "MVP map"
+      {
         :green ".."
         :desert "__"
         :forest "^^"
@@ -186,85 +166,96 @@
         :sign-on-crossroad "SX"
         :map-port "00"
         }
-      :backgrounds {
+      {
         :castle1 :green ;todo support background for complex comps
         :forest :green
         :house-inn :desert
         :sign-inn :desert
         :cave :desert
-      }
-      :geo-objects [
-        {
-          :map-tag :castle1
-          :tile-id :castle1
-          :entity-tag :castle1
-          :x 4 :y 1
-          :w 4 :h 4
-          :ports {
-            :main :castle1-yard
-            :tower :castle1-tower1
-            }
-          }
-        {
-          :map-tag :village1
-          :tile-id :village1
-          :entity-tag :village1
-          :x 13 :y 2
-          :w 2 :h 3
-          }
-        {
-          :map-tag :village2
-          :tile-id :village2
-          :entity-tag :village2
-          :x 8 :y 14
-          :w 3 :h 3
-          }
-        {
-          :map-tag :village3
-          :tile-id :village3
-          :entity-tag :village3
-          :x 1 :y 7
-          :w 3 :h 3
-          }
-        {
-          :map-tag :lake
-          :tile-id :green-lake
-          :entity-tag :small-lake
-          :x 9 :y 2
-          :w 3 :h 3
-          :tiles [
-            [:nw :nl :ne]
-            [:wl :cr :el]
-            [:sw :sl :se]
-            ]
-          }
-        {
-          :map-tag :lake
-          :tile-id :desert-lake
-          :entity-tag :big-lake
-          :x 7 :y 8
-          :w 3 :h 4
-          :tiles [
-            [:nw :nl :ne]
-            [:wl :cr :el]
-            [:wl :cr :el]
-            [:sw :sl :se]
-            ]
-          }
-        {
-          :map-tag :mountain
-          :tile-id :mountain
-          :entity-tag :mountain
-          :x 1 :y 16
-          :w 2 :h 2
-          }
-        ]
-      :transitions {
-        :east :room0
-        :west :room2
         }
-      }
-    :tags [:room1]
-    :actions {}
-    })
+
+      "^^ ^^ .. C1 C1 C1 C1 ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
+      "^^ ^^ .. C1 C1 C1 C1 H1 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
+      "^^ ^^ .. C1 C1 C1 C1 H2 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
+      "TT TT ^^ C1 00 C1 00 H3 ~~ ~~ ~~ HV V1 00 V1 ^^ SE"
+      "TT TT ^^ SX || .. .. .. .. .. rr == == == == == =="
+      "== == == == XX == == == == == ET __ __ __ ^^ ^^ ^^"
+      "V3 V3 V3 ^^ || ^^ __ __ __ __ || __ __ __ ^^ ^^ ^^"
+      "V3 V3 V3 ^^ || H4 ~~ ~~ ~~ __ || OO OO __ OO OO ^^"
+      "V3 V3 V3 ^^ || H5 ~~ ~~ ~~ __ || OO OO __ OO OO ^^"
+      "^^ ^^ ^^ ^^ || H1 ~~ ~~ ~~ __ || oo oo oo OO OO OO"
+      "^^ ^^ ^^ ^^ || ^^ ~~ ~~ ~~ __ || oo oo oo OO OO OO"
+      "== == \\ ^^ || .. __ __ __ __ || oo 00 oo rr == =="
+      "__ __ LL == ST == == == == == ST == == == // .. .."
+      "__ __ __ SI HI __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
+      "__ __ __ __ __ __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
+      "oo oo __ __ __ __ ^^ V2 V2 V2 .. .. .. OO OO .. .."
+      "oo oo __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
+      )
+    (add-geo-object {
+      :entity-tag :castle1
+      :tile-id :castle1 ;to lookup component
+      :map-tag :castle1 ;legend
+      :x 4 :y 1
+      :w 4 :h 4
+      :ports {
+        :main :castle1-yard
+        :tower :castle1-tower1
+        }
+      })
+    (add-geo-object {
+      :entity-tag :village1
+      :tile-id :village1
+      :map-tag :village1
+      :x 13 :y 2
+      :w 2 :h 3
+      })
+    (add-geo-object {
+      :entity-tag :village2
+      :tile-id :village2
+      :map-tag :village2
+      :x 8 :y 14
+      :w 3 :h 3
+      })
+    (add-geo-object {
+      :entity-tag :village3
+      :tile-id :village3
+      :map-tag :village3
+      :x 1 :y 7
+      :w 3 :h 3
+      })
+    (add-geo-object {
+      :entity-tag :mountain
+      :tile-id :mountain
+      :map-tag :mountain
+      :x 1 :y 16
+      :w 2 :h 2
+      })
+    (add-geo-object {
+      :entity-tag :small-lake
+      :tile-id :green-lake
+      :map-tag :lake
+      :x 9 :y 2
+      :w 3 :h 3
+      :tiles [
+        [:nw :nl :ne]
+        [:wl :cr :el]
+        [:sw :sl :se]
+        ]
+      })
+    (add-geo-object {
+      :entity-tag :big-lake
+      :tile-id :desert-lake
+      :map-tag :lake
+      :x 7 :y 8
+      :w 3 :h 4
+      :tiles [
+        [:nw :nl :ne]
+        [:wl :cr :el]
+        [:wl :cr :el]
+        [:sw :sl :se]
+        ]
+      })
+    (maps/save-room-map world)
+    )
   )

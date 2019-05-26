@@ -21,6 +21,6 @@
   (update-in target-map [:attrs :geo-objects] conj geo)
   )
 
-(defn save-room-map [world room-map]
+(defn save-room-map [room-map world]
   (save-entity world :helda.RoomMap room-map)
   )
