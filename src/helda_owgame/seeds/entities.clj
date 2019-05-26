@@ -192,7 +192,7 @@
       "oo oo __ __ __ __ ^^ V2 V2 V2 .. .. .. OO OO .. .."
       "oo oo __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
       )
-    (add-geo-object {
+    (maps/add-geo-object {
       :entity-tag :castle1
       :tile-id :castle1 ;to lookup component
       :map-tag :castle1 ;legend
@@ -203,35 +203,35 @@
         :tower :castle1-tower1
         }
       })
-    (add-geo-object {
+    (maps/add-geo-object {
       :entity-tag :village1
       :tile-id :village1
       :map-tag :village1
       :x 13 :y 2
       :w 2 :h 3
       })
-    (add-geo-object {
+    (maps/add-geo-object {
       :entity-tag :village2
       :tile-id :village2
       :map-tag :village2
       :x 8 :y 14
       :w 3 :h 3
       })
-    (add-geo-object {
+    (maps/add-geo-object {
       :entity-tag :village3
       :tile-id :village3
       :map-tag :village3
       :x 1 :y 7
       :w 3 :h 3
       })
-    (add-geo-object {
+    (maps/add-geo-object {
       :entity-tag :mountain
       :tile-id :mountain
       :map-tag :mountain
       :x 1 :y 16
       :w 2 :h 2
       })
-    (add-geo-object {
+    (maps/add-geo-object {
       :entity-tag :small-lake
       :tile-id :green-lake
       :map-tag :lake
@@ -243,7 +243,7 @@
         [:sw :sl :se]
         ]
       })
-    (add-geo-object {
+    (maps/add-geo-object {
       :entity-tag :big-lake
       :tile-id :desert-lake
       :map-tag :lake
