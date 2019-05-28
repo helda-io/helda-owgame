@@ -136,7 +136,7 @@
   (->
     (maps/init-room-map :room1 "MVP map"
       {
-        :green ".."
+        :green "::"
         :desert "__"
         :forest "^^"
         :water "~~"
@@ -167,36 +167,38 @@
         :map-port "00"
         }
       {
-        :castle1 :green ;todo support background for complex comps
+        :castle1 :green
         :forest :green
-        :house-inn :desert
-        :sign-inn :desert
-        :cave :desert
+        :house-inn :green
+        :sign-inn :green
+        :cave :green
         }
 
-      ".. .. V1 V1 V1 .. .. .. .. .. .. .. .. HH HH HH HH"
-      ".. .. V1 V1 V1 rr == == == == == == .. HH HH HH HH"
-      ".. .. V1 V1 V1 || .. .. .. .. .. .. .. HH HH HH HH"
-      ".. .. rr ST == // r~ -~ -~ -~ -~ -~ \" HH HH oo HH"
-      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. .. || .."
-      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. .. || .."
-      "-~ -~ BB -~ -~ -~ -~ ~~ .. .. .. ~~ ~| .. .. || .."
-      "~~ ~~ BB ~~ ~~ ~~ ~~ ~~ .. H3 .. ~~ ~| .. .. || .."
-      "_~ _~ BB _~ _~ _~ _~ ~~ .. .. .. ~~ ~| .. .. || .."
-      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. rr // .."
-      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. || .. .."
-      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. || TT TT"
-      ".. .. LL == == \\ L~ _~ _~ _~ _~ _~ ~/ .. || TT TT"
-      "MM MM MM MM MM || V2 V2 .. .. .. .. .. .. || TT TT"
+      ":: :: V1 V1 V1 :: :: :: :: :: :: :: :: HH HH HH HH"
+      ":: :: V1 V1 V1 rr == == == == == == :: HH HH HH HH"
+      ":: :: V1 V1 V1 || :: :: :: :: :: :: :: HH HH HH HH"
+      ":: :: rr ST == // r~ -~ -~ -~ -~ -~ \" HH HH oo HH"
+      ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: :: || ::"
+      ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: :: || ::"
+      "-~ -~ BB -~ -~ -~ -~ ~~ :: :: :: ~~ ~| :: :: || ::"
+      "~~ ~~ BB ~~ ~~ ~~ ~~ ~~ :: H3 :: ~~ ~| :: :: || ::"
+      "_~ _~ BB _~ _~ _~ _~ ~~ :: :: :: ~~ ~| :: :: || ::"
+      ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: rr // ::"
+      ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
+      ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || TT TT"
+      ":: :: LL == == \\ L~ _~ _~ _~ _~ _~ ~/ :: || TT TT"
+      "MM MM MM MM MM || V2 V2 :: :: :: :: :: :: || TT TT"
       "MM MM MM MM MM || V2 V2 rr == == == == == ST == =="
-      "MM MM MM MM MM || V2 V2 || .. .. .. .. .. .. .. .."
-      "MM MM MM MM MM LL == == // .. .. .. .. .. .. .. .."
+      "MM MM MM MM MM || V2 V2 || :: :: :: :: :: :: :: ::"
+      "MM MM MM MM MM LL == == // :: :: :: :: :: :: :: ::"
       )
+    (maps/save-room-map world)
+    )
 
   (->
     (maps/init-room-map :mega "Mega map"
       {
-        :green ".."
+        :green "::"
         :desert "__"
         :forest "^^"
         :water "~~"
@@ -227,30 +229,30 @@
         :map-port "00"
         }
       {
-        :castle1 :green ;todo support background for complex comps
+        :castle1 :green
         :forest :green
         :house-inn :desert
         :sign-inn :desert
         :cave :desert
         }
 
-      "^^ ^^ .. C1 C1 C1 C1 ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
-      "^^ ^^ .. C1 C1 C1 C1 H1 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
-      "^^ ^^ .. C1 C1 C1 C1 H2 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
+      "^^ ^^ :: C1 C1 C1 C1 ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
+      "^^ ^^ :: C1 C1 C1 C1 H1 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
+      "^^ ^^ :: C1 C1 C1 C1 H2 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
       "TT TT ^^ C1 00 C1 00 H3 ~~ ~~ ~~ HV V1 00 V1 ^^ SE"
-      "TT TT ^^ SX || .. .. .. .. .. rr == == == == == =="
+      "TT TT ^^ SX || :: :: :: :: :: rr == == == == == =="
       "== == == == XX == == == == == ET __ __ __ ^^ ^^ ^^"
       "V3 V3 V3 ^^ || ^^ __ __ __ __ || __ __ __ ^^ ^^ ^^"
       "V3 V3 V3 ^^ || H4 ~~ ~~ ~~ __ || OO OO __ OO OO ^^"
       "V3 V3 V3 ^^ || H5 ~~ ~~ ~~ __ || OO OO __ OO OO ^^"
       "^^ ^^ ^^ ^^ || H1 ~~ ~~ ~~ __ || oo oo oo OO OO OO"
       "^^ ^^ ^^ ^^ || ^^ ~~ ~~ ~~ __ || oo oo oo OO OO OO"
-      "== == \\ ^^ || .. __ __ __ __ || oo 00 oo rr == =="
-      "__ __ LL == ST == == == == == ST == == == // .. .."
-      "__ __ __ SI HI __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
-      "__ __ __ __ __ __ ^^ V2 V2 V2 .. .. .. .. .. .. .."
-      "oo oo __ __ __ __ ^^ V2 V2 V2 .. .. .. OO OO .. .."
-      "oo oo __ __ __ __ ^^ .. .. .. .. .. .. OO OO .. .."
+      "== == \\ ^^ || :: __ __ __ __ || oo 00 oo rr == =="
+      "__ __ LL == ST == == == == == ST == == == // :: ::"
+      "__ __ __ SI HI __ ^^ V2 V2 V2 :: :: :: :: :: :: ::"
+      "__ __ __ __ __ __ ^^ V2 V2 V2 :: :: :: :: :: :: ::"
+      "oo oo __ __ __ __ ^^ V2 V2 V2 :: :: :: OO OO :: ::"
+      "oo oo __ __ __ __ ^^ :: :: :: :: :: :: OO OO :: ::"
       )
     (maps/add-geo-object {
       :entity-tag :castle1
