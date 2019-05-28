@@ -174,6 +174,66 @@
         :cave :desert
         }
 
+      ".. .. V1 V1 V1 .. .. .. .. .. .. .. .. HH HH HH HH"
+      ".. .. V1 V1 V1 rr == == == == == == .. HH HH HH HH"
+      ".. .. V1 V1 V1 || .. .. .. .. .. .. .. HH HH HH HH"
+      ".. .. rr ST == // r~ -~ -~ -~ -~ -~ \" HH HH oo HH"
+      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. .. || .."
+      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. .. || .."
+      "-~ -~ BB -~ -~ -~ -~ ~~ .. .. .. ~~ ~| .. .. || .."
+      "~~ ~~ BB ~~ ~~ ~~ ~~ ~~ .. H3 .. ~~ ~| .. .. || .."
+      "_~ _~ BB _~ _~ _~ _~ ~~ .. .. .. ~~ ~| .. .. || .."
+      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. rr // .."
+      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. || .. .."
+      ".. .. || .. .. .. |~ ~~ ~~ ~~ ~~ ~~ ~| .. || TT TT"
+      ".. .. LL == == \\ L~ _~ _~ _~ _~ _~ ~/ .. || TT TT"
+      "MM MM MM MM MM || V2 V2 .. .. .. .. .. .. || TT TT"
+      "MM MM MM MM MM || V2 V2 rr == == == == == ST == =="
+      "MM MM MM MM MM || V2 V2 || .. .. .. .. .. .. .. .."
+      "MM MM MM MM MM LL == == // .. .. .. .. .. .. .. .."
+      )
+
+  (->
+    (maps/init-room-map :mega "Mega map"
+      {
+        :green ".."
+        :desert "__"
+        :forest "^^"
+        :water "~~"
+        :mountain "OO"
+        :cave "oo"
+        :castle1 "C1"
+        :village1 "V1"
+        :village2 "V2"
+        :village3 "V3"
+        :house-inn "HI"
+        :house1 "H1"
+        :house2 "H2"
+        :house3 "H3"
+        :house4 "H4"
+        :house5 "H5"
+        :h-road "=="
+        :v-road "||"
+        :x-crossroad "XX"
+        :south-t-crossroad "ST"
+        :east-t-crossroad "ET"
+        :west-north-turn "//"
+        :south-east-turn "rr"
+        :west-south-turn "\\"
+        :north-east-turn "LL"
+        :sign-inn "SI"
+        :sign-east "SE"
+        :sign-on-crossroad "SX"
+        :map-port "00"
+        }
+      {
+        :castle1 :green ;todo support background for complex comps
+        :forest :green
+        :house-inn :desert
+        :sign-inn :desert
+        :cave :desert
+        }
+
       "^^ ^^ .. C1 C1 C1 C1 ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
       "^^ ^^ .. C1 C1 C1 C1 H1 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"
       "^^ ^^ .. C1 C1 C1 C1 H2 ~~ ~~ ~~ ^^ V1 V1 V1 ^^ ^^"

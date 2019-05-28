@@ -4,6 +4,8 @@
     )
   )
 
+;todo introduce legend as separated object  
+
 (defn init-room-map [id descr legend backgrounds & tiles] {
   :description descr
   :attrs {
