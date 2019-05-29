@@ -1,10 +1,10 @@
 (ns helda-owgame.client.maps
   (:require
-    [helda-owgame.client.entities :refer [save-entity]]
+    [helda-owgame.client.entities :refer [find-entities save-entity]]
     )
   )
 
-;todo introduce legend as separated object  
+;todo introduce legend as separated object
 
 (defn init-room-map [id descr legend backgrounds & tiles] {
   :description descr
@@ -24,5 +24,12 @@
   )
 
 (defn save-room-map [room-map world]
-  (save-entity world :helda.RoomMap room-map)
+  (save-entity world "helda.RoomMap"
+    (if-let [entity (first
+      (find-entities world ["helda.RoomMap"] [(-> room-map :tags first)])
+      )]
+      (assoc room-map :id (:id entity))
+      room-map
+      )
+    )
   )

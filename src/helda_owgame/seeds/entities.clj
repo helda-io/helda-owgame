@@ -192,6 +192,20 @@
       "MM MM MM MM MM || V2 V2 || :: :: :: :: :: :: :: ::"
       "MM MM MM MM MM LL == == // :: :: :: :: :: :: :: ::"
       )
+    (maps/add-geo-object {
+      :entity-tag :village1
+      :tile-id :village1
+      :map-tag :village1
+      :x 13 :y 2
+      :w 2 :h 3
+      })
+    (maps/add-geo-object {
+      :entity-tag :village2
+      :tile-id :village2
+      :map-tag :village2
+      :x 8 :y 14
+      :w 3 :h 3
+      })
     (maps/save-room-map world)
     )
 
