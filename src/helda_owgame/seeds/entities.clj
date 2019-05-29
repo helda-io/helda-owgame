@@ -134,7 +134,7 @@
 
 (defn seed-world [world]
   (->
-    (maps/init-room-map :room1 "MVP map"
+    (maps/init-room-map "room1" "MVP map"
       {
         :green "::"
         :desert "__"
@@ -210,7 +210,7 @@
     )
 
   (->
-    (maps/init-room-map :mega "Mega map"
+    (maps/init-room-map "mega" "Mega map"
       {
         :green "::"
         :desert "__"

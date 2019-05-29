@@ -11,7 +11,7 @@
 (defn find-entities
   ([world]
     (read
-      (get
+      (client/get
         "http://localhost:3000/entities/entities-by-world"
         {
           :query-params {:world world}
@@ -23,7 +23,7 @@
     )
   ([world models]
     (read
-      (get
+      (client/get
         "http://localhost:3000/entities/entities-by-models"
         {
           :query-params {:world world :models models}
@@ -35,7 +35,7 @@
     )
   ([world models tags]
     (read
-      (get
+      (client/get
         "http://localhost:3000/entities/entities-by-tags-and-models"
         {
           :query-params {:world world :models models :tags tags}
