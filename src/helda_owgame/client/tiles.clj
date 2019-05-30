@@ -6,7 +6,16 @@
 
 (def tiles-world "owgame1")
 
-;todo implement update for SingleTile
+(defn insert-or-update [new-entity model]
+  (save-entity tiles-world model
+    (if-let [entity (first
+      (find-entities tiles-world [model] [id])
+      )]
+      (assoc new-entity :id (:id entity))
+      new-entity
+      )
+    )
+  )
 
 (defn single-tile
   ([model id descr file-id x y]
@@ -32,7 +41,7 @@
   )
 
 (defn tileset [id descr file-id & rows]
-  (save-entity tiles-world :helda.TileSet {
+  (insert-or-update {
     :description descr
     :attrs {
       :compId id
@@ -49,7 +58,9 @@
       }
     :tags [id]
     :actions {}
-    })
+    }
+    "helda.TileSet"
+    )
   )
 
 (defn scalable-tileset [id descr attrs]
