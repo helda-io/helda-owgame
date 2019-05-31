@@ -1,6 +1,6 @@
 (ns helda-owgame.client.tiles
   (:require
-    [helda-owgame.client.entities :refer [save-entity]]
+    [helda-owgame.client.entities :refer [find-entities save-entity]]
     )
   )
 
@@ -9,7 +9,7 @@
 (defn insert-or-update [new-entity model]
   (save-entity tiles-world model
     (if-let [entity (first
-      (find-entities tiles-world [model] [id])
+      (find-entities tiles-world [model] [(-> new-entity :tags first)])
       )]
       (assoc new-entity :id (:id entity))
       new-entity
