@@ -19,7 +19,7 @@
 
 (defn single-tile
   ([model id descr file-id x y]
-    (save-entity tiles-world model {
+    (insert-or-update {
       :description descr
       :attrs {
         :compId id
@@ -29,15 +29,17 @@
         }
       :tags [id]
       :actions {}
-      })
+      }
+      model
+      )
     )
   ([id descr file-id x y]
-    (single-tile :helda.SingleTile id descr file-id x y)
+    (single-tile "helda.SingleTile" id descr file-id x y)
     )
   )
 
 (defn foreground-tile [id descr file-id x y]
-  (single-tile :helda.ForegroundTile id descr file-id x y)
+  (single-tile "helda.ForegroundTile" id descr file-id x y)
   )
 
 (defn tileset [id descr file-id & rows]
@@ -64,10 +66,12 @@
   )
 
 (defn scalable-tileset [id descr attrs]
-  (save-entity tiles-world :helda.ScalableTileSet {
+  (insert-or-update {
     :description descr
     :attrs (assoc attrs :comp-id id)
     :tags [id]
     :actions {}
-    })
+    }
+    "helda.ScalableTileSet"
+    )
   )
