@@ -9,7 +9,7 @@
 (defn insert-or-update [new-entity model]
   (save-entity tiles-world model
     (if-let [entity (first
-      (find-entities tiles-world [model] [(-> new-entity :tags first)])
+      (find-entities tiles-world [model] [(-> new-entity :tags first name)])
       )]
       (assoc new-entity :id (:id entity))
       new-entity
