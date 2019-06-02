@@ -44,6 +44,18 @@
     [[1 4] [2 4]]
     [[1 5] [2 5]]
     )
+  (tiles/tileset :town1 "Town1 tileset"
+    :worldB
+    [[1 9] [2 9] [3 9]]
+    [[1 10] [2 10] [3 10]]
+    [[1 11] [2 11] [3 11]]
+    )
+  (tiles/tileset :town2 "Town2 tileset"
+    :worldB
+    [[1 6] [2 6] [3 6]]
+    [[1 7] [2 7] [3 7]]
+    [[1 8] [2 8] [3 8]]
+    )
   (tiles/tileset :village2 "Village2 tileset"
     :worldB
     [[3 3] [4 3] [5 3]]
@@ -193,9 +205,9 @@
       "MM MM MM MM MM LL == == // :: :: :: :: :: :: :: ::"
       )
     (maps/add-geo-object {
-      :entity-tag :village2
-      :tile-id :village2
-      :map-tag :village2
+      :entity-tag :town1
+      :tile-id :town1
+      :map-tag :town1
       :x 3 :y 1
       :w 3 :h 3
       })
