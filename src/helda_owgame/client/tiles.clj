@@ -17,6 +17,20 @@
     )
   )
 
+(defn save-legend [legend-id descr legend]
+  (insert-or-update {
+    :description descr
+    :attrs {
+      :legend-id legend-id
+      :legend legend
+      }
+    :tags [legend-id]
+    :actions {}
+    }
+    "helda.MapLegend"
+    )
+  )
+
 (defn single-tile
   ([model id descr file-id x y]
     (insert-or-update {

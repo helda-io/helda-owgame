@@ -7,6 +7,37 @@
   )
 
 (defn seed-tiles []
+  (tiles/save-legend :world-map "Common World Map Legend" {
+    :green "::"
+    :desert "__"
+    :forest "^^"
+    :water "~~"
+    :mountain "OO"
+    :cave "oo"
+    :castle1 "C1"
+    :village1 "V1"
+    :village2 "V2"
+    :village3 "V3"
+    :house-inn "HI"
+    :house1 "H1"
+    :house2 "H2"
+    :house3 "H3"
+    :house4 "H4"
+    :house5 "H5"
+    :h-road "=="
+    :v-road "||"
+    :x-crossroad "XX"
+    :south-t-crossroad "ST"
+    :east-t-crossroad "ET"
+    :west-north-turn "//"
+    :south-east-turn "rr"
+    :west-south-turn "\\"
+    :north-east-turn "LL"
+    :sign-inn "SI"
+    :sign-east "SE"
+    :sign-on-crossroad "SX"
+    :map-port "00"
+    })
   (tiles/single-tile :green "Grass basic tile" :world 2 1)
   (tiles/single-tile :desert "Desert basic tile" :world 5 5)
   (tiles/single-tile :water "Water basic tile" :world 1 14)
@@ -146,38 +177,7 @@
 
 (defn seed-world [world]
   (->
-    (maps/init-room-map "room1" "MVP map"
-      {
-        :green "::"
-        :desert "__"
-        :forest "^^"
-        :water "~~"
-        :mountain "OO"
-        :cave "oo"
-        :castle1 "C1"
-        :village1 "V1"
-        :village2 "V2"
-        :village3 "V3"
-        :house-inn "HI"
-        :house1 "H1"
-        :house2 "H2"
-        :house3 "H3"
-        :house4 "H4"
-        :house5 "H5"
-        :h-road "=="
-        :v-road "||"
-        :x-crossroad "XX"
-        :south-t-crossroad "ST"
-        :east-t-crossroad "ET"
-        :west-north-turn "//"
-        :south-east-turn "rr"
-        :west-south-turn "\\"
-        :north-east-turn "LL"
-        :sign-inn "SI"
-        :sign-east "SE"
-        :sign-on-crossroad "SX"
-        :map-port "00"
-        }
+    (maps/init-room-map "room1" "MVP map" :world-map
       {
         :castle1 :green
         :forest :green
@@ -222,38 +222,7 @@
     )
 
   (->
-    (maps/init-room-map "mega" "Mega map"
-      {
-        :green "::"
-        :desert "__"
-        :forest "^^"
-        :water "~~"
-        :mountain "OO"
-        :cave "oo"
-        :castle1 "C1"
-        :village1 "V1"
-        :village2 "V2"
-        :village3 "V3"
-        :house-inn "HI"
-        :house1 "H1"
-        :house2 "H2"
-        :house3 "H3"
-        :house4 "H4"
-        :house5 "H5"
-        :h-road "=="
-        :v-road "||"
-        :x-crossroad "XX"
-        :south-t-crossroad "ST"
-        :east-t-crossroad "ET"
-        :west-north-turn "//"
-        :south-east-turn "rr"
-        :west-south-turn "\\"
-        :north-east-turn "LL"
-        :sign-inn "SI"
-        :sign-east "SE"
-        :sign-on-crossroad "SX"
-        :map-port "00"
-        }
+    (maps/init-room-map "mega" "Mega map" :world-map
       {
         :castle1 :green
         :forest :green

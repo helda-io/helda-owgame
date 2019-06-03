@@ -6,11 +6,11 @@
 
 ;todo introduce legend as separated object
 
-(defn init-room-map [id descr legend backgrounds & tiles] {
+(defn init-room-map [id descr legend-id backgrounds & tiles] {
   :description descr
   :attrs {
     :name id
-    :legend legend
+    :legend-id legend-id
     :backgrounds backgrounds
     :tiles tiles
     :geo-objects []
