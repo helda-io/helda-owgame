@@ -14,6 +14,7 @@
     :water "~~"
     :mountain "OO"
     :cave "oo"
+    :bridge "BB"
     :castle1 "C1"
     :village1 "V1"
     :village2 "V2"
@@ -60,6 +61,15 @@
   (tiles/single-tile :south-east-turn "South-East turn tile" :world 2 2)
   (tiles/single-tile :west-south-turn "West-South turn tile" :world 3 2)
   (tiles/single-tile :north-east-turn "North-East turn tile" :world 2 3)
+
+  (tiles/tileset :v-bridge "Vertical bridge tileset"
+    :world
+    [[8 13]]
+    [[7 14]]
+    [[7 14]]
+    [[7 14]]
+    [[8 14]]
+    )
 
   (tiles/tileset :castle1 "Castle tileset"
     :worldB
@@ -184,6 +194,7 @@
         :house-inn :green
         :sign-inn :green
         :cave :green
+        :bridge :water
         }
 
       ":: :: V1 V1 V1 :: :: :: :: :: :: :: :: HH HH HH HH"
@@ -192,9 +203,9 @@
       ":: :: rr ST == // r~ -~ -~ -~ -~ -~ \" HH HH oo HH"
       ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: :: || ::"
       ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: :: || ::"
-      "-~ -~ BB -~ -~ -~ -~ ~~ :: :: :: ~~ ~| :: :: || ::"
+      "-~ -~ -~ -~ -~ -~ -~ ~~ :: :: :: ~~ ~| :: :: || ::"
       "~~ ~~ BB ~~ ~~ ~~ ~~ ~~ :: H3 :: ~~ ~| :: :: || ::"
-      "_~ _~ BB _~ _~ _~ _~ ~~ :: :: :: ~~ ~| :: :: || ::"
+      "_~ _~ _~ _~ _~ _~ _~ ~~ :: :: :: ~~ ~| :: :: || ::"
       ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: rr // ::"
       ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
       ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || TT TT"
@@ -204,6 +215,13 @@
       "MM MM MM MM MM || V2 V2 || :: :: :: :: :: :: :: ::"
       "MM MM MM MM MM LL == == // :: :: :: :: :: :: :: ::"
       )
+    (maps/add-geo-object {
+      :entity-tag :v-bridge
+      :tile-id :v-bridge
+      :map-tag :bridge
+      :x 3 :y 6
+      :w 1 :h 5
+      })
     (maps/add-geo-object {
       :entity-tag :town1
       :tile-id :town1
