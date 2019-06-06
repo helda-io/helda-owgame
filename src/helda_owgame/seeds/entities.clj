@@ -38,10 +38,18 @@
     :sign-east "SE"
     :sign-on-crossroad "SX"
     :map-port "00"
+    :n-coast "~-"
+    :nw-coast "|-"
+    :ne-coast "-|"
+    :w-coast "|~"
+    :e-coast "~|"
+    :sw-coast "|_"
+    :s-coast "~_"
+    :se-coast "_|"
     })
   (tiles/single-tile :green "Grass basic tile" :world 2 1)
   (tiles/single-tile :desert "Desert basic tile" :world 5 5)
-  (tiles/single-tile :water "Water basic tile" :world 1 14)
+  (tiles/single-tile :water "Water basic tile" :world 2 15)
 
   (tiles/foreground-tile :forest "Forest foreground tile" :worldB 5 12)
   (tiles/foreground-tile :house-inn "House Inn foreground tile" :worldB 6 2)
@@ -61,6 +69,15 @@
   (tiles/single-tile :south-east-turn "South-East turn tile" :world 2 2)
   (tiles/single-tile :west-south-turn "West-South turn tile" :world 3 2)
   (tiles/single-tile :north-east-turn "North-East turn tile" :world 2 3)
+
+  (tiles/single-tile :n-coast "North coast" :world 2 14)
+  (tiles/single-tile :nw-coast "North-West coast" :world 1 14)
+  (tiles/single-tile :ne-coast "North-East coast" :world 3 14)
+  (tiles/single-tile :w-coast "West coast" :world 1 15)
+  (tiles/single-tile :e-coast "East coast" :world 3 15)
+  (tiles/single-tile :sw-coast "South-West coast" :world 1 16)
+  (tiles/single-tile :s-coast "South coast" :world 2 16)
+  (tiles/single-tile :se-coast "South-East coast" :world 3 16)
 
   (tiles/tileset :v-bridge "Vertical bridge tileset"
     :world
@@ -203,9 +220,9 @@
       ":: :: rr ST == // |- ~- ~- ~- ~- ~- -| HH HH oo HH"
       ":: :: || ^^ ^^ :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: :: || ::"
       "^^ ^^ || ^^ ^^ :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: :: || H2"
-      "~- ~- ~- ~- ~- ~- |- ~~ _| ~_ |_ ~~ ~| :: :: || H1"
-      "~~ ~~ BB ~~ ~~ ~~ ~~ ~~ ~| H3 |~ ~~ ~| :: :: || ::"
-      "~_ ~_ ~_ ~_ ~_ ~_ |_ ~~ -| ~- |- ~~ ~| :: :: || ::"
+      "~- ~- ~- ~- ~- ~- ~~ ~~ _| :: |_ ~~ ~| :: :: || H1"
+      "~~ ~~ BB ~~ ~~ ~~ ~~ ~~ :: H3 ^^ ~~ ~| :: :: || ::"
+      "~_ ~_ ~_ ~_ ~_ ~_ ~~ ~~ -| :: |- ~~ ~| :: :: || ::"
       "^^ ^^ || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: rr // ::"
       ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
       ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || TT TT"
@@ -233,7 +250,7 @@
       :entity-tag :village1
       :tile-id :village1
       :map-tag :village1
-      :x 7 :y 13
+      :x 7 :y 14
       :w 2 :h 3
       })
     (maps/save-room-map world)
