@@ -36,7 +36,7 @@
     :west-south-turn "\\"
     :north-east-turn "LL"
     :sign-inn "SI"
-    :sign-east "SE"
+    :sign-white "SW"
     :sign-on-crossroad "SX"
     :map-port "00"
     :n-coast "~-"
@@ -61,6 +61,7 @@
   (tiles/foreground-tile :house4 "House IV foreground tile" :worldB 6 2)
   (tiles/foreground-tile :house5 "House V foreground tile" :worldB 7 2)
   (tiles/foreground-tile :sign-inn "INN sign foreground tile" :worldB 2 1)
+  (tiles/foreground-tile :sign-white "White sign foreground tile" :worldB 4 1)
 
   (tiles/single-tile :h-road "Horizontal Road tile" :world 1 2)
   (tiles/single-tile :v-road "Vertical Road tile" :world 1 3)
@@ -146,6 +147,11 @@
     :worldB
     [[11 5] [12 5]]
     [[11 6] [12 6]]
+    )
+  (tiles/tileset :dungeon-entrance1 "Dungeon entrance tileset"
+    :worldB
+    [[11 7] [12 7]]
+    [[11 8] [12 8]]
     )
   (tiles/tileset :mountains "Mountains chain tileset"
     :worldB
@@ -248,11 +254,11 @@
       "~_ ~_ ~_ ~_ ~_ ~_ ~~ ~~ -| :: |- ~~ ~| :: || :: ::"
       "^^ ^^ || :: MM MM |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
       ":: :: || :: MM MM |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
-      ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || TT TT"
+      ":: :: || :: SW :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || TT TT"
       ":: :: LL == == \\ |_ ~_ ~_ ~_ ~_ ~_ _| :: || TT TT"
       "MM MM MM MM ^^ || V2 V2 :: :: SI HI :: :: || TT TT"
       "MM MM MM MM ^^ || V2 V2 rr == == == == == ST == =="
-      "MM MM MM MM ^^ || V2 V2 || :: :: :: :: :: :: :: ::"
+      "MM MM MM MM ^^ || V2 V2 || :: :: :: :: :: :: :: SW"
       "MM MM MM MM ^^ LL == == // :: :: ^^ ^^ :: :: :: ::"
       )
     (maps/add-geo-object {
@@ -291,8 +297,8 @@
       :w 2 :h 3
       })
     (maps/add-geo-object {
-      :entity-tag :mountain
-      :tile-id :mountain
+      :entity-tag :dungeon-entrance1
+      :tile-id :dungeon-entrance1
       :map-tag :mountain
       :x 5 :y 10
       :w 2 :h 2
