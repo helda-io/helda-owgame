@@ -147,6 +147,13 @@
     [[11 5] [12 5]]
     [[11 6] [12 6]]
     )
+  (tiles/tileset :mountains "Mountains chain tileset"
+    :worldB
+    [[9 1] [10 1] [11 1] [12 1]]
+    [[9 2] [10 2] [11 2] [12 2]]
+    [[9 3] [10 3] [11 3] [12 3]]
+    [[9 4] [10 4] [11 4] [12 4]]
+    )
 
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
     {
@@ -239,14 +246,14 @@
       "~- ~- ~- ~- ~- ~- ~~ ~~ _| :: |_ ~~ ~| :: || H1 ::"
       "~~ ~~ BB ~~ ~~ ~~ ~~ ~~ :: H3 ^^ ~~ ~| :: || :: ::"
       "~_ ~_ ~_ ~_ ~_ ~_ ~~ ~~ -| :: |- ~~ ~| :: || :: ::"
-      "^^ ^^ || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
-      ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
+      "^^ ^^ || :: MM MM |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
+      ":: :: || :: MM MM |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
       ":: :: || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || TT TT"
       ":: :: LL == == \\ |_ ~_ ~_ ~_ ~_ ~_ _| :: || TT TT"
-      "MM MM MM MM MM || V2 V2 :: :: SI HI :: :: || TT TT"
-      "MM MM MM MM MM || V2 V2 rr == == == == == ST == =="
-      "MM MM MM MM MM || V2 V2 || :: :: :: :: :: :: :: ::"
-      "MM MM MM MM MM LL == == // :: :: ^^ ^^ :: :: :: ::"
+      "MM MM MM MM ^^ || V2 V2 :: :: SI HI :: :: || TT TT"
+      "MM MM MM MM ^^ || V2 V2 rr == == == == == ST == =="
+      "MM MM MM MM ^^ || V2 V2 || :: :: :: :: :: :: :: ::"
+      "MM MM MM MM ^^ LL == == // :: :: ^^ ^^ :: :: :: ::"
       )
     (maps/add-geo-object {
       :entity-tag :v-bridge
@@ -282,6 +289,20 @@
       :map-tag :tower
       :x 16 :y 12
       :w 2 :h 3
+      })
+    (maps/add-geo-object {
+      :entity-tag :mountain
+      :tile-id :mountain
+      :map-tag :mountain
+      :x 5 :y 10
+      :w 2 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :mountains
+      :tile-id :mountains
+      :map-tag :mountains
+      :x 1 :y 14
+      :w 4 :h 4
       })
     (maps/save-room-map world)
     )
