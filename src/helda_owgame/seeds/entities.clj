@@ -13,6 +13,7 @@
     :forest "^^"
     :water "~~"
     :mountain "OO"
+    :camp "AA"
     :cave "oo"
     :bridge "BB"
     :castle1 "C1"
@@ -53,6 +54,7 @@
 
   (tiles/foreground-tile :forest "Forest foreground tile" :worldB 5 12)
   (tiles/foreground-tile :house-inn "House Inn foreground tile" :worldB 6 2)
+  (tiles/foreground-tile :camp "Camp foreground tile" :worldB 5 2)
   (tiles/foreground-tile :house1 "House I foreground tile" :worldB 6 1)
   (tiles/foreground-tile :house2 "House II foreground tile" :worldB 7 1)
   (tiles/foreground-tile :house3 "House III foreground tile" :worldB 8 1)
@@ -98,10 +100,10 @@
 
   (tiles/tileset :wood "Grove tileset"
     :world
-    [[1 7] [2 7] [3 7]]
-    [[1 8] [2 8] [3 8]]
-    [[1 8] [2 8] [3 8]]
-    [[1 9] [2 9] [3 9]]
+    [[1 7] [2 7] [2 7] [3 7]]
+    [[1 8] [2 8] [2 8] [3 8]]
+    [[1 8] [2 8] [2 8] [3 8]]
+    [[1 9] [2 9] [2 9] [3 9]]
     )
 
   (tiles/tileset :village1 "Village1 tileset"
@@ -121,6 +123,12 @@
     [[1 6] [2 6] [3 6]]
     [[1 7] [2 7] [3 7]]
     [[1 8] [2 8] [3 8]]
+    )
+  (tiles/tileset :tower1 "Tower1 tileset"
+    :worldB
+    [[7 6] [8 6]]
+    [[7 7] [8 7]]
+    [[7 8] [8 8]]
     )
   (tiles/tileset :village2 "Village2 tileset"
     :worldB
@@ -222,13 +230,13 @@
         :bridge :water
         }
 
-      ":: :: V1 V1 V1 :: :: ^^ ^^ ^^ ^^ :: :: HH HH HH ::"
-      ":: :: V1 V1 V1 rr == == == == == == == HH HH HH ::"
-      ":: :: V1 V1 V1 || :: :: :: :: :: :: :: HH HH HH ::"
-      ":: :: rr ST == // |- ~- ~- ~- ~- ~- -| HH HH HH ::"
+      ":: :: V1 V1 V1 :: :: ^^ ^^ ^^ ^^ :: :: HH HH HH HH"
+      ":: :: V1 V1 V1 rr == == == == == == == HH HH HH HH"
+      ":: :: V1 V1 V1 || :: :: :: :: AA AA AA HH HH HH HH"
+      ":: :: rr ST == // |- ~- ~- ~- ~- ~- -| HH HH HH HH"
       ":: :: || ^^ ^^ :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
-      "^^ ^^ || ^^ ^^ :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: H2"
-      "~- ~- ~- ~- ~- ~- ~~ ~~ _| :: |_ ~~ ~| :: || :: H1"
+      "^^ ^^ || ^^ ^^ :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || H2 ::"
+      "~- ~- ~- ~- ~- ~- ~~ ~~ _| :: |_ ~~ ~| :: || H1 ::"
       "~~ ~~ BB ~~ ~~ ~~ ~~ ~~ :: H3 ^^ ~~ ~| :: || :: ::"
       "~_ ~_ ~_ ~_ ~_ ~_ ~~ ~~ -| :: |- ~~ ~| :: || :: ::"
       "^^ ^^ || :: :: :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
@@ -266,7 +274,14 @@
       :tile-id :wood
       :map-tag :wood
       :x 14 :y 1
-      :w 3 :h 4
+      :w 4 :h 4
+      })
+    (maps/add-geo-object {
+      :entity-tag :tower1
+      :tile-id :tower1
+      :map-tag :tower
+      :x 16 :y 12
+      :w 2 :h 3
       })
     (maps/save-room-map world)
     )
