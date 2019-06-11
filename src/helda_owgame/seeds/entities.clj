@@ -7,6 +7,28 @@
   )
 
 (defn seed-tiles []
+  (tiles/save-legend :outside-map "Common Ouside Map Legend" {
+    :green "::"
+    :water "~~"
+
+    :n-coast "~-"
+    :nw-coast "|-"
+    :ne-coast "-|"
+    :w-coast "|~"
+    :e-coast "~|"
+    :sw-coast "|_"
+    :s-coast "~_"
+    :se-coast "_|"
+    :cane "%%"
+
+    :stone-road "=="
+    :n-stone-road "=-"
+    :s-stone-road "=_"
+    :u45-stone-road "/="
+    :nw-green-stone-road ";="
+    :d45-stone-road "=/"
+
+    })
   (tiles/save-legend :world-map "Common World Map Legend" {
     :green "::"
     :desert "__"
