@@ -233,6 +233,33 @@
 
 (defn seed-world [world]
   (->
+    (maps/init-room-map "battle1" "Battle map" :outside-map
+      {
+
+        }
+
+      ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: :: :: :: :: :: %% %% %% %% %% %%"
+      ":: :: :: :: :: :: :: :: :: :: :: %% |- ~- ~- ~| %%"
+      "-= -= -= -= /= :: :: :: :: :: %% %% |~ ~~ ~~ ~| %%"
+      "== == == == :: :: :: :: :: %% %% %% |~ ~~ ~~ ~| %%"
+      "_= _= _= _= =/ :: :: :: :: %% %% %% |_ ~_ ~_ _| %%"
+      ":: :: :: :: :: :: :: :: :: %% %% %% %% %% %% %% %%"
+      ":: :: :: :: :: :: :: :: :: :: %% %% %% %% %% %% %%"
+      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
+      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
+      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
+      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
+      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
+      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
+      )
+    (maps/save-room-map world)
+    )
+
+  (->
     (maps/init-room-map "room1" "MVP map" :world-map
       {
         :castle1 :green
