@@ -33,6 +33,9 @@
     :flower1 "78"
     :cane "%%"
 
+    :log "LG"
+    :stump "ST"
+
     :deep-forest "FF"
 
     })
