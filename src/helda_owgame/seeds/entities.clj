@@ -8,7 +8,7 @@
 
 (defn seed-tiles []
   (tiles/save-legend :outside-map "Common Outside Map Legend" {
-    :green "::"
+    :green-outside "::"
     :water "~~"
 
     :n-coast "~-"
@@ -80,11 +80,20 @@
     :s-coast "~_"
     :se-coast "_|"
     })
-  (tiles/single-tile :green "Grass basic tile" :world 2 1)
+  (tiles/single-tile :green "Grass basic tile for world map" :world 2 1)
+  (tiles/single-tile :green-outside "Grass basic tile for outside map" :outside 2 1)
   (tiles/single-tile :desert "Desert basic tile" :world 5 5)
   (tiles/single-tile :water "Water basic tile" :world 2 15)
 
   (tiles/foreground-tile :forest "Forest foreground tile" :worldB 5 12)
+
+  ;todo implement auto-variations
+  (tiles/foreground-tile :flower1 "Flower1 foreground tile" :outside 6 6)
+  (tiles/foreground-tile :cane "Cane foreground tile" :outside 1 6)
+  (tiles/foreground-tile :large-stones1 "Large stones foreground tile" :outside 1 2)
+  (tiles/foreground-tile :large-stones2 "Large stones 2 foreground tile" :outside 2 2)
+  (tiles/foreground-tile :small-stones "Large stones 2 foreground tile" :outside 3 2)
+
   (tiles/foreground-tile :house-inn "House Inn foreground tile" :worldB 6 2)
   (tiles/foreground-tile :camp "Camp foreground tile" :worldB 5 2)
   (tiles/foreground-tile :house1 "House I foreground tile" :worldB 6 1)
@@ -275,7 +284,7 @@
       ":: :: :: :: LG LG LG :: /= ;= == == == == == == =="
       ":: ST ST :: :: :: :: /= ;= == =_ =_ =_ =_ =_ =_ =_"
       ":: ST ST :: :: oo /= ;= == =/ :: %% %% %% %% %% %%"
-      ":: :: :: :: :: /= ;= == =/ :: :: %% |- ~- ~- ~| %%"
+      ":: :: :: :: :: /= ;= == =/ :: :: %% |- ~- ~- -| %%"
       "=- =- =- =- /= ;= == =/ :: :: %% %% |~ ~~ ~~ ~| %%"
       "== == == == == == =/ :: :: %% %% %% |~ ~~ ~~ ~| %%"
       "=_ =_ =_ =_ =_ =/ :: :: :: %% %% %% |_ ~_ ~_ _| %%"
