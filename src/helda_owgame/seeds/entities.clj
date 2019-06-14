@@ -22,10 +22,11 @@
 
     :stone-road "=="
     :n-stone-road "=-"
+    :w-stone-road ":|"
+    :e-stone-road "|:"
     :s-stone-road "=_"
-    :u45-stone-road "/="
-    :nw-green-stone-road ";="
-    :d45-stone-road "=/"
+    :u45-stone-road ":/"
+    :d45-stone-road "/:"
 
     :large-stones1 "OO"
     :large-stones2 "oO"
