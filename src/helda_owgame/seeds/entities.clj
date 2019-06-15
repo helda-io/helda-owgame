@@ -21,12 +21,15 @@
     :se-coast "_|"
 
     :stone-road "=="
+    :v-stone-road "||"
     :n-stone-road "=-"
     :w-stone-road ":|"
     :e-stone-road "|:"
     :s-stone-road "=_"
-    :u45-stone-road ":/"
-    :d45-stone-road "/:"
+    :onw-stone-road ":/"
+    :inw-stone-road "/."
+    :ose-stone-road "/:"
+    :ise-stone-road "./"
 
     :large-stones1 "OO"
     :large-stones2 "oO"
@@ -87,6 +90,7 @@
   (tiles/single-tile :water "Water basic tile" :world 2 15)
 
   (tiles/single-tile :stone-road "Stone road tile" :outsideRoads 2 7)
+  (tiles/single-tile :v-stone-road "Stone road tile" :outsideRoads 2 7)
   (tiles/single-tile :n-stone-road "North Stone road tile" :outsideRoads 3 1)
   (tiles/single-tile :s-stone-road "South Stone road tile" :outsideRoads 3 2)
   (tiles/single-tile :w-stone-road "West Stone road tile" :outsideRoads 1 3)
