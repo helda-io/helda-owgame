@@ -86,6 +86,20 @@
   (tiles/single-tile :desert "Desert basic tile" :world 5 5)
   (tiles/single-tile :water "Water basic tile" :world 2 15)
 
+  (tiles/single-tile :stone-road "Stone road tile" :outsideRoads 2 7)
+  (tiles/single-tile :n-stone-road "North Stone road tile" :outsideRoads 3 1)
+  (tiles/single-tile :s-stone-road "South Stone road tile" :outsideRoads 3 2)
+  (tiles/single-tile :w-stone-road "West Stone road tile" :outsideRoads 1 3)
+  (tiles/single-tile :e-stone-road "East Stone road tile" :outsideRoads 2 3)
+  (tiles/single-tile :onw-stone-road "Outer North-West turn Stone road corner tile" :outsideRoads 1 1)
+  (tiles/single-tile :inw-stone-road "Inner North-West turn Stone road corner tile" :outsideRoads 2 2)
+  (tiles/single-tile :osw-stone-road "Outer South-West turn Stone road corner tile" :outsideRoads 1 5)
+  (tiles/single-tile :isw-stone-road "Inner South-West turn Stone road corner tile" :outsideRoads 2 4)
+  (tiles/single-tile :one-stone-road "Outer North-East turn Stone road corner tile" :outsideRoads 5 1)
+  (tiles/single-tile :ine-stone-road "Inner North-East turn Stone road corner tile" :outsideRoads 4 2)
+  (tiles/single-tile :ose-stone-road "Outer South-East turn Stone road corner tile" :outsideRoads 5 5)
+  (tiles/single-tile :ise-stone-road "Inner South-East turn Stone road corner tile" :outsideRoads 4 4)
+
   (tiles/foreground-tile :forest "Forest foreground tile" :worldB 5 12)
 
   ;todo implement auto-variations
@@ -283,10 +297,10 @@
       ":: :: :: :: :: :: :: :: :: :: :: :: :: :: oO OO oo"
       ":: 78 78 78 :: :/ =- =- =- =- =- =- =- =- =- =- =-"
       ":: :: :: :: :: :| || == == == == == == == == == =="
-      ":: LG LG LG :: :| || =_ =_ =_ =_ =_ =_ =_ =_ =_ =_"
+      ":: LG LG LG :: :| || /. =_ =_ =_ =_ =_ =_ =_ =_ =_"
       ":: LG LG LG oo :| || |: :: :: :: %% %% %% %% %% %%"
       ":: :: :: :: :: :| || |: ST ST :: %% |- ~- ~- -| %%"
-      "=- =- =- =- =- =- || |: ST ST %% %% |~ ~~ ~~ ~| %%"
+      "=- =- =- =- =- ./ || |: ST ST %% %% |~ ~~ ~~ ~| %%"
       "== == == == == == == |: :: %% %% %% |~ ~~ ~~ ~| %%"
       "=_ =_ =_ =_ =_ =_ =_ /: :: %% %% %% |_ ~_ ~_ _| %%"
       ":: :: :: 78 78 :: :: :: :: %% %% %% %% %% %% %% %%"
