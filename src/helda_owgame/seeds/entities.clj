@@ -341,7 +341,6 @@
       :x 12 :y 1
       :w 17 :h 6
       })
-    forest-south-border
     (maps/save-room-map world)
     )
 
