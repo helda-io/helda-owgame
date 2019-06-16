@@ -221,50 +221,22 @@
     [[9 4] [10 4] [11 4] [12 4]]
     )
 
+  (def forest-tree-tile-x [
+     9 10 11 12
+     9 10 11 12
+     9 10 11 12
+     9 10 11 12
+     9
+    ])
+
   (tiles/tileset :forest-south-border "Forest south border tileset"
     :worldB
-    [
-      [9 1] [10 1] [11 1] [12 1]
-      [9 1] [10 1] [11 1] [12 1]
-      [9 1] [10 1] [11 1] [12 1]
-      [9 1] [10 1] [11 1] [12 1]
-      [9 1]]
-    [
-      [9 2] [10 2] [11 2] [12 2]
-      [9 1] [10 1] [11 1] [12 1]
-      [9 1] [10 1] [11 1] [12 1]
-      [9 1] [10 1] [11 1] [12 1]
-      [9 1]]
-    [
-      [13 2] [14 2] [15 2] [16 2]
-      [13 2] [14 2] [15 2] [16 2]
-      [13 2] [14 2] [15 2] [16 2]
-      [13 2] [14 2] [15 2] [16 2]
-      [13 1]]
-    [
-      [13 1] [14 1] [15 1] [16 1]
-      [13 1] [14 1] [15 1] [16 1]
-      [13 1] [14 1] [15 1] [16 1]
-      [13 1] [14 1] [15 1] [16 1]
-      [13 1]]
-    [
-      [13 2] [14 2] [15 2] [16 2]
-      [13 2] [14 2] [15 2] [16 2]
-      [13 2] [14 2] [15 2] [16 2]
-      [13 2] [14 2] [15 2] [16 2]
-      [13 1]]
-    [
-      [13 3] [14 3] [15 3] [16 3]
-      [13 3] [14 3] [15 3] [16 3]
-      [13 3] [14 3] [15 3] [16 3]
-      [13 3] [14 3] [15 3] [16 3]
-      [13 1]]
-    [
-      [13 4] [14 4] [15 4] [16 4]
-      [13 3] [14 3] [15 3] [16 3]
-      [13 3] [14 3] [15 3] [16 3]
-      [13 3] [14 3] [15 3] [16 3]
-      [13 1]]
+    (mapv (fn [x] [x 1]) forest-tree-tile-x)
+    (mapv (fn [x] [x 2]) forest-tree-tile-x)
+    (mapv (fn [x] [(+ x 4) 1]) forest-tree-tile-x)
+    (mapv (fn [x] [(+ x 4) 2]) forest-tree-tile-x)
+    (mapv (fn [x] [(+ x 4) 3]) forest-tree-tile-x)
+    (mapv (fn [x] [(+ x 4) 4]) forest-tree-tile-x)
     )
 
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
@@ -362,6 +334,14 @@
       "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
       "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
       )
+    (maps/add-geo-object {
+      :entity-tag :forest-south-border
+      :tile-id :forest-south-border
+      :map-tag :deep-forest
+      :x 12 :y 1
+      :w 17 :h 6
+      })
+    forest-south-border
     (maps/save-room-map world)
     )
 
