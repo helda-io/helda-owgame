@@ -222,21 +222,29 @@
     )
 
   (def forest-tree-tile-x [
-     9 10 11 12
-     9 10 11 12
-     9 10 11 12
-     9 10 11 12
-     9
+     11 12 9 10
+     11 12 9 10
+     11 12 9 10
+     11 12 9 10
+     11
+    ])
+
+  (def forest-tile-x [
+     13 14 15 16
+     13 14 15 16
+     13 14 15 16
+     13 14 15 16
+     13
     ])
 
   (tiles/tileset :forest-south-border "Forest south border tileset"
-    :worldB
+    :outsideB
     (mapv (fn [x] [x 1]) forest-tree-tile-x)
     (mapv (fn [x] [x 2]) forest-tree-tile-x)
-    (mapv (fn [x] [(+ x 4) 1]) forest-tree-tile-x)
-    (mapv (fn [x] [(+ x 4) 2]) forest-tree-tile-x)
-    (mapv (fn [x] [(+ x 4) 3]) forest-tree-tile-x)
-    (mapv (fn [x] [(+ x 4) 4]) forest-tree-tile-x)
+    (mapv (fn [x] [x 1]) forest-tile-x)
+    (mapv (fn [x] [x 2]) forest-tile-x)
+    (mapv (fn [x] [x 3]) forest-tile-x)
+    (mapv (fn [x] [x 4]) forest-tile-x)
     )
 
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
@@ -338,7 +346,7 @@
       :entity-tag :forest-south-border
       :tile-id :forest-south-border
       :map-tag :deep-forest
-      :x 12 :y 1
+      :x 1 :y 12
       :w 17 :h 6
       })
     (maps/save-room-map world)
