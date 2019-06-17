@@ -4,12 +4,8 @@
     )
   )
 
-(defn range-x [start-x width y]
+(defn line-range [start-x width y]
   (for [x (range start-x (+ width start-x))] [x y])
-  )
-
-(defn range-y [x start-y height]
-  (for [y (range start-y (+ height start-y))] [x y])
   )
 
 (def tiles-world "owgame1")

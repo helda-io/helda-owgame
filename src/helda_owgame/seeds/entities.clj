@@ -221,6 +221,18 @@
     [[9 4] [10 4] [11 4] [12 4]]
     )
 
+  (tiles/tileset :log "Log tileset"
+    :outsideB
+    (tiles/line-range 6 3 9)
+    (tiles/line-range 6 3 10)
+    )
+
+  (tiles/tileset :stump "Stump tileset"
+    :outsideB
+    (tiles/line-range 15 2 7)
+    (tiles/line-range 15 2 8)
+    )
+
   (def forest-tree-tile-x [
      11 12 9 10
      11 12 9 10
@@ -348,6 +360,20 @@
       :map-tag :deep-forest
       :x 1 :y 12
       :w 17 :h 6
+      })
+    (maps/add-geo-object {
+      :entity-tag :log
+      :tile-id :log
+      :map-tag :log
+      :x 2 :y 4
+      :w 3 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :stump
+      :tile-id :stump
+      :map-tag :stump
+      :x 9 :y 6
+      :w 2 :h 2
       })
     (maps/save-room-map world)
     )
