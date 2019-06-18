@@ -89,6 +89,10 @@
     )
   )
 
+(defn tileset-for [id descr file-id rows]
+  (apply tileset id descr file-id rows)
+  )
+
 (defn scalable-tileset [id descr attrs]
   (insert-or-update {
     :description descr

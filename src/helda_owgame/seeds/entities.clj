@@ -233,6 +233,11 @@
     (tiles/line-range 15 2 8)
     )
 
+  (tiles/tileset-for :bridge-detailed "Stump tileset"
+    :outsideB
+    (tiles/tileset-range 12 4 11 3)
+    )
+
   (def forest-tree-tile-x [
      11 12 9 10
      11 12 9 10
