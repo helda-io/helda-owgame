@@ -39,6 +39,7 @@
 
     :log "LG"
     :stump "ST"
+    :bridge "BB"
 
     :deep-forest "FF"
 
@@ -233,11 +234,22 @@
     (tiles/line-range 15 2 8)
     )
 
-  (tiles/tileset-for :long-bridge-detailed "Bridge detailed tileset"
+  (tiles/tileset :long-bridge-detailed "Bridge detailed tileset"
     :outsideB
     (concat
-      (tiles/tileset-range 12 4 11 3)
-      (tiles/tileset-range 12 4 11 3)
+      (tiles/line-range 12 3 11)
+      (tiles/line-range 13 2 11)
+      (tiles/line-range 13 3 11)
+      )
+    (concat
+      (tiles/line-range 12 3 12)
+      (tiles/line-range 13 2 12)
+      (tiles/line-range 13 3 12)
+      )
+    (concat
+      (tiles/line-range 12 3 13)
+      (tiles/line-range 13 2 13)
+      (tiles/line-range 13 3 13)
       )
     )
 
@@ -342,7 +354,7 @@
   (->
     (maps/init-room-map "battle1" "Battle bridge map" :outside-map
       {
-
+        :bridge :water
         }
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~| :: :: :: :: :: :: ::"
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~| :: :: :: :: :: :: ::"
@@ -355,13 +367,20 @@
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~| :: :: :: :: :: :: ::"
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~~ -| :: :: :: :: :: ::"
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~~ ~| :: :: :: :: :: ::"
-      "=- =- =- =- :: |~ ~~ ~~ ~~ ~~ ~| :: =- =- =- =- =-"
-      "== == == == :: |~ ~~ ~~ ~~ ~~ ~| :: == == == == =="
-      "=_ =_ =_ =_ :: |~ ~~ ~~ ~~ ~~ ~| :: =_ =_ =_ =_ =_"
+      "=- =- =- =- :: |~ BB BB BB BB ~| :: =- =- =- =- =-"
+      "== == == == :: |~ BB BB BB BB ~| :: == == == == =="
+      "=_ =_ =_ =_ :: |~ BB BB BB BB ~| :: =_ =_ =_ =_ =_"
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~~ ~| :: :: :: :: :: ::"
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~~ ~| :: :: :: :: :: ::"
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~~ ~| :: :: :: :: :: ::"
       )
+    (maps/add-geo-object {
+      :entity-tag :long-bridge-detailed
+      :tile-id :long-bridge-detailed
+      :map-tag :bridge
+      :x 5 :y 12
+      :w 8 :h 3
+      })
     (maps/save-room-map world)
     )
 
