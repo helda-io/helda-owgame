@@ -423,7 +423,7 @@
 
       ":: :: V1 V1 V1 :: :: ^^ ^^ ^^ ^^ :: :: HH HH HH HH"
       ":: :: V1 V1 V1 rr == == == == == == == HH HH HH HH"
-      ":: :: V1 V1 V1 || :: :: :: :: AA AA AA HH HH HH HH"
+      ":: :: V1 V1 V1 || ^^ ^^ ^^ .. AA AA AA HH HH HH HH"
       ":: :: rr ST == // |- ~- ~- ~- ~- ~- -| HH HH HH HH"
       ":: :: || ^^ ^^ :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || :: ::"
       "^^ ^^ || ^^ ^^ :: |~ ~~ ~~ ~~ ~~ ~~ ~| :: || H2 ::"
@@ -436,7 +436,7 @@
       ":: :: LL == == \\ |_ ~_ ~_ ~_ ~_ ~_ _| :: || TT TT"
       "MM MM MM MM ^^ || V2 V2 :: :: SI HI :: :: || TT TT"
       "MM MM MM MM ^^ || V2 V2 rr == == == == == ST == =="
-      "MM MM MM MM ^^ || V2 V2 || :: :: :: :: :: :: :: SW"
+      "MM MM MM MM ^^ || V2 V2 || ^^ ^^ ^^ ^^ :: :: :: SW"
       "MM MM MM MM ^^ LL == == // :: :: ^^ ^^ :: :: :: ::"
       )
     (maps/add-geo-object {
