@@ -8,6 +8,12 @@
   (for [x (range start-x (+ width start-x))] [x y])
   )
 
+(defn tileset-range [start-x width start-y height]
+  (for [y (range start-y (+ height start-y))]
+    (line-range start-x width y)
+    )
+  )
+
 (def tiles-world "owgame1")
 
 (defn insert-or-update [new-entity model]
