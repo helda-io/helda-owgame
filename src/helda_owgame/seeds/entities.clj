@@ -41,7 +41,7 @@
     :stump "ST"
     :bridge "BB"
 
-    :deep-forest "FF"
+    :deep-forest "^^"
 
     })
   (tiles/save-legend :world-map "Common World Map Legend" {
@@ -253,6 +253,11 @@
       )
     )
 
+  (tiles/tileset-for :tree "Tree tileset"
+    :outsideB
+    (tiles/tileset-range 9 4 1 4)
+    )
+
   (def forest-tree-tile-x [
      11 12 9 10
      11 12 9 10
@@ -357,10 +362,10 @@
         :bridge :water
         }
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~| %% %% %% :: :: :: ::"
-      ":: :: :: :: :: |~ ~~ ~~ ~~ ~| %% %% %% :: :: :: ::"
-      ":: :: :: :: :: |~ ~~ ~~ ~~ ~| %% %% %% %% :: :: ::"
-      ":: :: :: :: :: |~ ~~ ~~ ~~ ~| %% %% %% :: :: :: ::"
-      ":: :: :: :: :: |~ ~~ ~~ ~~ ~| %% :: :: :: :: :: ::"
+      ":: ^^ ^^ ^^ ^^ |~ ~~ ~~ ~~ ~| %% %% %% :: :: :: ::"
+      ":: ^^ ^^ ^^ ^^ |~ ~~ ~~ ~~ ~| %% %% %% %% :: :: ::"
+      ":: ^^ ^^ ^^ ^^ |~ ~~ ~~ ~~ ~| %% %% %% :: :: :: ::"
+      ":: ^^ ^^ ^^ ^^ |~ ~~ ~~ ~~ ~| %% :: :: :: :: :: ::"
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~| :: :: :: :: :: :: ::"
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~| :: :: LG LG LG :: ::"
       ":: :: :: :: :: |~ ~~ ~~ ~~ ~| :: :: LG LG LG :: ::"
@@ -370,9 +375,9 @@
       "=- =- =- =- :: |~ BB BB BB BB ~| :: =- =- =- =- =-"
       "== == == == :: |~ BB BB BB BB ~| :: == == == == =="
       "=_ =_ =_ =_ :: |~ BB BB BB BB ~| :: =_ =_ =_ =_ =_"
-      ":: :: :: :: :: |~ ~~ ~~ ~~ ~~ ~| :: :: :: :: :: ::"
-      ":: :: :: :: :: |~ ~~ ~~ ~~ ~~ ~| :: :: :: :: :: ::"
-      ":: :: :: :: :: |~ ~~ ~~ ~~ ~~ ~| :: :: :: :: :: ::"
+      ":: ST ST :: :: |~ ~~ ~~ ~~ ~~ ~| :: :: :: Oo oo ::"
+      ":: ST ST 78 78 |~ ~~ ~~ ~~ ~~ ~| :: :: OO :: :: ::"
+      "78 :: :: :: :: |~ ~~ ~~ ~~ ~~ ~| :: :: :: :: :: ::"
       )
     (maps/add-geo-object {
       :entity-tag :long-bridge-detailed
@@ -387,6 +392,20 @@
       :map-tag :log
       :x 13 :y 7
       :w 3 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :stump
+      :tile-id :stump
+      :map-tag :stump
+      :x 2 :y 15
+      :w 2 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :tree1
+      :tile-id :tree
+      :map-tag :forest
+      :x 2 :y 2
+      :w 4 :h 4
       })
     (maps/save-room-map world)
     )
@@ -408,12 +427,12 @@
       "=_ =_ =_ =_ =_ =_ =_ /: :: %% %% %% |_ ~_ ~_ _| %%"
       ":: :: :: 78 78 :: :: :: :: %% %% %% %% %% %% %% %%"
       ":: :: :: :: :: :: oO OO :: :: %% %% %% %% %% %% %%"
-      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
-      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
-      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
-      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
-      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
-      "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"
+      "^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
+      "^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
+      "^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
+      "^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
+      "^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
+      "^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^ ^^"
       )
     (maps/add-geo-object {
       :entity-tag :forest-south-border
