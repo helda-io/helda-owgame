@@ -7,6 +7,13 @@
   )
 
 (defn seed-tiles []
+  (tiles/save-legend :town-map "Town Map Legend" {
+    :stone-square "::"
+    :town-house-inn "HI"
+    :town-house1 "H1"
+    :town-house2 "H2"
+    })
+
   (tiles/save-legend :outside-map "Common Outside Map Legend" {
     :green-outside "::"
     :water "~~"
@@ -90,6 +97,7 @@
   (tiles/single-tile :desert "Desert basic tile" :world 5 5)
   (tiles/single-tile :water "Water basic tile" :world 2 15)
 
+  (tiles/single-tile :stone-square "Stone square tile" :outsideRoads 2 7)
   (tiles/single-tile :stone-road "Stone road tile" :outsideRoads 2 7)
   (tiles/single-tile :v-stone-road "Stone road tile" :outsideRoads 2 7)
   (tiles/single-tile :n-stone-road "North Stone road tile" :outsideRoads 3 1)
@@ -358,16 +366,17 @@
   (->
     (maps/init-room-map "Town map" "Town map" :town-map
       {
+        :town-house-inn :stone-square
         }
-      "IH IH IH IH IH IH IH :: :: :: :: :: :: :: :: :: ::"
-      "IH IH IH IH IH IH IH :: :: :: :: :: :: :: :: :: ::"
-      "IH IH IH IH IH IH IH :: :: :: :: :: :: :: :: :: ::"
-      "IH IH IH IH IH IH IH :: :: :: :: :: :: :: :: :: ::"
-      "IH IH IH IH IH IH IH :: :: :: :: :: :: :: :: :: ::"
-      "IH IH IH IH IH IH IH :: :: :: :: :: :: :: :: :: ::"
-      "IH IH IH IH IH IH IH :: :: :: :: :: :: :: :: :: ::"
-      "IH IH IH IH IH IH IH :: :: :: :: :: :: :: :: :: ::"
-      "IH IH IH IH IH IH IH :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       ":: :: :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
       ":: :: :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
       ":: |- ~- ~- ~- -| :: :: H2 H2 H2 :: :: :: H1 H1 H1"
