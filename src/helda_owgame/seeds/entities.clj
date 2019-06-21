@@ -312,6 +312,21 @@
     (mapv (fn [x] [x 4]) forest-tile-x)
     )
 
+  (tiles/tileset :red-roof "Red roof tileset"
+    :house
+    (mapv (fn [x] [(+ x 8) 10]) [1 2 3 4 5 7 8])
+    (mapv (fn [x] [(+ x 8) 11]) [1 2 3 4 5 7 8])
+    (mapv (fn [x] [x 3])  [1 4 5 6 7 8 3])
+    (mapv (fn [x] [x 4])  [1 4 5 6 7 8 3])
+    )
+  (tiles/tileset :town-house-inn "Town House Inn tileset"
+    :house
+    (mapv (fn [x] [(+ x 8) 10]) [1 2 3 4 5 7 8])
+    (mapv (fn [x] [(+ x 8) 11]) [1 2 3 4 5 7 8])
+    (mapv (fn [x] [x 3])  [1 4 5 6 7 8 3])
+    (mapv (fn [x] [x 4])  [1 4 5 6 7 8 3])
+    )
+
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
     {
       :nw {:fileId :world :x 6 :y 7}
@@ -386,6 +401,7 @@
   (->
     (maps/init-room-map "town1" "Town map" :town-map
       {
+        :red-roof :stone-square
         :town-house-inn :stone-square
         :town-house1 :stone-square
         :town-house2 :stone-square
