@@ -12,6 +12,16 @@
     :town-house-inn "HI"
     :town-house1 "H1"
     :town-house2 "H2"
+
+    :town-pond "~~"
+    :n-town-pond "~-"
+    :nw-town-pond "|-"
+    :ne-town-pond "-|"
+    :w-town-pond "|~"
+    :e-town-pond "~|"
+    :sw-town-pond "|_"
+    :s-town-pond "~_"
+    :se-town-pond "_|"
     })
 
   (tiles/save-legend :outside-map "Common Outside Map Legend" {
@@ -150,6 +160,16 @@
   (tiles/single-tile :sw-coast "South-West coast" :world 1 16)
   (tiles/single-tile :s-coast "South coast" :world 2 16)
   (tiles/single-tile :se-coast "South-East coast" :world 3 16)
+
+  (tiles/single-tile :town-pond "Town pond" :outsideRoads 7 2)
+  (tiles/single-tile :n-town-pond "North town pond" :outsideRoads 7 1)
+  (tiles/single-tile :nw-town-pond "North-West town pond" :outsideRoads 6 1)
+  (tiles/single-tile :ne-town-pond "North-East town pond" :outsideRoads 8 1)
+  (tiles/single-tile :w-town-pond "West town pond" :outsideRoads 6 2)
+  (tiles/single-tile :e-town-pond "East town pond" :outsideRoads 8 2)
+  (tiles/single-tile :sw-town-pond "South-West town pond" :outsideRoads 6 3)
+  (tiles/single-tile :s-town-pond "South town pond" :outsideRoads 7 3)
+  (tiles/single-tile :se-town-pond "South-East town pond" :outsideRoads 8 3)
 
   (tiles/tileset :v-bridge "Vertical bridge tileset"
     :world
@@ -364,9 +384,11 @@
 
 (defn seed-world [world]
   (->
-    (maps/init-room-map "Town map" "Town map" :town-map
+    (maps/init-room-map "town1" "Town map" :town-map
       {
         :town-house-inn :stone-square
+        :town-house1 :stone-square
+        :town-house2 :stone-square
         }
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
@@ -390,7 +412,7 @@
     )
 
   (->
-    (maps/init-room-map "Village map" "Village map" :village-map
+    (maps/init-room-map "village1" "Village map" :village-map
       {
         }
       ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
@@ -415,7 +437,7 @@
     )
 
   (->
-    (maps/init-room-map "Dungeon map" "Dungeon map" :dungeon-map
+    (maps/init-room-map "dungeon1" "Dungeon map" :dungeon-map
       {
         }
       ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
