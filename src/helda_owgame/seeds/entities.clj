@@ -313,11 +313,12 @@
     )
 
   (tiles/tileset :red-roof "Red roof tileset"
-    :house
-    (mapv (fn [x] [(+ x 8) 10]) [1 2 3 4 5 7 8])
-    (mapv (fn [x] [(+ x 8) 11]) [1 2 3 4 5 7 8])
-    (mapv (fn [x] [x 3])  [1 4 5 6 7 8 3])
-    (mapv (fn [x] [x 4])  [1 4 5 6 7 8 3])
+    :redRoof
+    (tiles/line-range 1 7 6)
+    (tiles/line-range 1 7 7)
+    (tiles/line-range 1 7 8)
+    (tiles/line-range 1 7 13)
+    (tiles/line-range 1 7 14)
     )
   (tiles/tileset :town-house-inn "Town House Inn tileset"
     :house
@@ -424,6 +425,20 @@
       ":: |_ ~_ ~_ ~_ _| :: :: H2 H2 H2 :: :: :: H1 H1 H1"
       ":: :: :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
       )
+    (maps/add-geo-object {
+      :entity-tag :red-roof
+      :tile-id :red-roof
+      :map-tag :red-roof
+      :x 1 :y 1
+      :w 7 :h 5
+      })
+    (maps/add-geo-object {
+      :entity-tag :town-house-inn
+      :tile-id :town-house-inn
+      :map-tag :town-house-inn
+      :x 6 :y 1
+      :w 7 :h 4
+      })
     (maps/save-room-map world)
     )
 
