@@ -398,6 +398,8 @@
     )
   )
 
+;todo Add validation for x,y
+
 (defn seed-world [world]
   (->
     (maps/init-room-map "town1" "Town map" :town-map
@@ -436,7 +438,7 @@
       :entity-tag :town-house-inn
       :tile-id :town-house-inn
       :map-tag :town-house-inn
-      :x 6 :y 1
+      :x 1 :y 6
       :w 7 :h 4
       })
     (maps/save-room-map world)
