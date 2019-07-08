@@ -336,10 +336,10 @@
 
   (tiles/tileset :town-house-narrow "Narrow town house tileset"
     :house
-    (tiles/line-range 1 7 6)
-    (tiles/line-range 1 7 6)
-    (tiles/line-range 1 7 6)
-    (tiles/line-range 1 7 6)
+    [[9 10] [11 10] [16 10]]
+    [[9 11] [11 11] [16 11]]
+    [[9 10] [5 3]   [16 10]]
+    [[9 11] [5 4]   [16 11]]
     )
 
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
@@ -473,7 +473,7 @@
       :entity-tag :red-roof-narrow2
       :tile-id :red-roof-narrow
       :map-tag :red-roof-narrow
-      :x 9 :y 10
+      :x 14 :y 10
       :w 3 :h 4
       })
     (maps/add-geo-object {
