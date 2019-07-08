@@ -320,12 +320,26 @@
     (tiles/line-range 1 7 13)
     (tiles/line-range 1 7 14)
     )
+
+  (tiles/tileset-for :red-roof-narrow "Narrow red roof tileset"
+    :redRoof
+    (tiles/tileset-range 1 3 2 4)
+    )
+
   (tiles/tileset :town-house-inn "Town House Inn tileset"
     :house
     (mapv (fn [x] [(+ x 8) 10]) [1 2 3 4 5 7 8])
     (mapv (fn [x] [(+ x 8) 11]) [1 2 3 4 5 7 8])
     (mapv (fn [x] [x 3])  [1 4 5 6 7 8 3])
     (mapv (fn [x] [x 4])  [1 4 5 6 7 8 3])
+    )
+
+  (tiles/tileset :town-house-narrow "Narrow town house tileset"
+    :house
+    (tiles/line-range 1 7 6)
+    (tiles/line-range 1 7 6)
+    (tiles/line-range 1 7 6)
+    (tiles/line-range 1 7 6)
     )
 
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
@@ -440,6 +454,34 @@
       :map-tag :town-house-inn
       :x 1 :y 6
       :w 7 :h 4
+      })
+    (maps/add-geo-object {
+      :entity-tag :red-roof-narrow1
+      :tile-id :red-roof-narrow
+      :map-tag :red-roof-narrow
+      :x 9 :y 10
+      :w 3 :h 4
+      })
+    (maps/add-geo-object {
+      :entity-tag :town-house-narrow1
+      :tile-id :town-house-narrow
+      :map-tag :town-house-narrow
+      :x 9 :y 14
+      :w 3 :h 4
+      })
+    (maps/add-geo-object {
+      :entity-tag :red-roof-narrow2
+      :tile-id :red-roof-narrow
+      :map-tag :red-roof-narrow
+      :x 9 :y 10
+      :w 3 :h 4
+      })
+    (maps/add-geo-object {
+      :entity-tag :town-house-narrow2
+      :tile-id :town-house-narrow
+      :map-tag :town-house-narrow
+      :x 14 :y 14
+      :w 3 :h 4
       })
     (maps/save-room-map world)
     )
