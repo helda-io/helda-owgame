@@ -10,6 +10,7 @@
   (tiles/save-legend :town-map "Town Map Legend" {
     :stone-square "::"
     :town-house-inn "HI"
+    :sign-inn "SI"
     :town-house1 "H1"
     :town-house2 "H2"
 
@@ -422,6 +423,7 @@
         :town-house-inn :stone-square
         :town-house1 :stone-square
         :town-house2 :stone-square
+        :sign-inn :stone-square
         }
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
@@ -432,7 +434,7 @@
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
-      ":: :: :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
+      ":: SI :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
       ":: :: :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
       ":: |- ~- ~- ~- -| :: :: H2 H2 H2 :: :: :: H1 H1 H1"
       ":: |~ ~~ ~~ ~~ ~| :: :: H2 H2 H2 :: :: :: H1 H1 H1"
