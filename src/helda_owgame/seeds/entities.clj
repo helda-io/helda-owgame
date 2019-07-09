@@ -444,11 +444,11 @@
         }
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
+      "HI HI HI HI HI HI HI :: :: TL TL TL TL TL TL :: ::"
+      "HI HI HI HI HI HI HI :: :: TL TL TL TL TL TL :: ::"
+      "HI HI HI HI HI HI HI :: :: TL TL TL TL TL TL :: ::"
+      "HI HI HI HI HI HI HI :: :: TL TL TL TL TL TL :: ::"
+      "HI HI HI HI HI HI HI :: :: TL TL TL TL TL TL :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       ":: SI :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
@@ -506,14 +506,14 @@
       :entity-tag :town-lawn
       :tile-id :town-lawn
       :map-tag :town-lawn
-      :x 11 :y 3
-      :w 4 :h 5
+      :x 10 :y 3
+      :w 6 :h 5
       :tiles [
-        [:nw :nl :nl :ne]
-        [:wl :cr :cr :el]
-        [:wl :cr :cr :el]
-        [:wl :cr :cr :el]
-        [:sw :sl :sl :se]
+        [:nw :nl :nl :nl :nl :ne]
+        [:wl :cr :cr :cr :cr :el]
+        [:wl :cr :cr :cr :cr :el]
+        [:wl :cr :cr :cr :cr :el]
+        [:sw :sl :sl :sl :sl :se]
         ]
       })
     (maps/save-room-map world)
