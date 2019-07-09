@@ -11,8 +11,11 @@
     :stone-square "::"
     :town-house-inn "HI"
     :sign-inn "SI"
+
     :town-house1 "H1"
     :town-house2 "H2"
+
+    :town-lawn "TL"
 
     :town-pond "~~"
     :n-town-pond "~-"
@@ -343,6 +346,19 @@
     [[9 11] [5 4]   [16 11]]
     )
 
+  (tiles/scalable-tileset :town-lawn "Town lawn"
+    {
+      :nw {:fileId :castle :x 6 :y 14}
+      :sw {:fileId :castle :x 6 :y 16}
+      :ne {:fileId :castle :x 8 :y 14}
+      :se {:fileId :castle :x 8 :y 16}
+      :nl {:fileId :castle :x 7 :y 14}
+      :sl {:fileId :castle :x 7 :y 16}
+      :wl {:fileId :castle :x 6 :y 15}
+      :el {:fileId :castle :x 8 :y 15}
+      :cr {:fileId :castle :x 7 :y 15}
+    })
+
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
     {
       :nw {:fileId :world :x 6 :y 7}
@@ -424,14 +440,15 @@
         :town-house1 :stone-square
         :town-house2 :stone-square
         :sign-inn :stone-square
+        :town-lawn :stone-square
         }
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
-      "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
+      "HI HI HI HI HI HI HI :: :: :: TL TL TL TL :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       ":: SI :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
@@ -484,6 +501,20 @@
       :map-tag :town-house-narrow
       :x 14 :y 14
       :w 3 :h 4
+      })
+    (maps/add-geo-object {
+      :entity-tag :town-lawn
+      :tile-id :town-lawn
+      :map-tag :town-lawn
+      :x 11 :y 3
+      :w 4 :h 5
+      :tiles [
+        [:nw :nl :nl :ne]
+        [:wl :cr :cr :el]
+        [:wl :cr :cr :el]
+        [:wl :cr :cr :el]
+        [:sw :sl :sl :se]
+        ]
       })
     (maps/save-room-map world)
     )
