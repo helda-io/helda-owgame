@@ -15,6 +15,8 @@
     :town-house1 "H1"
     :town-house2 "H2"
 
+    :box-opened "BO"
+    :box-closed "BC"
     :town-lawn "TL"
 
     :town-pond "~~"
@@ -145,6 +147,8 @@
   (tiles/foreground-tile :house5 "House V foreground tile" :worldB 7 2)
   (tiles/foreground-tile :sign-inn "INN sign foreground tile" :worldB 2 1)
   (tiles/foreground-tile :sign-white "White sign foreground tile" :worldB 4 1)
+  (tiles/foreground-tile :box-opened "Box opened" :desert 2 5)
+  (tiles/foreground-tile :box-closed "Box closed" :desert 2 4)
 
   (tiles/single-tile :h-road "Horizontal Road tile" :world 1 2)
   (tiles/single-tile :v-road "Vertical Road tile" :world 1 3)
@@ -441,6 +445,8 @@
         :town-house2 :stone-square
         :sign-inn :stone-square
         :town-lawn :stone-square
+        :box-opened :stone-square
+        :box-closed :stone-square
         }
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
@@ -451,7 +457,7 @@
       "HI HI HI HI HI HI HI :: :: TL TL TL TL TL TL :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
       "HI HI HI HI HI HI HI :: :: :: :: :: :: :: :: :: ::"
-      ":: SI :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
+      ":: SI :: :: BO BC BC :: H2 H2 H2 :: :: :: H1 H1 H1"
       ":: :: :: :: :: :: :: :: H2 H2 H2 :: :: :: H1 H1 H1"
       ":: |- ~- ~- ~- -| :: :: H2 H2 H2 :: :: :: H1 H1 H1"
       ":: |~ ~~ ~~ ~~ ~| :: :: H2 H2 H2 :: :: :: H1 H1 H1"
