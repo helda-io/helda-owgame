@@ -35,8 +35,8 @@
     :scarecrow "SC"
     :cabbage "OO"
     :carrot "vv"
-    :wheet-top "ff"
-    :wheet-bottom "tt"
+    :wheat-top "ff"
+    :wheat-bottom "tt"
 
     :flower1 "78"
 
