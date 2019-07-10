@@ -30,10 +30,15 @@
     :se-town-pond "_|"
     })
 
-  (tiles/save-legend :village-map "Town Map Legend" {
+  (tiles/save-legend :village-map "Village Map Legend" {
     :green "::"
     :scarecrow "SC"
     :cabbage "OO"
+    :carrot "vv"
+    :wheet-top "ff"
+    :wheet-bottom "tt"
+
+    :flower1 "78"
 
     :arrable "$$"
     :n-fence "--"
@@ -554,14 +559,14 @@
       ":: :: :: :: :: :: || :: :: :: H2 H2 H2 H2 H2 H2 H2"
       ":: :: :: :: :: :: || :: :: :: H2 H2 H2 H2 H2 H2 H2"
       "== == == == == == == == == == == == == == == == =="
-      ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
-      ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
-      ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
-      "|- -- -- -- -- -- -- -| :: :: :: :: :: :: :: :: ::"
-      "|$ OO OO OO $$ SC SC $| :: :: :: :: :: :: :: :: ::"
-      "|$ OO OO OO $$ SC SC $| :: :: :: :: :: :: :: :: ::"
-      "|$ OO OO OO OO OO OO $| :: :: :: :: :: :: :: :: ::"
-      "|_ __ __ __ __ __ __ _| :: :: :: :: :: :: :: :: ::"
+      "ff ff ff ff ff ff ff ff || :: :: :: :: :: :: :: ::"
+      "tt tt tt tt tt tt tt tt || :: :: :: :: :: :: :: ::"
+      "== == == == == == == == || :: :: :: 78 78 78 :: ::"
+      "|- -- -- -- -- -- -- -| || :: |- -- -- -- -- -- -|"
+      "|$ OO OO OO $$ SC SC $| || :: |$ vv vv vv vv vv $|"
+      "|$ OO OO OO $$ SC SC $| || :: |$ vv vv vv vv vv $|"
+      "|$ OO OO OO OO OO OO $| || :: |$ vv vv vv vv vv $|"
+      "|_ __ __ __ __ __ __ _| || :: |_ __ __ __ __ __ _|"
       )
     (maps/save-room-map world)
     )
