@@ -384,6 +384,11 @@
       :cr {:fileId :castle :x 7 :y 15}
     })
 
+  (tiles/tileset-for :farm-red-roof "Farm Red roof tileset"
+    :farmA
+    (tiles/tileset-by-vecs [13 14 15 14 14 14 16] [9 10 11])
+    )
+
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
     {
       :nw {:fileId :world :x 6 :y 7}

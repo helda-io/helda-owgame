@@ -8,6 +8,12 @@
   (for [x (range start-x (+ width start-x))] [x y])
   )
 
+(defn line-for [vec-x y] (mapv (fn [x] [x y]) vec-x))
+
+(defn tileset-by-vecs [vec-x vec-y]
+  (for [y vec-y] (line-for vec-x y))
+  )
+
 (defn tileset-range [start-x width start-y height]
   (for [y (range start-y (+ height start-y))]
     (line-range start-x width y)
