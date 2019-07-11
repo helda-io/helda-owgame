@@ -359,16 +359,16 @@
     :house
     (mapv (fn [x] [(+ x 8) 10]) [1 2 3 4 5 7 8])
     (mapv (fn [x] [(+ x 8) 11]) [1 2 3 4 5 7 8])
-    (mapv (fn [x] [x 3])  [1 4 5 6 7 8 3])
-    (mapv (fn [x] [x 4])  [1 4 5 6 7 8 3])
+    (tiles/line-for [1 4 5 6 7 8 3] 3)
+    (tiles/line-for [1 4 5 6 7 8 3] 4)
     )
 
   (tiles/tileset :town-house-narrow "Narrow town house tileset"
     :house
-    [[9 10] [11 10] [16 10]]
-    [[9 11] [11 11] [16 11]]
-    [[9 10] [5 3]   [16 10]]
-    [[9 11] [5 4]   [16 11]]
+    (tiles/line-for [9 11 16] 10)
+    (tiles/line-for [9 11 16] 11)
+    [[9 10] [5 3] [16 10]]
+    [[9 11] [5 4] [16 11]]
     )
 
   (tiles/scalable-tileset :town-lawn "Town lawn"
@@ -385,8 +385,13 @@
     })
 
   (tiles/tileset-for :farm-red-roof "Farm Red roof tileset"
-    :farmA
-    (tiles/tileset-by-vecs [13 14 15 14 14 14 16] [9 10 11])
+    :farmB
+    (tiles/tileset-by-vecs [13 14 15 14 14 14 14 16] [9 10 11])
+    )
+
+  (tiles/tileset-for :farm-house1 "Farm house1 tileset"
+    :farmB
+    (tiles/tileset-range 1 8 12 2)
     )
 
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
@@ -555,11 +560,11 @@
     (maps/init-room-map "village1" "Village map" :village-map
       {
         }
-      ":: UU UU UU UU UU UU UU :: :: H2 H2 H2 H2 H2 H2 H2"
-      ":: UU UU UU UU UU UU UU :: :: H2 H2 H2 H2 H2 H2 H2"
-      ":: UU UU UU UU UU UU UU :: :: H2 H2 H2 H2 H2 H2 H2"
-      ":: H1 H1 H1 H1 H1 H1 H1 :: :: H2 H2 H2 H2 H2 H2 H2"
-      ":: H1 H1 H1 H1 H1 || H1 :: :: H2 H2 H2 H2 H2 H2 H2"
+      "UU UU UU UU UU UU UU UU :: :: H2 H2 H2 H2 H2 H2 H2"
+      "UU UU UU UU UU UU UU UU :: :: H2 H2 H2 H2 H2 H2 H2"
+      "UU UU UU UU UU UU UU UU :: :: H2 H2 H2 H2 H2 H2 H2"
+      "H1 H1 H1 H1 H1 H1 H1 H1 :: :: H2 H2 H2 H2 H2 H2 H2"
+      "H1 H1 H1 H1 H1 H1 || H1 :: :: H2 H2 H2 H2 H2 H2 H2"
       ":: :: :: :: :: :: || :: :: :: H2 H2 H2 H2 H2 H2 H2"
       ":: :: :: :: :: :: || :: :: :: H2 H2 H2 H2 H2 H2 H2"
       ":: :: :: :: :: :: || :: :: :: H2 H2 H2 H2 H2 H2 H2"
@@ -573,6 +578,22 @@
       "|$ OO OO OO OO OO OO $| || :: |$ vv vv vv vv vv $|"
       "|_ __ __ __ __ __ __ _| || :: |_ __ __ __ __ __ _|"
       )
+
+    (maps/add-geo-object {
+      :entity-tag :farm-red-roof
+      :tile-id :farm-red-roof
+      :map-tag :farm-red-roof
+      :x 1 :y 1
+      :w 8 :h 3
+      })
+    (maps/add-geo-object {
+      :entity-tag :farm-house1
+      :tile-id :farm-house1
+      :map-tag :farm-house1
+      :x 1 :y 4
+      :w 8 :h 2
+      })
+
     (maps/save-room-map world)
     )
 
