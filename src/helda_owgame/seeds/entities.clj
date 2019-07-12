@@ -389,14 +389,16 @@
     (tiles/tileset-by-vecs [13 14 15 14 14 14 14 16] [9 10 11])
     )
 
-  (tiles/tileset-for :farm-roof2 "Farm House 2 roof tileset"
+  (tiles/tileset :farm-roof2 "Farm House 2 roof tileset"
     :farmB
-    (tiles/tileset-by-vecs [1 2 2 2 2 2 3] [2 3])
+    (tiles/line-for [1 1 5 1 1 1 1] 1)
+    (tiles/line-for [1 2 5 2 2 2 3] 2)
+    (tiles/line-for [1 2 2 2 2 2 3] 3)
     )
 
   (tiles/tileset-for :farm-house1 "Farm house1 tileset"
     :farmB
-    (tiles/tileset-range 1 8 12 2)
+    (tiles/tileset-range 1 8 10 2)
     )
 
   (tiles/tileset :farm-house2 "Farm house2 tileset"
@@ -571,7 +573,7 @@
     (maps/init-room-map "village1" "Village map" :village-map
       {
         }
-      "UU UU UU UU UU UU UU UU :: :: :: :: :: :: :: :: ::"
+      "UU UU UU UU UU UU UU UU :: UU UU UU UU UU UU UU ::"
       "UU UU UU UU UU UU UU UU :: UU UU UU UU UU UU UU ::"
       "UU UU UU UU UU UU UU UU :: UU UU UU UU UU UU UU ::"
       "H1 H1 H1 H1 H1 H1 H1 H1 :: H2 H2 H2 H2 H2 H2 H2 ::"
@@ -594,22 +596,22 @@
       :entity-tag :farm-red-roof
       :tile-id :farm-red-roof
       :map-tag :farm-red-roof
-      :x 1 :y 1
+      :x 1 :y 2
       :w 8 :h 3
       })
     (maps/add-geo-object {
       :entity-tag :farm-house1
       :tile-id :farm-house1
       :map-tag :farm-house1
-      :x 1 :y 4
+      :x 1 :y 5
       :w 8 :h 2
       })
     (maps/add-geo-object {
       :entity-tag :farm-roof2
       :tile-id :farm-roof2
       :map-tag :farm-roof2
-      :x 10 :y 2
-      :w 7 :h 2
+      :x 10 :y 1
+      :w 7 :h 3
       })
     (maps/add-geo-object {
       :entity-tag :farm-house2
