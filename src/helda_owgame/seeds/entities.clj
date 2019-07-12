@@ -389,9 +389,20 @@
     (tiles/tileset-by-vecs [13 14 15 14 14 14 14 16] [9 10 11])
     )
 
+  (tiles/tileset-for :farm-roof2 "Farm House 2 roof tileset"
+    :farmB
+    (tiles/tileset-by-vecs [1 2 2 2 2 2 3] [2 3])
+    )
+
   (tiles/tileset-for :farm-house1 "Farm house1 tileset"
     :farmB
     (tiles/tileset-range 1 8 12 2)
+    )
+
+  (tiles/tileset :farm-house2 "Farm house2 tileset"
+    :farmB
+    [[1 6] [6 4] [7 4] [8 4] [6 6] [7 6] [8 6]]
+    [[1 7] [6 5] [7 5] [8 5] [6 7] [7 7] [8 7]]
     )
 
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
@@ -560,14 +571,14 @@
     (maps/init-room-map "village1" "Village map" :village-map
       {
         }
-      "UU UU UU UU UU UU UU UU :: :: H2 H2 H2 H2 H2 H2 H2"
-      "UU UU UU UU UU UU UU UU :: :: H2 H2 H2 H2 H2 H2 H2"
-      "UU UU UU UU UU UU UU UU :: :: H2 H2 H2 H2 H2 H2 H2"
-      "H1 H1 H1 H1 H1 H1 H1 H1 :: :: H2 H2 H2 H2 H2 H2 H2"
-      "H1 H1 H1 H1 H1 H1 || H1 :: :: H2 H2 H2 H2 H2 H2 H2"
-      ":: :: :: :: :: :: || :: :: :: H2 H2 H2 H2 H2 H2 H2"
-      ":: :: :: :: :: :: || :: :: :: H2 H2 H2 H2 H2 H2 H2"
-      ":: :: :: :: :: :: || :: :: :: H2 H2 H2 H2 H2 H2 H2"
+      "UU UU UU UU UU UU UU UU :: :: :: :: :: :: :: :: ::"
+      "UU UU UU UU UU UU UU UU :: UU UU UU UU UU UU UU ::"
+      "UU UU UU UU UU UU UU UU :: UU UU UU UU UU UU UU ::"
+      "H1 H1 H1 H1 H1 H1 H1 H1 :: H2 H2 H2 H2 H2 H2 H2 ::"
+      "H1 H1 H1 H1 H1 H1 || H1 :: H2 H2 H2 H2 H2 H2 H2 ::"
+      ":: :: :: :: :: :: || :: :: :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: || :: :: :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: || :: :: :: :: :: :: :: :: :: ::"
       "== == == == == == == == == == == == == == == == =="
       "ff ff ff ff ff ff ff ff || :: :: :: :: :: :: :: ::"
       "tt tt tt tt tt tt tt tt || :: :: :: :: :: :: :: ::"
@@ -592,6 +603,20 @@
       :map-tag :farm-house1
       :x 1 :y 4
       :w 8 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :farm-roof2
+      :tile-id :farm-roof2
+      :map-tag :farm-roof2
+      :x 10 :y 2
+      :w 7 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :farm-house2
+      :tile-id :farm-house2
+      :map-tag :farm-house2
+      :x 10 :y 4
+      :w 7 :h 2
       })
 
     (maps/save-room-map world)
