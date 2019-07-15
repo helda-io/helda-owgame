@@ -49,6 +49,9 @@
     :sw-arrable "|_"
     :s-arrable "__"
     :se-arrable "_|"
+
+    :h-village-road "=="
+    :v-village-road "||"
     })
 
   (tiles/save-legend :outside-map "Common Outside Map Legend" {
@@ -209,6 +212,9 @@
   (tiles/single-tile :sw-arrable "South-West arrable boundary" :farmA 2 6)
   (tiles/single-tile :s-arrable "South arrable boundary" :farmA 3 6)
   (tiles/single-tile :se-arrable "South-East arrable boundary" :farmA 4 6)
+
+  (tiles/single-tile :h-village-road "Horizontal village road" :desertA5 2 1)
+  (tiles/single-tile :v-village-road "Vertical village road" :desertA5 3 1)
 
   (tiles/tileset :v-bridge "Vertical bridge tileset"
     :world
@@ -592,10 +598,10 @@
       ":: UU UU UU UU UU UU UU :: UU UU UU UU UU UU UU ::"
       ":: UU UU UU UU UU UU UU :: UU UU UU UU UU UU UU ::"
       ":: UU UU UU UU UU UU UU :: H2 H2 H2 H2 H2 H2 H2 ::"
-      ":: H1 H1 H1 H1 H1 H1 H1 :: H2 H2 H2 H2 H2 H2 H2 ::"
-      ":: H1 H1 H1 H1 H1 || H1 :: :: :: :: :: :: :: :: ::"
-      ":: :: :: :: :: :: || :: :: :: :: :: :: :: :: :: ::"
-      ":: :: :: :: :: :: || :: :: :: :: :: :: :: :: :: ::"
+      ":: H1 H1 H1 H1 H1 H1 H1 :: H2 H2 || H2 H2 H2 H2 ::"
+      ":: H1 H1 H1 H1 || H1 H1 :: :: :: || :: :: :: :: ::"
+      ":: :: :: :: :: || :: :: :: :: :: || :: :: :: :: ::"
+      ":: :: :: :: :: || :: :: :: :: :: || :: :: :: :: ::"
       "== == == == == == == == == == == == == == == == =="
       "ff ff ff ff ff ff ff ff || :: :: :: :: :: :: :: ::"
       "tt tt tt tt tt tt tt tt || :: :: :: :: :: :: :: ::"
