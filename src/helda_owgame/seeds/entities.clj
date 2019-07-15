@@ -41,14 +41,14 @@
     :flower1 "78"
 
     :arrable "$$"
-    :n-fence "--"
-    :nw-fence "|-"
-    :ne-fence "-|"
-    :w-fence "|$"
-    :e-fence "$|"
-    :sw-fence "|_"
-    :s-fence "__"
-    :se-fence "_|"
+    :n-arrable "--"
+    :nw-arrable "|-"
+    :ne-arrable "-|"
+    :w-arrable "|$"
+    :e-arrable "$|"
+    :sw-arrable "|_"
+    :s-arrable "__"
+    :se-arrable "_|"
     })
 
   (tiles/save-legend :outside-map "Common Outside Map Legend" {
@@ -199,6 +199,16 @@
   (tiles/single-tile :sw-town-pond "South-West town pond" :outsideRoads 6 3)
   (tiles/single-tile :s-town-pond "South town pond" :outsideRoads 7 3)
   (tiles/single-tile :se-town-pond "South-East town pond" :outsideRoads 8 3)
+
+  (tiles/single-tile :arrable "Arrable tile" :farmA 3 5)
+  (tiles/single-tile :n-arrable "North arrable boundary" :farmA 3 4)
+  (tiles/single-tile :nw-arrable "North-West arrable boundary" :farmA 2 4)
+  (tiles/single-tile :ne-arrable "North-East arrable boundary" :farmA 4 4)
+  (tiles/single-tile :w-arrable "West arrable boundary" :farmA 2 5)
+  (tiles/single-tile :e-arrable "East arrable boundary" :farmA 4 5)
+  (tiles/single-tile :sw-arrable "South-West arrable boundary" :farmA 2 6)
+  (tiles/single-tile :s-arrable "South arrable boundary" :farmA 3 6)
+  (tiles/single-tile :se-arrable "South-East arrable boundary" :farmA 4 6)
 
   (tiles/tileset :v-bridge "Vertical bridge tileset"
     :world
@@ -572,6 +582,11 @@
   (->
     (maps/init-room-map "village1" "Village map" :village-map
       {
+        :cabbage :arrable
+        :carrot :arrable
+        :scarecrow :arrable
+        :wheat-top :arrable
+        :wheat-bottom :arrable
         }
       ":: :: :: :: :: :: :: :: :: UU UU UU UU UU UU UU ::"
       ":: UU UU UU UU UU UU UU :: UU UU UU UU UU UU UU ::"
