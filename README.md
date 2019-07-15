@@ -4,3 +4,10 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
   "target-entity-id": "5c51ec5f4d22df75677eff05",
   "action-ctx": {}
 }' 'http://localhost:3000/entities/perform-action'
+
+
+# Roadmap
+
+* Variations for simple tiles
+* Options for complex tilesets
+* Third layer

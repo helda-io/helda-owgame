@@ -216,6 +216,10 @@
   (tiles/single-tile :h-village-road "Horizontal village road" :desertA5 2 1)
   (tiles/single-tile :v-village-road "Vertical village road" :desertA5 3 1)
 
+  (tiles/foreground-tile :carrot "Grown carrot tileset" :farmA 15 3)
+  (tiles/foreground-tile :wheat-top "Wheat top tileset" :farmA 15 7)
+  (tiles/foreground-tile :wheat-top "Wheat top tileset" :farmA 15 8)
+
   (tiles/tileset :v-bridge "Vertical bridge tileset"
     :world
     [[8 13]]
