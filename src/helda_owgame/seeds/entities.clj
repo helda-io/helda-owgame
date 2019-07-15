@@ -217,8 +217,9 @@
   (tiles/single-tile :v-village-road "Vertical village road" :desertA5 3 1)
 
   (tiles/foreground-tile :carrot "Grown carrot tileset" :farmA 15 3)
+  (tiles/foreground-tile :cabbage "Cabbage tileset" :farmA 11 4)
   (tiles/foreground-tile :wheat-top "Wheat top tileset" :farmA 15 7)
-  (tiles/foreground-tile :wheat-top "Wheat top tileset" :farmA 15 8)
+  (tiles/foreground-tile :wheat-bottom "Wheat top tileset" :farmA 15 8)
 
   (tiles/tileset :v-bridge "Vertical bridge tileset"
     :world
@@ -610,11 +611,11 @@
       "ff ff ff ff ff ff ff ff || :: :: :: :: :: :: :: ::"
       "tt tt tt tt tt tt tt tt || :: :: :: :: :: :: :: ::"
       "== == == == == == == == || :: :: :: 78 78 78 :: ::"
-      "|- -- -- -- -- -- -- -| || :: |- -- -- -- -- -- -|"
-      "|$ OO OO OO $$ SC SC $| || :: |$ vv vv vv vv vv $|"
-      "|$ OO OO OO $$ SC SC $| || :: |$ vv vv vv vv vv $|"
-      "|$ OO OO OO OO OO OO $| || :: |$ vv vv vv vv vv $|"
-      "|_ __ __ __ __ __ __ _| || :: |_ __ __ __ __ __ _|"
+      "OO OO OO OO OO OO OO OO || :: $$ vv vv vv vv vv vv"
+      "OO OO OO OO $$ SC SC OO || :: $$ vv vv vv vv vv $$"
+      "OO OO OO OO $$ SC SC OO || :: vv vv vv vv vv vv $$"
+      "$$ OO OO OO OO OO OO OO || :: $$ vv vv vv vv vv $$"
+      "|_ __ __ __ __ __ __ _| || :: $$ vv vv vv vv vv $$"
       )
 
     (maps/add-geo-object {
