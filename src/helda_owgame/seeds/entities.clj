@@ -39,6 +39,8 @@
     :wheat-bottom "tt"
 
     :flower1 "78"
+    :haystack "HH"
+    :shovels "SH"
 
     :arrable "$$"
     :n-arrable "--"
@@ -428,6 +430,26 @@
     [[1 7] [6 5] [7 5] [8 5] [6 7] [7 7] [8 7]]
     )
 
+  (tiles/tileset-for :scarecrow "Scarecrow tileset"
+    :farmA
+    (tiles/tileset-range 13 2 7 2)
+    )
+  (tiles/tileset-for :haystack "Haystack tileset"
+    :farmA
+    (tiles/tileset-range 5 2 9 2)
+    )
+
+  ;todo object variations needed
+  (tiles/tileset-for :haycart "Haycart tileset"
+    :farmA
+    (tiles/tileset-by-vecs [3 6 8] [11 12])
+    )
+
+  (tiles/tileset-for :shovels "Shovels tileset"
+    :farmA
+    (tiles/tileset-range 6 1 13 2)
+    )
+
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
     {
       :nw {:fileId :world :x 6 :y 7}
@@ -605,15 +627,15 @@
       ":: UU UU UU UU UU UU UU :: H2 H2 H2 H2 H2 H2 H2 ::"
       ":: H1 H1 H1 H1 H1 H1 H1 :: H2 H2 || H2 H2 H2 H2 ::"
       ":: H1 H1 H1 H1 || H1 H1 :: :: :: || :: :: :: :: ::"
-      ":: :: :: :: :: || :: :: :: :: :: || :: :: :: :: ::"
-      ":: :: :: :: :: || :: :: :: :: :: || :: :: :: :: ::"
+      ":: :: :: :: :: || 78 78 HC HC HC || :: :: HH HH ::"
+      ":: :: :: :: :: || :: :: HC HC HC || :: :: HH HH ::"
       "== == == == == == == == == == == == == == == == =="
-      "ff ff ff ff ff ff ff ff || :: :: :: :: :: :: :: ::"
-      "tt tt tt tt tt tt tt tt || :: :: :: :: :: :: :: ::"
-      "== == == == == == == == || :: :: :: 78 78 78 :: ::"
+      "ff ff ff ff ff ff ff ff || SH :: :: :: :: :: :: ::"
+      "tt tt tt tt tt tt tt tt || SH :: :: 78 78 78 78 78"
+      "== == == == == == == == || :: :: 78 78 78 78 78 78"
       "OO OO OO OO OO OO OO OO || :: $$ vv vv vv vv vv vv"
-      "OO OO OO OO $$ SC SC OO || :: $$ vv vv vv vv vv $$"
-      "OO OO OO OO $$ SC SC OO || :: vv vv vv vv vv vv $$"
+      "OO OO OO OO OO SC SC OO || :: $$ vv vv vv vv vv $$"
+      "OO OO OO OO OO SC SC OO || :: vv vv vv vv vv vv $$"
       "$$ OO OO OO OO OO OO OO || :: $$ vv vv vv vv vv $$"
       "|_ __ __ __ __ __ __ _| || :: $$ vv vv vv vv vv $$"
       )
@@ -645,6 +667,34 @@
       :map-tag :farm-house2
       :x 10 :y 4
       :w 7 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :scarecrow
+      :tile-id :scarecrow
+      :map-tag :scarecrow
+      :x 6 :y 14
+      :w 2 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :haystack
+      :tile-id :haystack
+      :map-tag :haystack
+      :x 15 :y 7
+      :w 2 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :haycart
+      :tile-id :haycart
+      :map-tag :haycart
+      :x 9 :y 7
+      :w 3 :h 2
+      })
+    (maps/add-geo-object {
+      :entity-tag :shovels
+      :tile-id :shovels
+      :map-tag :shovels
+      :x 10 :y 10
+      :w 1 :h 2
       })
 
     (maps/save-room-map world)
