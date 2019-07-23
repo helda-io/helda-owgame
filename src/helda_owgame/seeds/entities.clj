@@ -103,22 +103,25 @@
 
     :stone-road "=="
     :v-stone-road "||"
-    :n-stone-road "=-"
-    :w-stone-road ":|"
-    :e-stone-road "|:"
-    :s-stone-road "=_"
-    :one-stone-road "=|"
-    :ine-stone-road "=]"
-    :osw-stone-road "LL"
-    :isw-stone-road "\\"
-    :onw-stone-road ":/"
-    :inw-stone-road "/."
-    :ose-stone-road "/:"
-    :ise-stone-road "./"
 
-    :large-stones1 "OO"
-    :large-stones2 "oO"
-    :small-stones "oo"
+    :dark-cave-wall-top "TT"
+    :dark-cave-wall-top-left "|T"
+    :dark-cave-wall-top-right "T|"
+
+    :dark-cave-wall "BB"
+
+    :dark-cave-wall-down "UU"
+    :dark-cave-wall-down-left "|U"
+    :dark-cave-wall-down-right "U|"
+
+    :dark-cave-left-wall "|I"
+    :dark-cave-right-wall "I|"
+
+    :dark-cave-left-up-corner "|-"
+    :dark-cave-right-up-corner "-|"
+
+    :dark-cave-far-wall "--"
+
     })
 
   (tiles/save-legend :world-map "Common World Map Legend" {
@@ -733,23 +736,23 @@
     (maps/init-room-map "dungeon1" "Dungeon map" :dungeon-map
       {
         }
-      ":: :: :: :: :: :: :| || |: :: :: :: :: :: :: :: ::"
-      ":: :: :: :: :: :: :| || |: :: :: :: :: :: :: :: ::"
-      ":: :: :: |- -- -- :| || |: -- -- -- -- -| :: :: ::"
-      ":: :: :: |I :: :: :| || |: :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: :| || |: :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: :| || |: :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: :| || \\ =- =- =- =- =- =- =- =-"
-      ":: :: :: |I :: :: :| || == == == == == == == == =="
-      ":: :: :: |I :: :: :| || /. =_ =_ =_ =_ =_ =_ =_ =_"
-      ":: :: :: |I :: :: :| || |: :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: :| || |: :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: :| || |: :: :: :: :: I| :: :: ::"
+      ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
+      ":: :: :: |- -- -- || || || -- -- -- -- -| :: :: ::"
+      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: || || || == == == == == == == =="
+      ":: :: :: |I :: :: || || || == == == == == == == =="
+      ":: :: :: |I :: :: || || || == == == == == == == =="
+      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
       ":: :: :: |T TT TT TT || TT TT TT TT TT T| :: :: ::"
-      ":: :: :: |B BB BB BB OO BB BB BB BB BB B| :: :: ::"
-      ":: :: :: |U UU UU UU OO UU UU UU UU UU U| :: :: ::"
-      ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
-      ":: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::"
+      ":: :: :: |B BB BB BB AA BB BB BB BB BB B| :: :: ::"
+      ":: :: :: |U UU UU UU II UU UU UU UU UU U| :: :: ::"
+      ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
       )
     (maps/save-room-map world)
     )
