@@ -97,6 +97,30 @@
     :deep-forest "^^"
 
     })
+
+  (tiles/save-legend :dungeon-map "Dungeon Map Legend" {
+    :dungeon-base-tile "::"
+
+    :stone-road "=="
+    :v-stone-road "||"
+    :n-stone-road "=-"
+    :w-stone-road ":|"
+    :e-stone-road "|:"
+    :s-stone-road "=_"
+    :one-stone-road "=|"
+    :ine-stone-road "=]"
+    :osw-stone-road "LL"
+    :isw-stone-road "\\"
+    :onw-stone-road ":/"
+    :inw-stone-road "/."
+    :ose-stone-road "/:"
+    :ise-stone-road "./"
+
+    :large-stones1 "OO"
+    :large-stones2 "oO"
+    :small-stones "oo"
+    })
+
   (tiles/save-legend :world-map "Common World Map Legend" {
     :green "::"
     :desert "__"
@@ -141,6 +165,7 @@
   (tiles/single-tile :green "Grass basic tile for world map" :world 2 1)
   (tiles/single-tile :green-outside "Grass basic tile for outside map" :outside 2 1)
   (tiles/single-tile :desert "Desert basic tile" :world 5 5)
+  (tiles/single-tile :dungeon-base-tile "Dungeon basic tile" :dungeon 5 4)
   (tiles/single-tile :water "Water basic tile" :world 2 15)
 
   (tiles/single-tile :stone-square "Stone square tile" :outsideRoads 2 7)
