@@ -101,8 +101,8 @@
   (tiles/save-legend :dungeon-map "Dungeon Map Legend" {
     :dungeon-base-tile "::"
 
-    :stone-road "=="
-    :v-stone-road "||"
+    :dungeon-road "=="
+    :v-dungeon-road "||"
 
     :dark-cave-wall-top "TT"
     :dark-cave-wall-top-left "|T"
@@ -125,6 +125,9 @@
     :dark-cave-right-up-corner "-|"
 
     :dark-cave-far-wall "--"
+
+    :statue1 "S1"
+    :statue2 "S2"
 
     })
 
@@ -265,6 +268,8 @@
   (tiles/single-tile :dark-cave-wall-top "Dark cave front wall top" :dungeon 2 8)
   (tiles/single-tile :dark-cave-wall-top-left "Dark cave front wall top left" :dungeon 1 8)
   (tiles/single-tile :dark-cave-wall-top-right "Dark cave front wall top right" :dungeon 3 8)
+  (tiles/single-tile :dungeon-road "Dungeon road" :dungeon 7 1)
+  (tiles/single-tile :v-dungeon-road "Vertical Dungeon road" :dungeon 8 1)
 
   (tiles/foreground-tile :dark-cave-left-up-corner "Dark cave left up corner" :dungeonB 6 2)
   (tiles/foreground-tile :dark-cave-right-up-corner "Dark cave right up corner" :dungeonB 8 2)
@@ -503,6 +508,16 @@
   (tiles/tileset-for :shovels "Shovels tileset"
     :farmA
     (tiles/tileset-range 6 1 13 2)
+    )
+
+  (tiles/tileset-for :statue1 "Statue1 tileset"
+    :dungeonB
+    (tiles/tileset-range 5 2 13 3)
+    )
+
+  (tiles/tileset-for :statue2 "Statue2 tileset"
+    :dungeonB
+    (tiles/tileset-range 7 2 13 3)
     )
 
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
@@ -760,25 +775,41 @@
       {
         :dark-cave-left-up-corner :dungeon-base-tile
         :dark-cave-right-up-corner :dungeon-base-tile
+        :statue1 :dungeon-base-tile
+        :statue2 :dungeon-base-tile
         }
-      ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
-      ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
-      ":: :: :: |- -- -- || || || -- -- -- -- -| :: :: ::"
-      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: || || || == == == == == == == =="
-      ":: :: :: |I :: :: || || || == == == == == == == =="
-      ":: :: :: |I :: :: || || || == == == == == == == =="
-      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: || || || :: :: :: :: I| :: :: ::"
-      ":: :: :: |T TT TT TT || TT TT TT TT TT T| :: :: ::"
+      ":: :: :: :: :: :: :: || :: :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: :: || :: :: :: :: :: :: :: :: ::"
+      ":: :: :: |- -- -- -- || -- -- -- -- -- -| :: :: ::"
+      ":: :: :: |I :: :: :: || :: :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: :: || :: :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: :: || :: :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: :: || :: :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: :: || == == == == == == == == =="
+      ":: :: :: |I :: :: :: || == == == == == == == == =="
+      ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
+      ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
+      ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
+      ":: :: :: |T TT TT TT TT TT TT TT TT TT T| :: :: ::"
       ":: :: :: |B BB BB BB AA BB BB BB BB BB B| :: :: ::"
       ":: :: :: |U UU UU UU II UU UU UU UU UU U| :: :: ::"
       ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
       ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
       )
+    (maps/add-geo-object {
+      :entity-tag :statue1
+      :tile-id :statue1
+      :map-tag :statue1
+      :x 6 :y 10
+      :w 2 :h 3
+      })
+    (maps/add-geo-object {
+      :entity-tag :statue2
+      :tile-id :statue2
+      :map-tag :statue2
+      :x 9 :y 10
+      :w 2 :h 3
+      })
     (maps/save-room-map world)
     )
 
