@@ -266,6 +266,13 @@
   (tiles/single-tile :dark-cave-wall-top-left "Dark cave front wall top left" :dungeon 1 8)
   (tiles/single-tile :dark-cave-wall-top-right "Dark cave front wall top right" :dungeon 3 8)
 
+  (tiles/foreground-tile :dark-cave-left-up-corner "Dark cave left up corner" :dungeonB 6 2)
+  (tiles/foreground-tile :dark-cave-right-up-corner "Dark cave right up corner" :dungeonB 8 2)
+  (tiles/single-tile :dark-cave-far-wall "Dark cave far wall" :dungeonB 7 2)
+
+  (tiles/single-tile :dark-cave-entrance-top "Dark cave entrance top" :dungeon 4 9)
+  (tiles/single-tile :dark-cave-entrance-bottom "Dark cave entrance bottom" :dungeon 4 10)
+
   (tiles/foreground-tile :carrot "Grown carrot tileset" :farmA 15 3)
   (tiles/foreground-tile :cabbage "Cabbage tileset" :farmA 11 4)
   (tiles/foreground-tile :wheat-top "Wheat top tileset" :farmA 15 7)
@@ -751,6 +758,8 @@
   (->
     (maps/init-room-map "dungeon1" "Dungeon map" :dungeon-map
       {
+        :dark-cave-left-up-corner :dungeon-base-tile
+        :dark-cave-right-up-corner :dungeon-base-tile
         }
       ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
       ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
