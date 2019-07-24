@@ -109,6 +109,8 @@
     :dark-cave-wall-top-right "T|"
 
     :dark-cave-wall "BB"
+    :dark-cave-wall-left "|B"
+    :dark-cave-wall-right "B|"
 
     :dark-cave-wall-down "UU"
     :dark-cave-wall-down-left "|U"
@@ -116,6 +118,8 @@
 
     :dark-cave-left-wall "|I"
     :dark-cave-right-wall "I|"
+    :dark-cave-entrance-top "AA"
+    :dark-cave-entrance-bottom "II"
 
     :dark-cave-left-up-corner "|-"
     :dark-cave-right-up-corner "-|"
@@ -249,6 +253,18 @@
 
   (tiles/single-tile :h-village-road "Horizontal village road" :desertA5 2 1)
   (tiles/single-tile :v-village-road "Vertical village road" :desertA5 3 1)
+
+  (tiles/single-tile :dark-cave-left-wall "Dark cave left wall" :dungeon 1 6)
+  (tiles/single-tile :dark-cave-right-wall "Dark cave right wall" :dungeon 1 7)
+  (tiles/single-tile :dark-cave-wall "Dark cave front wall" :dungeon 2 9)
+  (tiles/single-tile :dark-cave-wall-left "Dark cave front wall left corner" :dungeon 1 9)
+  (tiles/single-tile :dark-cave-wall-right "Dark cave front wall right corner" :dungeon 3 9)
+  (tiles/single-tile :dark-cave-wall-down "Dark cave front wall down" :dungeon 2 10)
+  (tiles/single-tile :dark-cave-wall-down-left "Dark cave front wall down left" :dungeon 1 10)
+  (tiles/single-tile :dark-cave-wall-down-right "Dark cave front wall down right" :dungeon 3 10)
+  (tiles/single-tile :dark-cave-wall-top "Dark cave front wall top" :dungeon 2 8)
+  (tiles/single-tile :dark-cave-wall-top-left "Dark cave front wall top left" :dungeon 1 8)
+  (tiles/single-tile :dark-cave-wall-top-right "Dark cave front wall top right" :dungeon 3 8)
 
   (tiles/foreground-tile :carrot "Grown carrot tileset" :farmA 15 3)
   (tiles/foreground-tile :cabbage "Cabbage tileset" :farmA 11 4)
