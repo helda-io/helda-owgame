@@ -145,6 +145,11 @@
     :torcher-top "YY"
     :torcher-bottom "IL"
 
+    :box-opened "BO"
+    :box-closed "BC"
+
+    :dark-stone ".o"
+
     })
 
   (tiles/save-legend :world-map "Common World Map Legend" {
@@ -193,6 +198,7 @@
   (tiles/single-tile :desert "Desert basic tile" :world 5 5)
   (tiles/single-tile :dungeon-base-tile "Dungeon basic tile" :dungeon 5 4)
   (tiles/single-tile :dark-tile "Dark tile" :dungeon 5 6)
+  (tiles/single-tile :dark-stone "Dark stone" :dungeon 7 4)
   (tiles/single-tile :water "Water basic tile" :world 2 15)
 
   (tiles/single-tile :dungeon-road "Dungeon road" :dungeon 7 1)
@@ -821,21 +827,24 @@
 
         :torcher-top :dungeon-base-tile
         :torcher-bottom :dungeon-base-tile
+
+        :box-opened :dungeon-base-tile
+        :box-closed :dungeon-base-tile
         }
       "00 00 00 00 00 ll 00 || lm 00 00 00 00 00 00 00 00"
       "00 00 00 00 00 00 00 || 00 00 00 00 00 00 00 ls 00"
       "00 00 00 |- -- -- -- || -- -- -- -- -- -| 00 00 00"
       "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
       "00 ll 00 |I :: :: :: || :: :: YY :: :: I| 00 lm 00"
-      "00 00 00 |I :: :: :: || :: :: IL :: :: I| 0o 00 00"
-      "00 00 00 |I :: :: :: || :: :: :: :: :: I| oo 00 00"
+      "00 00 00 |I :: :: :: || :: :: IL BO BC I| 0o 00 00"
+      "00 00 00 |I :: :: :: || .o :: :: :: :: I| oo 00 00"
       "0O O0 00 |I :: :: :: || == == == == == == == == =="
       "oO Oo :: |I :: :: :: || == == == == == == == == =="
       ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
-      ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
-      ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
+      ":: :: :: |I :: S1 S1 || S2 S2 :: .o :: I| :: :: ::"
+      ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: .o ::"
       ":: :: :: |T TT TT TT TT TT TT TT TT TT T| :: :: ::"
-      ":: :: :: |B BB BB BB AA BB BB BB BB BB B| :: :: ::"
+      ":: .o :: |B BB BB BB AA BB BB BB BB BB B| :: :: ::"
       ":: :: :: |U UU UU UU II UU UU UU UU UU U| :: :: ::"
       ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
       ":: :: :: :: :: :: || || || :: :: :: :: :: :: :: ::"
