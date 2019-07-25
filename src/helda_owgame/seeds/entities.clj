@@ -134,6 +134,14 @@
     :crystals-m "lm"
     :crystals-s "ls"
 
+    :dark-stone-s-top "0o"
+    :dark-stone-s-bottom "oo"
+
+    :dark-stone-l-top-left "0O"
+    :dark-stone-l-top-right "O0"
+    :dark-stone-l-bottom-left "oO"
+    :dark-stone-l-bottom-right "Oo"
+
     })
 
   (tiles/save-legend :world-map "Common World Map Legend" {
@@ -288,6 +296,14 @@
   (tiles/foreground-tile :crystals-l "Big Crystal" :dungeonB 14 12)
   (tiles/foreground-tile :crystals-m "Mid Crystal" :dungeonB 15 12)
   (tiles/foreground-tile :crystals-s "Small Crystals" :dungeonB 14 13)
+
+  (tiles/foreground-tile :dark-stone-s-top "Small dark stone top" :dungeonB 6 6)
+  (tiles/single-tile :dark-stone-s-bottom "Small dark stone bottom" :dungeonB 6 7)
+
+  (tiles/foreground-tile :dark-stone-l-top-left "Large dark stone top left" :dungeonB 7 6)
+  (tiles/foreground-tile :dark-stone-l-top-right "Large dark stone top right" :dungeonB 8 6)
+  (tiles/single-tile :dark-stone-l-bottom-left "Large dark stone bottom left" :dungeonB 7 7)
+  (tiles/single-tile :dark-stone-l-bottom-right "Large dark stone bottom right" :dungeonB 8 7)
 
   (tiles/foreground-tile :carrot "Grown carrot tileset" :farmA 15 3)
   (tiles/foreground-tile :cabbage "Cabbage tileset" :farmA 11 4)
@@ -790,6 +806,10 @@
         :crystals-m :dark-tile
         :crystals-s :dark-tile
 
+        :dark-stone-l-top-left :dark-tile
+        :dark-stone-l-top-right :dark-tile
+        :dark-stone-s-top :dark-tile
+
         :statue1 :dungeon-base-tile
         :statue2 :dungeon-base-tile
         }
@@ -798,10 +818,10 @@
       "00 00 00 |- -- -- -- || -- -- -- -- -- -| 00 00 00"
       "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
       "00 ll 00 |I :: :: :: || :: :: :: :: :: I| 00 lm 00"
-      "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
-      "00 00 00 |I :: :: :: || :: :: :: :: :: I| :: 00 00"
-      "00 00 :: |I :: :: :: || == == == == == == == == =="
-      "00 :: :: |I :: :: :: || == == == == == == == == =="
+      "00 00 00 |I :: :: :: || :: :: :: :: :: I| 0o 00 00"
+      "00 00 00 |I :: :: :: || :: :: :: :: :: I| oo 00 00"
+      "0O O0 00 |I :: :: :: || == == == == == == == == =="
+      "oO Oo :: |I :: :: :: || == == == == == == == == =="
       ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
       ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
       ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
