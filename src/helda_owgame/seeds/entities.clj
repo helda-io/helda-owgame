@@ -142,6 +142,9 @@
     :dark-stone-l-bottom-left "oO"
     :dark-stone-l-bottom-right "Oo"
 
+    :torcher-top "YY"
+    :torcher-bottom "IL"
+
     })
 
   (tiles/save-legend :world-map "Common World Map Legend" {
@@ -304,6 +307,9 @@
   (tiles/foreground-tile :dark-stone-l-top-right "Large dark stone top right" :dungeonB 8 6)
   (tiles/single-tile :dark-stone-l-bottom-left "Large dark stone bottom left" :dungeonB 7 7)
   (tiles/single-tile :dark-stone-l-bottom-right "Large dark stone bottom right" :dungeonB 8 7)
+
+  (tiles/foreground-tile :torcher-top "Torcher top" :dungeonB 4 9)
+  (tiles/foreground-tile :torcher-bottom "Torcher bottom" :dungeonB 5 9)
 
   (tiles/foreground-tile :carrot "Grown carrot tileset" :farmA 15 3)
   (tiles/foreground-tile :cabbage "Cabbage tileset" :farmA 11 4)
@@ -812,13 +818,16 @@
 
         :statue1 :dungeon-base-tile
         :statue2 :dungeon-base-tile
+
+        :torcher-top :dungeon-base-tile
+        :torcher-bottom :dungeon-base-tile
         }
       "00 00 00 00 00 ll 00 || lm 00 00 00 00 00 00 00 00"
       "00 00 00 00 00 00 00 || 00 00 00 00 00 00 00 ls 00"
       "00 00 00 |- -- -- -- || -- -- -- -- -- -| 00 00 00"
       "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
-      "00 ll 00 |I :: :: :: || :: :: :: :: :: I| 00 lm 00"
-      "00 00 00 |I :: :: :: || :: :: :: :: :: I| 0o 00 00"
+      "00 ll 00 |I :: :: :: || :: :: YY :: :: I| 00 lm 00"
+      "00 00 00 |I :: :: :: || :: :: IL :: :: I| 0o 00 00"
       "00 00 00 |I :: :: :: || :: :: :: :: :: I| oo 00 00"
       "0O O0 00 |I :: :: :: || == == == == == == == == =="
       "oO Oo :: |I :: :: :: || == == == == == == == == =="
