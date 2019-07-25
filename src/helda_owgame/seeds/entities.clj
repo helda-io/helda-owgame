@@ -100,6 +100,7 @@
 
   (tiles/save-legend :dungeon-map "Dungeon Map Legend" {
     :dungeon-base-tile "::"
+    :dark-tile "00"
 
     :dungeon-road "=="
     :v-dungeon-road "||"
@@ -176,7 +177,11 @@
   (tiles/single-tile :green-outside "Grass basic tile for outside map" :outside 2 1)
   (tiles/single-tile :desert "Desert basic tile" :world 5 5)
   (tiles/single-tile :dungeon-base-tile "Dungeon basic tile" :dungeon 5 4)
+  (tiles/single-tile :dark-tile "Dark tile" :dungeon 5 6)
   (tiles/single-tile :water "Water basic tile" :world 2 15)
+
+  (tiles/single-tile :dungeon-road "Dungeon road" :dungeon 7 1)
+  (tiles/single-tile :v-dungeon-road "Vertical Dungeon road" :dungeon 8 1)
 
   (tiles/single-tile :stone-square "Stone square tile" :outsideRoads 2 7)
   (tiles/single-tile :stone-road "Stone road tile" :outsideRoads 2 7)
@@ -268,8 +273,6 @@
   (tiles/single-tile :dark-cave-wall-top "Dark cave front wall top" :dungeon 2 8)
   (tiles/single-tile :dark-cave-wall-top-left "Dark cave front wall top left" :dungeon 1 8)
   (tiles/single-tile :dark-cave-wall-top-right "Dark cave front wall top right" :dungeon 3 8)
-  (tiles/single-tile :dungeon-road "Dungeon road" :dungeon 7 1)
-  (tiles/single-tile :v-dungeon-road "Vertical Dungeon road" :dungeon 8 1)
 
   (tiles/foreground-tile :dark-cave-left-up-corner "Dark cave left up corner" :dungeonB 6 2)
   (tiles/foreground-tile :dark-cave-right-up-corner "Dark cave right up corner" :dungeonB 8 2)
@@ -773,20 +776,20 @@
   (->
     (maps/init-room-map "dungeon1" "Dungeon map" :dungeon-map
       {
-        :dark-cave-left-up-corner :dungeon-base-tile
-        :dark-cave-right-up-corner :dungeon-base-tile
+        :dark-cave-left-up-corner :dark-tile
+        :dark-cave-right-up-corner :dark-tile
         :statue1 :dungeon-base-tile
         :statue2 :dungeon-base-tile
         }
-      ":: :: :: :: :: :: :: || :: :: :: :: :: :: :: :: ::"
-      ":: :: :: :: :: :: :: || :: :: :: :: :: :: :: :: ::"
-      ":: :: :: |- -- -- -- || -- -- -- -- -- -| :: :: ::"
-      ":: :: :: |I :: :: :: || :: :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: :: || :: :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: :: || :: :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: :: || :: :: :: :: :: I| :: :: ::"
-      ":: :: :: |I :: :: :: || == == == == == == == == =="
-      ":: :: :: |I :: :: :: || == == == == == == == == =="
+      "00 00 00 00 00 00 00 || 00 00 00 00 00 00 00 00 00"
+      "00 00 00 00 00 00 00 || 00 00 00 00 00 00 00 00 00"
+      "00 00 00 |- -- -- -- || -- -- -- -- -- -| 00 00 00"
+      "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
+      "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
+      "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
+      "00 00 00 |I :: :: :: || :: :: :: :: :: I| :: 00 00"
+      "00 00 :: |I :: :: :: || == == == == == == == == =="
+      "00 :: :: |I :: :: :: || == == == == == == == == =="
       ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
       ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
       ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
