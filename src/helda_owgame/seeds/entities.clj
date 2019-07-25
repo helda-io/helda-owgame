@@ -130,6 +130,10 @@
     :statue1 "S1"
     :statue2 "S2"
 
+    :crystals-l "ll"
+    :crystals-m "lm"
+    :crystals-s "ls"
+
     })
 
   (tiles/save-legend :world-map "Common World Map Legend" {
@@ -280,6 +284,10 @@
 
   (tiles/single-tile :dark-cave-entrance-top "Dark cave entrance top" :dungeon 4 9)
   (tiles/single-tile :dark-cave-entrance-bottom "Dark cave entrance bottom" :dungeon 4 10)
+
+  (tiles/foreground-tile :crystals-l "Big Crystal" :dungeonB 14 12)
+  (tiles/foreground-tile :crystals-m "Mid Crystal" :dungeonB 15 12)
+  (tiles/foreground-tile :crystals-s "Small Crystals" :dungeonB 14 13)
 
   (tiles/foreground-tile :carrot "Grown carrot tileset" :farmA 15 3)
   (tiles/foreground-tile :cabbage "Cabbage tileset" :farmA 11 4)
@@ -778,14 +786,18 @@
       {
         :dark-cave-left-up-corner :dark-tile
         :dark-cave-right-up-corner :dark-tile
+        :crystals-l :dark-tile
+        :crystals-m :dark-tile
+        :crystals-s :dark-tile
+
         :statue1 :dungeon-base-tile
         :statue2 :dungeon-base-tile
         }
-      "00 00 00 00 00 00 00 || 00 00 00 00 00 00 00 00 00"
-      "00 00 00 00 00 00 00 || 00 00 00 00 00 00 00 00 00"
+      "00 00 00 00 00 ll 00 || lm 00 00 00 00 00 00 00 00"
+      "00 00 00 00 00 00 00 || 00 00 00 00 00 00 00 ls 00"
       "00 00 00 |- -- -- -- || -- -- -- -- -- -| 00 00 00"
       "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
-      "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
+      "00 ll 00 |I :: :: :: || :: :: :: :: :: I| 00 lm 00"
       "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
       "00 00 00 |I :: :: :: || :: :: :: :: :: I| :: 00 00"
       "00 00 :: |I :: :: :: || == == == == == == == == =="
