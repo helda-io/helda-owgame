@@ -150,6 +150,10 @@
 
     :dark-stone ".o"
 
+    :dark-thumbstone-top "@@"
+    :dark-thumbstone-bottom "##"
+    :broken-pot "GG"
+
     })
 
   (tiles/save-legend :world-map "Common World Map Legend" {
@@ -314,8 +318,11 @@
   (tiles/single-tile :dark-stone-l-bottom-left "Large dark stone bottom left" :dungeonB 7 7)
   (tiles/single-tile :dark-stone-l-bottom-right "Large dark stone bottom right" :dungeonB 8 7)
 
-  (tiles/foreground-tile :torcher-top "Torcher top" :dungeonB 4 9)
+  (tiles/foreground-tile :torcher-top "Torcher top" :dungeonB 5 8)
   (tiles/foreground-tile :torcher-bottom "Torcher bottom" :dungeonB 5 9)
+  (tiles/foreground-tile :dark-thumbstone-top "Dark thumbstone top" :dungeonB 8 8)
+  (tiles/foreground-tile :dark-thumbstone-bottom "Dark thumbstone bottom" :dungeonB 8 9)
+  (tiles/foreground-tile :broken-pot "Broken pot" :dungeonB 5 5)
 
   (tiles/foreground-tile :carrot "Grown carrot tileset" :farmA 15 3)
   (tiles/foreground-tile :cabbage "Cabbage tileset" :farmA 11 4)
@@ -555,6 +562,11 @@
     )
 
   (tiles/tileset-for :statue2 "Statue2 tileset"
+    :dungeonB
+    (tiles/tileset-range 7 2 13 3)
+    )
+
+  (tiles/tileset-for :dark-thumbstone "Dark tumbstone"
     :dungeonB
     (tiles/tileset-range 7 2 13 3)
     )
@@ -830,17 +842,21 @@
 
         :box-opened :dungeon-base-tile
         :box-closed :dungeon-base-tile
+
+        :dark-thumbstone-top :dungeon-base-tile
+        :dark-thumbstone-bottom :dungeon-base-tile
+        :broken-pot :dungeon-base-tile
         }
       "00 00 00 00 00 ll 00 || lm 00 00 00 00 00 00 00 00"
       "00 00 00 00 00 00 00 || 00 00 00 00 00 00 00 ls 00"
       "00 00 00 |- -- -- -- || -- -- -- -- -- -| 00 00 00"
       "00 00 00 |I :: :: :: || :: :: :: :: :: I| 00 00 00"
-      "00 ll 00 |I :: :: :: || :: :: YY :: :: I| 00 lm 00"
-      "00 00 00 |I :: :: :: || :: :: IL BO BC I| 0o 00 00"
-      "00 00 00 |I :: :: :: || .o :: :: :: :: I| oo 00 00"
-      "0O O0 00 |I :: :: :: || == == == == == == == == =="
-      "oO Oo :: |I :: :: :: || == == == == == == == == =="
-      ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: :: ::"
+      "00 ll 00 |I :: @@ :: || :: :: YY :: :: I| 00 lm 00"
+      "00 00 00 |I :: ## :: || :: :: IL BO BC I| 00 00 00"
+      "00 00 00 |I :: :: :: || .o :: :: :: :: I| 0o 00 00"
+      "0O O0 00 |I :: GG :: || == == == == == == oo 0O O0"
+      "oO Oo :: |I :: :: :: || == == == == == == == oO Oo"
+      ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: .o .o"
       ":: :: :: |I :: S1 S1 || S2 S2 :: .o :: I| :: :: ::"
       ":: :: :: |I :: S1 S1 || S2 S2 :: :: :: I| :: .o ::"
       ":: :: :: |T TT TT TT TT TT TT TT TT TT T| :: :: ::"
