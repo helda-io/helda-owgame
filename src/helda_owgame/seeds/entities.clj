@@ -129,6 +129,7 @@
 
     :statue1 "S1"
     :statue2 "S2"
+    :angel-statue1 "SA"
 
     :crystals-l "ll"
     :crystals-m "lm"
@@ -571,6 +572,11 @@
     (tiles/tileset-range 7 2 13 3)
     )
 
+  (tiles/tileset-for :angel-statue1 "Angel Statue1 tileset"
+    :dungeonB
+    (tiles/tileset-range 5 2 10 3)
+    )
+
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
     {
       :nw {:fileId :world :x 6 :y 7}
@@ -879,6 +885,59 @@
       :x 9 :y 10
       :w 2 :h 3
       })
+    (maps/save-room-map world)
+    )
+
+  (->
+    (maps/init-room-map "dungeon2" "Dungeon map" :dungeon-map
+      {
+        :dark-cave-left-up-corner :dark-tile
+        :dark-cave-right-up-corner :dark-tile
+        :crystals-l :dark-tile
+        :crystals-m :dark-tile
+        :crystals-s :dark-tile
+
+        :dark-stone-l-top-left :dark-tile
+        :dark-stone-l-top-right :dark-tile
+        :dark-stone-s-top :dark-tile
+
+        :torcher-top :dungeon-base-tile
+        :torcher-bottom :dungeon-base-tile
+
+        :box-opened :dungeon-base-tile
+        :box-closed :dungeon-base-tile
+
+        :dark-thumbstone-top :dungeon-base-tile
+        :dark-thumbstone-bottom :dungeon-base-tile
+        :broken-pot :dungeon-base-tile
+
+        :angel-statue1 :dungeon-base-tile
+        }
+      "ll ll 00 00 00 00 00 ll lm 00 00 00 00 00 00 00 00"
+      "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+      "00 00 00 |- -- -- -- -- -- -- -- -- -- -| 00 00 00"
+      "00 00 00 |I :: :: :: :: :: :: :: :: :: I| 00 00 00"
+      "00 ll 00 |I :: SA SA :: :: :: :: :: :: I| 00 00 00"
+      "00 00 00 |I :: SA SA :: :: :: :: :: :: I| 00 00 00"
+      "00 00 00 |I :: SA SA :: :: :: :: :: :: I| 00 lm 00"
+      "0O O0 00 |I :: :: :: :: :: :: :: :: :: I| 0o 0O O0"
+      "oO Oo .o |I :: :: :: :: :: :: :: :: :: I| oo oO Oo"
+      ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: .o .o"
+      ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: :: ::"
+      ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: .o ::"
+      ":: :: :: |T TT TT TT TT TT TT TT TT TT T| :: :: ::"
+      ":: .o :: |B BB BB BB BB BB BB BB BB BB B| :: :: ::"
+      ":: :: :: |U UU UU UU UU UU UU UU UU UU U| :: :: ::"
+      ":: :: :: :: :: :: :: :: || :: :: :: :: :: :: :: ::"
+      ":: :: :: :: :: :: :: :: || :: :: :: :: :: :: :: ::"
+      )
+      (maps/add-geo-object {
+        :entity-tag :angel-statue1
+        :tile-id :angel-statue1
+        :map-tag :angel-statue1
+        :x 6 :y 5
+        :w 2 :h 3
+        })
     (maps/save-room-map world)
     )
 
