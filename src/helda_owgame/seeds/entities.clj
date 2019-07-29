@@ -158,6 +158,8 @@
     :torcher-top "YY"
     :torcher-bottom "IL"
 
+    :white-torch-stone "WS"
+
     :box-opened "BO"
     :box-closed "BC"
 
@@ -601,6 +603,11 @@
     (tiles/tileset-range 5 2 10 3)
     )
 
+  (tiles/tileset-for :white-torch-stone "White Torch Stone tileset"
+    :dungeonB
+    (tiles/tileset-range 2 1 10 3)
+    )
+
   (tiles/scalable-tileset :desert-lake "Desert Lake Coast"
     {
       :nw {:fileId :world :x 6 :y 7}
@@ -936,14 +943,15 @@
         :broken-pot :dungeon-base-tile
 
         :angel-statue1 :dungeon-base-tile
+        :white-torch-stone :dungeon-base-tile
         }
       "ll ll 00 00 00 00 00 ll lm 00 00 00 00 00 00 00 00"
       "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
       "00 00 00 |- -- -- -- -- -- -- -- -- -- -| 00 00 00"
       "00 00 00 |I :: :: :: :: :: :: :: :: :: I| 00 00 00"
-      "00 ll 00 |I :: SA SA :: :: :: :: :: :: I| 00 00 00"
-      "00 00 00 |I :: SA SA :: :: :: :: :: :: I| 00 00 00"
-      "00 00 00 |I :: SA SA :: :: :: :: :: :: I| 00 lm 00"
+      "00 ll 00 |I :: SA SA :: :: :: :: WS :: I| 00 00 00"
+      "00 00 00 |I :: SA SA :: :: :: :: WS :: I| 00 00 00"
+      "00 00 00 |I :: SA SA :: :: :: :: WS :: I| 00 lm 00"
       "0O O0 00 |I :: :: :: :: :: :: :: :: :: I| 0o 0O O0"
       "oO Oo .o |I :: :: :: :: :: :: :: :: :: I| oo oO Oo"
       ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: .o .o"
@@ -962,6 +970,14 @@
         :x 6 :y 5
         :w 2 :h 3
         })
+      (maps/add-geo-object {
+        :entity-tag :white-torch-stone
+        :tile-id :white-torch-stone
+        :map-tag :white-torch-stone
+        :x 12 :y 5
+        :w 1 :h 3
+        })
+
     (maps/save-room-map world)
     )
 
