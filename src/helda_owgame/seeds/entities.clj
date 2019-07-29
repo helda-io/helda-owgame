@@ -312,6 +312,18 @@
   (tiles/single-tile :dark-cave-wall-top-left "Dark cave front wall top left" :dungeon 1 8)
   (tiles/single-tile :dark-cave-wall-top-right "Dark cave front wall top right" :dungeon 3 8)
 
+  (tiles/single-tile :dark-cave-stairs-left-up "Dark cave stairs left up" :dungeon 6 8)
+  (tiles/single-tile :dark-cave-stairs-up "Dark cave stairs up" :dungeon 7 8)
+  (tiles/single-tile :dark-cave-stairs-right-up "Dark cave stairs right up" :dungeon 8 8)
+
+  (tiles/single-tile :dark-cave-stairs-left "Dark cave stairs left" :dungeon 6 9)
+  (tiles/single-tile :dark-cave-stairs "Dark cave stairs" :dungeon 7 9)
+  (tiles/single-tile :dark-cave-stairs-right "Dark cave stairs right" :dungeon 8 9)
+
+  (tiles/single-tile :dark-cave-stairs-left-down "Dark cave stairs left down" :dungeon 6 10)
+  (tiles/single-tile :dark-cave-stairs-down "Dark cave stairs down" :dungeon 7 10)
+  (tiles/single-tile :dark-cave-stairs-right-down "Dark cave stairs right down" :dungeon 8 10)
+
   (tiles/foreground-tile :dark-cave-left-up-corner "Dark cave left up corner" :dungeonB 6 2)
   (tiles/foreground-tile :dark-cave-right-up-corner "Dark cave right up corner" :dungeonB 8 2)
   (tiles/single-tile :dark-cave-far-wall "Dark cave far wall" :dungeonB 7 2)
@@ -937,9 +949,9 @@
       ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: .o .o"
       ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: :: ::"
       ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: .o ::"
-      ":: :: :: |T TT TT TT TI HH IT TT TT TT T| :: :: ::"
+      ":: :: :: |T TT TT TT TI TH IT TT TT TT T| :: :: ::"
       ":: .o :: |B BB BB BB BI HH IB BB BB BB B| :: :: ::"
-      ":: :: :: |U UU UU UU UI HH IU UU UU UU U| :: :: ::"
+      ":: :: :: |U UU UU UU UI UH IU UU UU UU U| :: :: ::"
       ":: :: :: :: :: :: :: :: || :: :: :: :: :: :: :: ::"
       ":: :: :: :: :: :: :: :: || :: :: :: :: :: :: :: ::"
       )
