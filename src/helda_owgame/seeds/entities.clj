@@ -127,6 +127,18 @@
 
     :dark-cave-far-wall "--"
 
+    :dark-cave-stairs-left-up "TI"
+    :dark-cave-stairs-left "BI"
+    :dark-cave-stairs-left-down "UI"
+
+    :dark-cave-stairs-right-up "IT"
+    :dark-cave-stairs-right "IB"
+    :dark-cave-stairs-right-down "IU"
+
+    :dark-cave-stairs-up "TH"
+    :dark-cave-stairs "HH"
+    :dark-cave-stairs-down "UH"
+
     :statue1 "S1"
     :statue2 "S2"
     :angel-statue1 "SA"
@@ -925,9 +937,9 @@
       ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: .o .o"
       ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: :: ::"
       ":: :: :: |I :: :: :: :: :: :: :: :: :: I| :: .o ::"
-      ":: :: :: |T TT TT TT TT TT TT TT TT TT T| :: :: ::"
-      ":: .o :: |B BB BB BB BB BB BB BB BB BB B| :: :: ::"
-      ":: :: :: |U UU UU UU UU UU UU UU UU UU U| :: :: ::"
+      ":: :: :: |T TT TT TT TI HH IT TT TT TT T| :: :: ::"
+      ":: .o :: |B BB BB BB BI HH IB BB BB BB B| :: :: ::"
+      ":: :: :: |U UU UU UU UI HH IU UU UU UU U| :: :: ::"
       ":: :: :: :: :: :: :: :: || :: :: :: :: :: :: :: ::"
       ":: :: :: :: :: :: :: :: || :: :: :: :: :: :: :: ::"
       )
